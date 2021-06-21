@@ -61,7 +61,6 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 {
                     return -1;
                 }
-
             }
             catch (Exception error)
             {
@@ -70,9 +69,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 string[] arrStr = arrStr0[1].Split('\n');
                 MessageBox.Show(arrStr[0].ToString() + "\nĐăng nhập thất bại.");
                 return -1;
-            }
-
-            
+            }        
         }
     }
 }

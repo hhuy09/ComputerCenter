@@ -21,3 +21,4 @@ C:\Users\HuyNguyen\Downloads\TrungTamTinHoc-main\TRUNGTAMTINHOC\obj\Debug\TRUNGT
 C:\Users\HuyNguyen\Downloads\TrungTamTinHoc-main\TRUNGTAMTINHOC\obj\Debug\TRUNGTAMTINHOC.csproj.CoreCompileInputs.cache
 C:\Users\HuyNguyen\Downloads\TrungTamTinHoc-main\TRUNGTAMTINHOC\obj\Debug\TRUNGTAMTINHOC.exe
 C:\Users\HuyNguyen\Downloads\TrungTamTinHoc-main\TRUNGTAMTINHOC\obj\Debug\TRUNGTAMTINHOC.pdb
+C:\Users\HuyNguyen\Downloads\TrungTamTinHoc-main\TRUNGTAMTINHOC\obj\Debug\TRUNGTAMTINHOC.csproj.AssemblyReference.cache
