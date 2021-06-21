@@ -5,6 +5,8 @@ namespace TRUNGTAMTINHOC
 {
     public partial class DangNhap : Form
     {
+        public string HoTen;
+
         public DangNhap()
         {
             InitializeComponent();

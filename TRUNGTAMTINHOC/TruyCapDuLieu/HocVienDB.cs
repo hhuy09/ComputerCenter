@@ -21,6 +21,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
             try
             {
+
                 SqlCommand cmd = new SqlCommand("SP_DANGNHAP", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter tendn = new SqlParameter("@TENDN", SqlDbType.NVarChar, 100);
@@ -72,6 +73,5 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 return -1;
             }        
         }
-
     }
 }

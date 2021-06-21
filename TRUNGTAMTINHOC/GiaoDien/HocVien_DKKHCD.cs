@@ -12,9 +12,22 @@ namespace TRUNGTAMTINHOC
 {
     public partial class HocVien_DKKHCD : Form
     {
+        public string MaHV;
+        public string HoTen;
+
         public HocVien_DKKHCD()
         {
             InitializeComponent();
+        }
+
+        private void HocVien_DKKHCD_Load(object sender, EventArgs e)
+        {
+            label2.Text = HoTen;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

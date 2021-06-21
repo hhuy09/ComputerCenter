@@ -21,5 +21,12 @@ namespace TRUNGTAMTINHOC
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DangNhap dn = new DangNhap();
+            this.Close();
+            dn.Show();
+        }
     }
 }

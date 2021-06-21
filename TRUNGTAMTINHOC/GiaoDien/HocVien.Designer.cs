@@ -57,6 +57,7 @@ namespace TRUNGTAMTINHOC
             this.button2.Text = "Đăng ký khóa học - chuyên đề";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
@@ -179,6 +180,7 @@ namespace TRUNGTAMTINHOC
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HocVien";
             this.Text = "Học viên trung tâm";
+            this.Load += new System.EventHandler(this.HocVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

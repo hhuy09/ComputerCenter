@@ -16,5 +16,13 @@ namespace TRUNGTAMTINHOC
         {
             InitializeComponent();
         }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView2.Rows[e.RowIndex];
+            }
+        }
     }
 }

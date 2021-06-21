@@ -243,6 +243,7 @@ namespace TRUNGTAMTINHOC
             this.button2.TabIndex = 7;
             this.button2.Text = "Đăng ký";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox4
             // 
@@ -651,6 +652,7 @@ namespace TRUNGTAMTINHOC
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HocVien_DKKHCD";
             this.Text = "Đăng ký Khóa học - Chuyên đề";
+            this.Load += new System.EventHandler(this.HocVien_DKKHCD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
