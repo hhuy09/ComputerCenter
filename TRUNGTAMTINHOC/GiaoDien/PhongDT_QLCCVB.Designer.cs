@@ -110,8 +110,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 20);
             this.button1.TabIndex = 30;
-            this.button1.Text = "Thoát";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Text = "      Thoát";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // label2

@@ -9,6 +9,7 @@ namespace TRUNGTAMTINHOC.NghiepVu
 {
     class HocVien
     {
+        private string MaHocVien;
         private string HoTen;
         private string GioiTinh;
         private string Email;

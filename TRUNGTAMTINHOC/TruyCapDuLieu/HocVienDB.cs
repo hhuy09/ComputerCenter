@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using System.Configuration;
 
 namespace TRUNGTAMTINHOC.TruyCapDuLieu
 {
@@ -14,7 +15,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
     {
         public static int DangNhap(string TenDN, string MatKhau)
         {
-            string connectString = "Data Source = NDHHUY; Initial Catalog = TRUNGTAMTINHOC; Integrated Security = True";
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
             SqlConnection con = new SqlConnection(connectString);
             con.Open();
 
@@ -71,5 +72,6 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 return -1;
             }        
         }
+
     }
 }
