@@ -22,22 +22,22 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
             try
             {
 
-                SqlCommand cmd = new SqlCommand("SP_DANGNHAP", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-                SqlParameter tendn = new SqlParameter("@TENDN", SqlDbType.NVarChar, 100);
-                SqlParameter matkhau = new SqlParameter("@MATKHAU", SqlDbType.NVarChar, 20);
-                SqlParameter type = new SqlParameter("@TYPE", SqlDbType.Int);
-                tendn.Value = TenDN;
-                matkhau.Value = MatKhau;
-                type.Direction = ParameterDirection.Output;
-                cmd.Parameters.Add(tendn);
-                cmd.Parameters.Add(matkhau);
-                cmd.Parameters.Add(type);
-                cmd.ExecuteNonQuery();
-                cmd.Parameters.Clear();
-                string ty = type.Value.ToString();
-                con.Close();
-                MessageBox.Show("Đăng nhập thành công.");
+                //SqlCommand cmd = new SqlCommand("SP_DANGNHAP", con);
+                //cmd.CommandType = CommandType.StoredProcedure;
+                //SqlParameter tendn = new SqlParameter("@TENDN", SqlDbType.NVarChar, 100);
+                //SqlParameter matkhau = new SqlParameter("@MATKHAU", SqlDbType.NVarChar, 20);
+                //SqlParameter type = new SqlParameter("@TYPE", SqlDbType.Int);
+                //tendn.Value = TenDN;
+                //matkhau.Value = MatKhau;
+                //type.Direction = ParameterDirection.Output;
+                //cmd.Parameters.Add(tendn);
+                //cmd.Parameters.Add(matkhau);
+                //cmd.Parameters.Add(type);
+                //cmd.ExecuteNonQuery();
+                //cmd.Parameters.Clear();
+                //string ty = type.Value.ToString();
+                //con.Close();
+                //MessageBox.Show("Đăng nhập thành công.");
 
                 if (ty == "0")
                 {
