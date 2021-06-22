@@ -16,5 +16,10 @@ namespace TRUNGTAMTINHOC.GiaoDien
         {
             InitializeComponent();
         }
+
+        private void DangKy_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -12,8 +12,8 @@ namespace TRUNGTAMTINHOC
 {
     public partial class HocVien : Form
     {
-        string MaHV;
-        string HoTen;
+        public string MaHV;
+        public string HoTen;
 
         public HocVien()
         {
@@ -29,9 +29,7 @@ namespace TRUNGTAMTINHOC
 
         private void HocVien_Load(object sender, EventArgs e)
         {
-            HoTen = "abc";
             label2.Text = HoTen;
-
         }
 
         private void button2_Click(object sender, EventArgs e)

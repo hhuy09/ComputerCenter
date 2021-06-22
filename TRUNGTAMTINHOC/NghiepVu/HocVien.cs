@@ -21,5 +21,15 @@ namespace TRUNGTAMTINHOC.NghiepVu
             int result = HocVienDB.DangNhap(TenDN, MatKhau);
             return result;
         }
+
+        public static string Hoten(string Email)
+        {
+            return TruyCapDuLieu.HocVienDB.HoTen(Email);
+        }
+
+        public static string ID(string Email)
+        {
+            return TruyCapDuLieu.HocVienDB.ID(Email);
+        }
     }
 }

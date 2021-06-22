@@ -6,6 +6,8 @@ namespace TRUNGTAMTINHOC
     public partial class DangNhap : Form
     {
         public string HoTen;
+        public string Email;
+        public string ID;
 
         public DangNhap()
         {
@@ -21,18 +23,25 @@ namespace TRUNGTAMTINHOC
         {
             string TenDN = textBox1.Text;
             string MatKhau = textBox2.Text;
+            Email = TenDN;
             int result = NghiepVu.HocVien.KiemTraDangNhap(TenDN, MatKhau);
+            HoTen = NghiepVu.HocVien.Hoten(Email);
+            ID = NghiepVu.HocVien.ID(Email);
 
-            if(result == 0)
+            if (result == 0)
             {
                 HocVien hv = new HocVien();
-                this.Hide();
+                hv.HoTen = HoTen;
+                hv.MaHV = ID;
+                this.Hide();          
                 hv.Show();
             }
 
             if (result == 1)
             {
                 TroLy tl = new TroLy();
+                tl.HoTen = HoTen;
+                tl.MaNV = ID;
                 this.Hide();
                 tl.Show();
             }
@@ -40,6 +49,8 @@ namespace TRUNGTAMTINHOC
             if (result == 2)
             {
                 ChuyenMon cm = new ChuyenMon();
+                cm.HoTen = HoTen;
+                cm.MaNV = ID;
                 this.Hide();
                 cm.Show();
             }
@@ -47,6 +58,8 @@ namespace TRUNGTAMTINHOC
             if (result == 3)
             {
                 PhongDaoTao pdt = new PhongDaoTao();
+                pdt.HoTen = HoTen;
+                pdt.MaNV = ID;
                 this.Hide();
                 pdt.Show();
             }
@@ -54,6 +67,8 @@ namespace TRUNGTAMTINHOC
             if (result == 4)
             {
                 PhongTaiVu tv = new PhongTaiVu();
+                tv.HoTen = HoTen;
+                tv.MaNV = ID;
                 this.Hide();
                 tv.Show();
             }

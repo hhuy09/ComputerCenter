@@ -12,6 +12,9 @@ namespace TRUNGTAMTINHOC
 {
     public partial class PhongTaiVu : Form
     {
+        public string MaNV;
+        public string HoTen;
+
         public PhongTaiVu()
         {
             InitializeComponent();
@@ -19,7 +22,7 @@ namespace TRUNGTAMTINHOC
 
         private void PhongTaiVu_Load(object sender, EventArgs e)
         {
-
+            label2.Text = HoTen;
         }
     }
 }

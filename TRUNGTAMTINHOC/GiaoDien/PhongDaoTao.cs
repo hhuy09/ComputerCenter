@@ -12,9 +12,17 @@ namespace TRUNGTAMTINHOC
 {
     public partial class PhongDaoTao : Form
     {
+        public string MaNV;
+        public string HoTen;
+
         public PhongDaoTao()
         {
             InitializeComponent();
+        }
+
+        private void PhongDaoTao_Load(object sender, EventArgs e)
+        {
+            label2.Text = HoTen;
         }
     }
 }

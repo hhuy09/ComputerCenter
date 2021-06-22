@@ -73,5 +73,73 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 return -1;
             }        
         }
+
+        public static string HoTen (string Email)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("SP_TTUSER", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter email = new SqlParameter("@EMAIL", SqlDbType.NVarChar, 100);
+                SqlParameter hoten = new SqlParameter("@HOTEN", SqlDbType.NVarChar, 100);
+                SqlParameter id = new SqlParameter("@ID", SqlDbType.NVarChar, 20);
+                email.Value = Email;
+                hoten.Direction = ParameterDirection.Output;
+                id.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(email);
+                cmd.Parameters.Add(hoten);
+                cmd.Parameters.Add(id);
+                cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+                string name = hoten.Value.ToString();
+                con.Close();
+
+                return name;
+                
+            }
+            catch
+            {           
+                return null;
+            }
+
+        }
+
+        public static string ID(string Email)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+            try
+            {
+
+                SqlCommand cmd = new SqlCommand("SP_TTUSER", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlParameter email = new SqlParameter("@EMAIL", SqlDbType.NVarChar, 100);
+                SqlParameter hoten = new SqlParameter("@HOTEN", SqlDbType.NVarChar, 100);
+                SqlParameter id = new SqlParameter("@ID", SqlDbType.NVarChar, 20);
+                email.Value = Email;
+                hoten.Direction = ParameterDirection.Output;
+                id.Direction = ParameterDirection.Output;
+                cmd.Parameters.Add(email);
+                cmd.Parameters.Add(hoten);
+                cmd.Parameters.Add(id);
+                cmd.ExecuteNonQuery();
+                cmd.Parameters.Clear();
+                string iden = id.Value.ToString();
+                con.Close();
+
+                return iden;
+
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
     }
 }

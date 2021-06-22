@@ -12,9 +12,17 @@ namespace TRUNGTAMTINHOC
 {
     public partial class ChuyenMon : Form
     {
+        public string MaNV;
+        public string HoTen;
+
         public ChuyenMon()
         {
             InitializeComponent();
+        }
+
+        private void ChuyenMon_Load(object sender, EventArgs e)
+        {
+            label2.Text = HoTen;
         }
     }
 }

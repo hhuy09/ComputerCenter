@@ -12,6 +12,9 @@ namespace TRUNGTAMTINHOC
 {
     public partial class TroLy : Form
     {
+        public string MaNV;
+        public string HoTen;
+
         public TroLy()
         {
             InitializeComponent();
@@ -19,7 +22,7 @@ namespace TRUNGTAMTINHOC
 
         private void TroLy_Load(object sender, EventArgs e)
         {
-
+            label2.Text = HoTen;
         }
 
         private void button1_Click(object sender, EventArgs e)
