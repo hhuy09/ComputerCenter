@@ -37,8 +37,7 @@ namespace TRUNGTAMTINHOC
             HocVien_DKKHCD dk = new HocVien_DKKHCD();
             dk.MaHV = MaHV;
             dk.HoTen = HoTen;
-            dk.Show();
-            
+            dk.Show();           
         }
     }
 }

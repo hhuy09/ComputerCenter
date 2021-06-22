@@ -12,6 +12,8 @@ namespace TRUNGTAMTINHOC
 {
     public partial class HocVien_DKHP : Form
     {
+        public string HoTen;
+        public string MaHV;
         public HocVien_DKHP()
         {
             InitializeComponent();
@@ -23,6 +25,16 @@ namespace TRUNGTAMTINHOC
             {
                 DataGridViewRow row = this.dataGridView2.Rows[e.RowIndex];
             }
+        }
+
+        private void HocVien_DKHP_Load(object sender, EventArgs e)
+        {
+            label2.Text = HoTen;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

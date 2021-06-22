@@ -7,7 +7,6 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
-using System.Configuration;
 
 namespace TRUNGTAMTINHOC.TruyCapDuLieu
 {

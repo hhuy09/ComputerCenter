@@ -84,6 +84,7 @@ namespace TRUNGTAMTINHOC
             this.button1.TabIndex = 47;
             this.button1.Text = "      Thoát";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -186,6 +187,7 @@ namespace TRUNGTAMTINHOC
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HocVien_DKHP";
             this.Text = "Đăng ký học phần";
+            this.Load += new System.EventHandler(this.HocVien_DKHP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
