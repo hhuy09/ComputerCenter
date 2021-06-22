@@ -131,8 +131,25 @@
     <Compile Include="GiaoDien\TroLy_QLLT.Designer.cs">
       <DependentUpon>TroLy_QLLT.cs</DependentUpon>
     </Compile>
+    <Compile Include="NghiepVu\ChungChiVanBang.cs" />
+    <Compile Include="NghiepVu\ChuyenDe.cs" />
+    <Compile Include="NghiepVu\DangKyHocPhan.cs" />
+    <Compile Include="NghiepVu\DanhGiaKhoaHoc.cs" />
+    <Compile Include="NghiepVu\DanhGiaNHP.cs" />
+    <Compile Include="NghiepVu\DiemThi.cs" />
+    <Compile Include="NghiepVu\HocPhan.cs" />
     <Compile Include="NghiepVu\HocVien.cs" />
     <Compile Include="NghiepVu\HV_KDT.cs" />
+    <Compile Include="NghiepVu\HV_LCD.cs" />
+    <Compile Include="NghiepVu\KhoaDaoTao.cs" />
+    <Compile Include="NghiepVu\KhoaHoc.cs" />
+    <Compile Include="NghiepVu\LichThi.cs" />
+    <Compile Include="NghiepVu\LopChuyenDe.cs" />
+    <Compile Include="NghiepVu\LopHoc.cs" />
+    <Compile Include="NghiepVu\NamKy.cs" />
+    <Compile Include="NghiepVu\NhanVien.cs" />
+    <Compile Include="NghiepVu\NhomHocPhan.cs" />
+    <Compile Include="NghiepVu\PhongBan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GiaoDien\TroLy.cs">
@@ -141,8 +158,25 @@
     <Compile Include="GiaoDien\TroLy.Designer.cs">
       <DependentUpon>TroLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="TruyCapDuLieu\ChungChiVanBangDB.cs" />
+    <Compile Include="TruyCapDuLieu\ChuyenDeDB.cs" />
+    <Compile Include="TruyCapDuLieu\DangKyHocPhanDB.cs" />
+    <Compile Include="TruyCapDuLieu\DanhGiaKhoaHocDB.cs" />
+    <Compile Include="TruyCapDuLieu\DanhGiaNHPDB.cs" />
+    <Compile Include="TruyCapDuLieu\DiemThiDB.cs" />
+    <Compile Include="TruyCapDuLieu\HocPhanDB.cs" />
     <Compile Include="TruyCapDuLieu\HocVienDB.cs" />
     <Compile Include="TruyCapDuLieu\HV_KDTDB.cs" />
+    <Compile Include="TruyCapDuLieu\HV_LCDDB.cs" />
+    <Compile Include="TruyCapDuLieu\KhoaDaoTaoDB.cs" />
+    <Compile Include="TruyCapDuLieu\KhoaHocDB.cs" />
+    <Compile Include="TruyCapDuLieu\LichThiDB.cs" />
+    <Compile Include="TruyCapDuLieu\LopChuyenDeDB.cs" />
+    <Compile Include="TruyCapDuLieu\LopHocDB.cs" />
+    <Compile Include="TruyCapDuLieu\NamKyDB.cs" />
+    <Compile Include="TruyCapDuLieu\NhanVienDB.cs" />
+    <Compile Include="TruyCapDuLieu\NhomHocPhanDB.cs" />
+    <Compile Include="TruyCapDuLieu\PhongBanDB.cs" />
     <EmbeddedResource Include="GiaoDien\ChuyenMon_QLLH.resx">
       <DependentUpon>ChuyenMon_QLLH.cs</DependentUpon>
     </EmbeddedResource>
