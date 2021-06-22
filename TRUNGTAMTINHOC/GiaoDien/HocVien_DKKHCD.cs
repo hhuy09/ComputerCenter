@@ -81,5 +81,10 @@ namespace TRUNGTAMTINHOC
             label25.Text = dataGridView1.Rows[0].Cells[3].Value.ToString();
             label26.Text = dataGridView1.Rows[0].Cells[2].Value.ToString();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
