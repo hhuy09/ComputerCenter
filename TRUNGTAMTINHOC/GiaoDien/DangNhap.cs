@@ -78,5 +78,12 @@ namespace TRUNGTAMTINHOC
         {
             Application.Exit();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            GiaoDien.DangKy dk = new GiaoDien.DangKy();
+            this.Hide();
+            dk.Show();
+        }
     }
 }
