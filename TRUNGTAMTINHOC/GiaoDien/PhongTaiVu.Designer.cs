@@ -32,7 +32,7 @@ namespace TRUNGTAMTINHOC
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhongTaiVu));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_QLHP = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -64,20 +64,21 @@ namespace TRUNGTAMTINHOC
             this.label5.TabIndex = 44;
             this.label5.Text = "Bộ phận phòng tài vụ";
             // 
-            // button2
+            // btn_QLHP
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::TRUNGTAMTINHOC.Properties.Resources.addstd;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(360, 236);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(277, 106);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "Quản lý học phí";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_QLHP.BackColor = System.Drawing.Color.White;
+            this.btn_QLHP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_QLHP.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_QLHP.Image = global::TRUNGTAMTINHOC.Properties.Resources.addstd;
+            this.btn_QLHP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_QLHP.Location = new System.Drawing.Point(360, 236);
+            this.btn_QLHP.Name = "btn_QLHP";
+            this.btn_QLHP.Size = new System.Drawing.Size(277, 106);
+            this.btn_QLHP.TabIndex = 43;
+            this.btn_QLHP.Text = "Quản lý học phí";
+            this.btn_QLHP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_QLHP.UseVisualStyleBackColor = false;
+            this.btn_QLHP.Click += new System.EventHandler(this.btn_QLHP_Click);
             // 
             // label1
             // 
@@ -136,7 +137,7 @@ namespace TRUNGTAMTINHOC
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_QLHP);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
@@ -156,7 +157,7 @@ namespace TRUNGTAMTINHOC
 
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_QLHP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
