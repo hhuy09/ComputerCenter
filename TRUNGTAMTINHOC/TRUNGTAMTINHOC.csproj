@@ -137,6 +137,8 @@
     <Compile Include="NghiepVu\DanhGiaKhoaHoc.cs" />
     <Compile Include="NghiepVu\DanhGiaNHP.cs" />
     <Compile Include="NghiepVu\DiemThi.cs" />
+    <Compile Include="NghiepVu\DSDKHocPhan.cs" />
+    <Compile Include="NghiepVu\DSHocPhi.cs" />
     <Compile Include="NghiepVu\HocPhan.cs" />
     <Compile Include="NghiepVu\HocVien.cs" />
     <Compile Include="NghiepVu\HV_KDT.cs" />
@@ -163,7 +165,10 @@
     <Compile Include="TruyCapDuLieu\DangKyHocPhanDB.cs" />
     <Compile Include="TruyCapDuLieu\DanhGiaKhoaHocDB.cs" />
     <Compile Include="TruyCapDuLieu\DanhGiaNHPDB.cs" />
+    <Compile Include="TruyCapDuLieu\DataProvider.cs" />
     <Compile Include="TruyCapDuLieu\DiemThiDB.cs" />
+    <Compile Include="TruyCapDuLieu\DSDKHocPhanDB.cs" />
+    <Compile Include="TruyCapDuLieu\DSHocPhiDB.cs" />
     <Compile Include="TruyCapDuLieu\HocPhanDB.cs" />
     <Compile Include="TruyCapDuLieu\HocVienDB.cs" />
     <Compile Include="TruyCapDuLieu\HV_KDTDB.cs" />
@@ -174,6 +179,7 @@
     <Compile Include="TruyCapDuLieu\LopChuyenDeDB.cs" />
     <Compile Include="TruyCapDuLieu\LopHocDB.cs" />
     <Compile Include="TruyCapDuLieu\NamKyDB.cs" />
+    <Compile Include="TruyCapDuLieu\NamKy_DB_H.cs" />
     <Compile Include="TruyCapDuLieu\NhanVienDB.cs" />
     <Compile Include="TruyCapDuLieu\NhomHocPhanDB.cs" />
     <Compile Include="TruyCapDuLieu\PhongBanDB.cs" />

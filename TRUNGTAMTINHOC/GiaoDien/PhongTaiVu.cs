@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TRUNGTAMTINHOC.GiaoDien;
 
 namespace TRUNGTAMTINHOC
 {
@@ -23,6 +24,12 @@ namespace TRUNGTAMTINHOC
         private void PhongTaiVu_Load(object sender, EventArgs e)
         {
             label2.Text = HoTen;
+        }
+
+        private void btn_QLHP_Click(object sender, EventArgs e)
+        {
+            PhongTaiVu_QLHP f = new PhongTaiVu_QLHP();
+            f.Show();
         }
     }
 }
