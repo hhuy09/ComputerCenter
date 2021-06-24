@@ -44,6 +44,12 @@ namespace TRUNGTAMTINHOC.GiaoDien
 
         }
 
+        void Load_DSChuaNopHocPhi_NamKy(string namky)
+        {
+            dtgv_DSHocPhi.DataSource = DSHocPhiDB.Instance.GetList_ChuaNopHocPhi(namky);
+
+        }
+
         void Load_DSHocPhi_NamKy(string namky)
         {
             dtgv_DSHocPhi.DataSource = DSHocPhiDB.Instance.GetListDSHocPhi_NamKy(namky);
@@ -64,32 +70,23 @@ namespace TRUNGTAMTINHOC.GiaoDien
             Load_DSHocPhi_NamKy(NamKy);
         }
 
+        
+
         private void btn_DSChuaNop_Click(object sender, EventArgs e)
         {
-            DataProvider provider = new DataProvider();
-            string query = "exec USP_DS_ChuaNop_HocPhi @namky";
 
-            dtgv_DSHocPhi.DataSource = DataProvider.Instance.ExecuteQuery(query, new object[] { NamKy });
+            Load_DSChuaNopHocPhi_NamKy(NamKy);
         }
 
         private void btn_TinhHocPhi_Click(object sender, EventArgs e)
         {
-            DataProvider provider = new DataProvider();
-            string query = "exec USP_TinhHocPhi @namky";
+            DSHocPhiDB.Instance.TinhHocPhi(NamKy);
 
-            dtgv_DSHocPhi.DataSource = DataProvider.Instance.ExecuteNonQuery(query, new object[] { NamKy });
-
-            string query2 = "exec USP_DS_ChuaNop_HocPhi @namky";
-
-            dtgv_DSHocPhi.DataSource = DataProvider.Instance.ExecuteQuery(query2, new object[] { NamKy });
+            Load_DSHocPhi_NamKy(NamKy);
 
             }
 
-        //void Add_HocPhi_Binding()
-        //{
-        //    lb_MaHocVien.DataBindings.Add(new Binding("Text", dtgv_DSHocPhi.DataSource, "HocVien"));
-        //}
-
+       
         private void dtgv_DSHocPhi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dtgv_DSHocPhi.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
@@ -102,27 +99,19 @@ namespace TRUNGTAMTINHOC.GiaoDien
             }           
         }
 
-        void NopHocPhi(string mahocvien)
-        {
-            string query = "exec USP_NopHocPhi @mahocvien ";
-            DataProvider.Instance.ExecuteNonQuery(query, new object[] { mahocvien });
-        }
-
-        void HuyNopHocPhi(string mahocvien)
-        {
-            string query = "exec USP_HuyNopHocPhi @mahocvien ";
-            DataProvider.Instance.ExecuteNonQuery(query, new object[] { mahocvien });
-        }
+       
 
         private void btn_Nop_Click(object sender, EventArgs e)
         {
 
-            NopHocPhi(HocVien);
+            DSHocPhiDB.Instance.NopHocPhi(HocVien);
+            Load_DSChuaNopHocPhi_NamKy(NamKy);
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
-            HuyNopHocPhi(HocVien);
+            DSHocPhiDB.Instance.HuyNopHocPhi(HocVien);
+            Load_DSChuaNopHocPhi_NamKy(NamKy);
         }
     }
 }
