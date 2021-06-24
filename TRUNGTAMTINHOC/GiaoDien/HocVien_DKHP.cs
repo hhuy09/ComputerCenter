@@ -30,6 +30,12 @@ namespace TRUNGTAMTINHOC
         private void HocVien_DKHP_Load(object sender, EventArgs e)
         {
             label2.Text = HoTen;
+
+            DataTable dt1 = NghiepVu.LopHoc.DanhSachLopHocPhan(MaHV,"2021-1");
+            dataGridView1.DataSource = dt1;
+
+            DataTable dt2 = NghiepVu.DangKyHocPhan.DanhSachDKHP(MaHV, "2021-1");
+            dataGridView2.DataSource = dt2;
         }
 
         private void button1_Click(object sender, EventArgs e)

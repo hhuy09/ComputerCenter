@@ -39,5 +39,13 @@ namespace TRUNGTAMTINHOC
             dk.HoTen = HoTen;
             dk.Show();           
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            HocVien_DKHP dk = new HocVien_DKHP();
+            dk.MaHV = MaHV;
+            dk.HoTen = HoTen;
+            dk.Show();
+        }
     }
 }
