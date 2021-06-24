@@ -133,6 +133,7 @@
     </Compile>
     <Compile Include="NghiepVu\HocVien.cs" />
     <Compile Include="NghiepVu\HV_KDT.cs" />
+    <Compile Include="NghiepVu\KhoaHoc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GiaoDien\TroLy.cs">
@@ -141,6 +142,7 @@
     <Compile Include="GiaoDien\TroLy.Designer.cs">
       <DependentUpon>TroLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="TruyCapDuLieu\KhoaHocDB.cs" />
     <Compile Include="TruyCapDuLieu\HocVienDB.cs" />
     <Compile Include="TruyCapDuLieu\HV_KDTDB.cs" />
     <EmbeddedResource Include="GiaoDien\ChuyenMon_QLLH.resx">

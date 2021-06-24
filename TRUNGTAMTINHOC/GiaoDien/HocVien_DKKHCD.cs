@@ -12,8 +12,8 @@ namespace TRUNGTAMTINHOC
 {
     public partial class HocVien_DKKHCD : Form
     {
-        public string MaHV;
-        public string HoTen;
+       public string MaHV;
+       public string HoTen;
 
         public HocVien_DKKHCD()
         {
@@ -83,6 +83,11 @@ namespace TRUNGTAMTINHOC
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
