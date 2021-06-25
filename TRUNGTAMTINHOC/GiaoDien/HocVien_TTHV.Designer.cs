@@ -55,7 +55,6 @@ namespace TRUNGTAMTINHOC
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -109,6 +108,7 @@ namespace TRUNGTAMTINHOC
             this.button1.TabIndex = 52;
             this.button1.Text = "      Thoát";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -136,7 +136,6 @@ namespace TRUNGTAMTINHOC
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(17, 56);
             this.tabControl1.Name = "tabControl1";
@@ -333,16 +332,6 @@ namespace TRUNGTAMTINHOC
             this.dataGridView3.Size = new System.Drawing.Size(917, 127);
             this.dataGridView3.TabIndex = 1;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(947, 461);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Thông tin cá nhân";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // HocVien_TTHV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,6 +347,7 @@ namespace TRUNGTAMTINHOC
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HocVien_TTHV";
             this.Text = "Thông tin học viên";
+            this.Load += new System.EventHandler(this.HocVien_TTHV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -389,7 +379,6 @@ namespace TRUNGTAMTINHOC
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.GroupBox groupBox6;

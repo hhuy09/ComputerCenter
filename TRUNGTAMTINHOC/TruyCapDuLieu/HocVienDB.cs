@@ -114,7 +114,6 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
             con.Open();
             try
             {
-
                 SqlCommand cmd = new SqlCommand("SP_TTUSER", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlParameter email = new SqlParameter("@EMAIL", SqlDbType.NVarChar, 100);
@@ -139,6 +138,54 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 return null;
             }
 
+        }
+
+        public static bool KTEmail(string Email)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+
+            try
+            {
+                string sql = "EXEC SP_KTEMAIL '" + Email + "'";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (Exception error)
+            {
+                string errorStr = error.ToString();
+                string[] arrStr0 = errorStr.Split(':');
+                string[] arrStr = arrStr0[1].Split('\n');
+                MessageBox.Show(arrStr[0].ToString());
+                return false;
+            }
+        }
+
+        public static bool DKHocVien(string HoTen, string GioiTinh, string Email, string SDT, string MatKhau)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+
+            try
+            {
+                string sql = "EXEC SP_DKHOCVIEN N'" + HoTen + "',N'" + GioiTinh + "',N'" + Email + "',N'" + SDT + "',N'" + MatKhau + "'";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (Exception error)
+            {
+                string errorStr = error.ToString();
+                string[] arrStr0 = errorStr.Split(':');
+                string[] arrStr = arrStr0[1].Split('\n');
+                MessageBox.Show(arrStr[0].ToString());
+                return false;
+            }
         }
     }
 }

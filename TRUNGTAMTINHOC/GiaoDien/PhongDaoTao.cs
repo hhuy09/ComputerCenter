@@ -24,5 +24,10 @@ namespace TRUNGTAMTINHOC
         {
             label2.Text = HoTen;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

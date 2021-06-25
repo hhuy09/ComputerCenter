@@ -31,5 +31,15 @@ namespace TRUNGTAMTINHOC.NghiepVu
         {
             return TruyCapDuLieu.HocVienDB.ID(Email);
         }
+
+        public static bool KiemTraTonTaiEmail(string Email)
+        {
+            return TruyCapDuLieu.HocVienDB.KTEmail(Email);
+        }
+
+        public static bool DangKyHocVien(string HoTen, string GioiTinh, string Email, string SDT, string MatKhau)
+        {
+            return TruyCapDuLieu.HocVienDB.DKHocVien(HoTen, GioiTinh, Email, SDT, MatKhau);
+        }
     }
 }

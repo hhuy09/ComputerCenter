@@ -132,6 +132,7 @@ namespace TRUNGTAMTINHOC
             this.textBox2.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.Location = new System.Drawing.Point(174, 100);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(241, 30);
             this.textBox2.TabIndex = 8;
             // 
@@ -187,6 +188,7 @@ namespace TRUNGTAMTINHOC
             this.label6.Size = new System.Drawing.Size(121, 19);
             this.label6.TabIndex = 5;
             this.label6.Text = "Đăng ký học viên";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // DangNhap
             // 
