@@ -12,6 +12,7 @@ namespace TRUNGTAMTINHOC.NghiepVu
 {
     class LopHoc
     {
+
         private string MaLopHoc;
         private string LopDaoTao;
         private string HocPhan;
@@ -25,6 +26,7 @@ namespace TRUNGTAMTINHOC.NghiepVu
             return TruyCapDuLieu.LopHocDB.DSLopHocPhan(MaHV, NamKy);
         }
 
+
         public static DataTable DanhSachLopHoc(string MaNV, string NamKy)
         {
             return TruyCapDuLieu.LopHocDB.DSLopHoc(MaNV, NamKy);
@@ -34,5 +36,6 @@ namespace TRUNGTAMTINHOC.NghiepVu
         {
             return TruyCapDuLieu.LopHocDB.DSThiHocPhan(MaNV, NamKy);
         }
+
     }
 }

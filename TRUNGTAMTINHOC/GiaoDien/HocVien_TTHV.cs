@@ -28,6 +28,10 @@ namespace TRUNGTAMTINHOC
             DataTable dt1 = NghiepVu.DiemThi.BangDiemHocVien(MaHV, NamKy);
             dataGridView1.DataSource = dt1;
 
+            DataTable dt2 = NghiepVu.HV_KDT.BangDiemTotNghiep(MaHV, NamKy);
+            dataGridView2.DataSource = dt2;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
