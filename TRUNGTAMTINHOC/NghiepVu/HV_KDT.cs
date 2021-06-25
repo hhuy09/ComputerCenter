@@ -35,5 +35,10 @@ namespace TRUNGTAMTINHOC.NghiepVu
         {
             return TruyCapDuLieu.HV_KDTDB.HuyDKKH(MaHV, MaLopDT);
         }
+
+        public static DataTable BangDiemTotNghiep(string MaHV, string NamKy)
+        {
+            return TruyCapDuLieu.HV_KDTDB.BangDiemTN(MaHV, NamKy);
+        }
     }
 }
