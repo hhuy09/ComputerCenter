@@ -31,5 +31,12 @@ namespace TRUNGTAMTINHOC
             PhongTaiVu_QLHP f = new PhongTaiVu_QLHP();
             f.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DangNhap dn = new DangNhap();
+            this.Close();
+            dn.Show();
+        }
     }
 }

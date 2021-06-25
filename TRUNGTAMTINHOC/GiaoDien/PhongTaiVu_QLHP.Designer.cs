@@ -111,6 +111,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.button1.Text = "Thoát      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lb_TenNV
             // 
@@ -163,7 +164,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.tabPage1.Controls.Add(this.dtgv_dsdkHocPhan);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(947, 461);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh sách đăng ký học phần";
@@ -186,7 +187,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(947, 461);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh sách học phí";

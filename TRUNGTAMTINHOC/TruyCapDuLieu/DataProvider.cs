@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 
 namespace TRUNGTAMTINHOC.TruyCapDuLieu
@@ -23,14 +24,12 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
             private set => instance = value;
         }
 
-
-        private string conn_str = "Data Source=DESKTOP-O7T6R5H\\SQLEXPRESS;Initial Catalog=TRUNGTAMTINHOC;Integrated Security=True";
-
+       
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
-
-            using (SqlConnection connection = new SqlConnection(conn_str))
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            using (SqlConnection connection = new SqlConnection(connectString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
@@ -61,8 +60,8 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
         public int ExecuteNonQuery(string query, object[] parameter = null)
         {
             int data = 0;
-
-            using (SqlConnection connection = new SqlConnection(conn_str))
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            using (SqlConnection connection = new SqlConnection(connectString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
@@ -94,8 +93,8 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
         public object ExecuteScalar(string query, object[] parameter = null)
         {
             object data = 0;
-
-            using (SqlConnection connection = new SqlConnection(conn_str))
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            using (SqlConnection connection = new SqlConnection(connectString))
             {
                 connection.Open();
                 SqlCommand command = new SqlCommand(query, connection);
