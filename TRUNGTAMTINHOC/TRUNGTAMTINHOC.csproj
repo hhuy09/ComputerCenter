@@ -142,6 +142,7 @@
     <Compile Include="NghiepVu\HocPhan.cs" />
     <Compile Include="NghiepVu\HocVien.cs" />
     <Compile Include="NghiepVu\HV_KDT.cs" />
+    <Compile Include="NghiepVu\KhoaHoc.cs" />
     <Compile Include="NghiepVu\HV_LCD.cs" />
     <Compile Include="NghiepVu\KhoaDaoTao.cs" />
     <Compile Include="NghiepVu\KhoaHoc.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="GiaoDien\TroLy.Designer.cs">
       <DependentUpon>TroLy.cs</DependentUpon>
     </Compile>
+    <Compile Include="TruyCapDuLieu\KhoaHocDB.cs" />
     <Compile Include="TruyCapDuLieu\ChungChiVanBangDB.cs" />
     <Compile Include="TruyCapDuLieu\ChuyenDeDB.cs" />
     <Compile Include="TruyCapDuLieu\DangKyHocPhanDB.cs" />

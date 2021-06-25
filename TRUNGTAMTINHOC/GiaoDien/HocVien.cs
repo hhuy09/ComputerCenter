@@ -38,6 +38,7 @@ namespace TRUNGTAMTINHOC
             dk.MaHV = MaHV;
             dk.HoTen = HoTen;
             dk.Show();           
+            
         }
 
         private void button4_Click(object sender, EventArgs e)

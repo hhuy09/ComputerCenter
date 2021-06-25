@@ -50,6 +50,7 @@ namespace TRUNGTAMTINHOC
             this.Close();
         }
 
+
         private void button2_Click(object sender, EventArgs e)
         {
             int rows = dataGridView1.Rows.Count - 1;
@@ -80,6 +81,7 @@ namespace TRUNGTAMTINHOC
             }
 
             HocVien_DKHP_Load(sender, e);
+
         }
     }
 }
