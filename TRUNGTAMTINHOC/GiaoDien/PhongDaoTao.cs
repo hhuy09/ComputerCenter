@@ -26,6 +26,7 @@ namespace TRUNGTAMTINHOC
             label2.Text = HoTen;
         }
 
+
         private void button2_Click(object sender, EventArgs e)
         {
             GiaoDien.PhongDT_QLCCVB pdt_ql = new GiaoDien.PhongDT_QLCCVB();
@@ -42,9 +43,10 @@ namespace TRUNGTAMTINHOC
             dn.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-         
+
+
         }
     }
 }

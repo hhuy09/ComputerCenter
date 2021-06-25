@@ -85,6 +85,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.button2.TabIndex = 17;
             this.button2.Text = "Đăng ký";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label9
             // 
@@ -102,6 +103,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.textBox5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox5.Location = new System.Drawing.Point(256, 200);
             this.textBox5.Name = "textBox5";
+            this.textBox5.PasswordChar = '•';
             this.textBox5.Size = new System.Drawing.Size(241, 26);
             this.textBox5.TabIndex = 15;
             // 
@@ -110,6 +112,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.textBox4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.Location = new System.Drawing.Point(256, 168);
             this.textBox4.Name = "textBox4";
+            this.textBox4.PasswordChar = '•';
             this.textBox4.Size = new System.Drawing.Size(241, 26);
             this.textBox4.TabIndex = 14;
             // 
@@ -218,6 +221,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.button1.Text = "Đăng nhập";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 

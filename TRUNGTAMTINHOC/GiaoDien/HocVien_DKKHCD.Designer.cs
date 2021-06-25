@@ -29,7 +29,9 @@ namespace TRUNGTAMTINHOC
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HocVien_DKKHCD));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -89,6 +91,13 @@ namespace TRUNGTAMTINHOC
             this.label16 = new System.Windows.Forms.Label();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -252,7 +261,7 @@ namespace TRUNGTAMTINHOC
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(117, 23);
             this.label24.TabIndex = 9;
-            this.label24.Text = "Lớp dào tạo:";
+            this.label24.Text = "Lớp đào tạo:";
             // 
             // label23
             // 
@@ -279,9 +288,19 @@ namespace TRUNGTAMTINHOC
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(8, 31);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 25);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1231, 159);
@@ -567,6 +586,10 @@ namespace TRUNGTAMTINHOC
             // 
             // groupBox16
             // 
+            this.groupBox16.Controls.Add(this.label30);
+            this.groupBox16.Controls.Add(this.label31);
+            this.groupBox16.Controls.Add(this.label32);
+            this.groupBox16.Controls.Add(this.label33);
             this.groupBox16.Controls.Add(this.button5);
             this.groupBox16.Controls.Add(this.dataGridView2);
             this.groupBox16.Location = new System.Drawing.Point(8, 327);
@@ -588,16 +611,28 @@ namespace TRUNGTAMTINHOC
             this.button5.TabIndex = 8;
             this.button5.Text = "Hủy";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(8, 31);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView2.Location = new System.Drawing.Point(6, 25);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(1231, 159);
             this.dataGridView2.TabIndex = 0;
+            this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
             // 
             // groupBox9
             // 
@@ -757,7 +792,7 @@ namespace TRUNGTAMTINHOC
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(297, 20);
             this.label14.TabIndex = 2;
-            this.label14.Text = "Lúc 8h00,ngày 15/07/2021, phòng P.200";
+            this.label14.Text = "Lúc 8h00,ngày 01/05/2021, phòng P.200";
             // 
             // label15
             // 
@@ -768,7 +803,7 @@ namespace TRUNGTAMTINHOC
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(297, 20);
             this.label15.TabIndex = 1;
-            this.label15.Text = "Lúc 8h00,ngày 08/07/2021, phòng P.100";
+            this.label15.Text = "Lúc 8h00,ngày 01/04/2021, phòng P.100";
             // 
             // label16
             // 
@@ -779,10 +814,13 @@ namespace TRUNGTAMTINHOC
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(297, 20);
             this.label16.TabIndex = 0;
-            this.label16.Text = "Lúc 8h00,ngày 01/07/2021, phòng P.100";
+            this.label16.Text = "Lúc 8h00,ngày 01/03/2021, phòng P.100";
             // 
             // groupBox15
             // 
+            this.groupBox15.Controls.Add(this.label29);
+            this.groupBox15.Controls.Add(this.label28);
+            this.groupBox15.Controls.Add(this.label27);
             this.groupBox15.Controls.Add(this.label17);
             this.groupBox15.Location = new System.Drawing.Point(8, 62);
             this.groupBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -802,6 +840,76 @@ namespace TRUNGTAMTINHOC
             this.label17.TabIndex = 0;
             this.label17.Text = "1.  CĐ: Kỹ năng làm chủ ngôn ngữ lập \r\n     trình mới\r\n\r\n2.  CĐ: Ứng dụng tin học" +
     " văn phòng\r\n\r\n\r\n3.  CĐ: Tìm kiếm tài liệu phù hợp\r\n";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(109, 35);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(65, 19);
+            this.label27.TabIndex = 4;
+            this.label27.Text = "LCD001";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(27, 92);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(65, 19);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "LCD002";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(27, 149);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(65, 19);
+            this.label29.TabIndex = 6;
+            this.label29.Text = "LCD003";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(498, 160);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(34, 19);
+            this.label30.TabIndex = 15;
+            this.label30.Text = "-----";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(89, 160);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(34, 19);
+            this.label31.TabIndex = 14;
+            this.label31.Text = "-----";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(376, 160);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(116, 19);
+            this.label32.TabIndex = 13;
+            this.label32.Text = "Lớp chuyên đề:";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(6, 160);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(86, 19);
+            this.label33.TabIndex = 12;
+            this.label33.Text = "Chuyên đề:";
             // 
             // HocVien_DKKHCD
             // 
@@ -841,6 +949,7 @@ namespace TRUNGTAMTINHOC
             this.groupBox5.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox9.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
@@ -921,5 +1030,12 @@ namespace TRUNGTAMTINHOC
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
     }
 }
