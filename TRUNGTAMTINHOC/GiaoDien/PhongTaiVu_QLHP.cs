@@ -84,7 +84,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
 
             Load_DSHocPhi_NamKy(NamKy);
 
-            }
+        }
 
        
         private void dtgv_DSHocPhi_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -118,5 +118,6 @@ namespace TRUNGTAMTINHOC.GiaoDien
         {
             this.Close();
         }
+
     }
 }
