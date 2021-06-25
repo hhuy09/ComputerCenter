@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using TRUNGTAMTINHOC.TruyCapDuLieu;
 
 namespace TRUNGTAMTINHOC.NghiepVu
@@ -40,6 +41,21 @@ namespace TRUNGTAMTINHOC.NghiepVu
         public static bool DangKyHocVien(string HoTen, string GioiTinh, string Email, string SDT, string MatKhau)
         {
             return TruyCapDuLieu.HocVienDB.DKHocVien(HoTen, GioiTinh, Email, SDT, MatKhau);
+        }
+
+        public static DataTable DanhSachHocVien(string NVChuyenMon)
+        {
+            return TruyCapDuLieu.HocVienDB.DSHocVien(NVChuyenMon);
+        }
+
+        public static DataTable DanhSachHocVienThiHocPhan(string NVChuyenMon)
+        {
+            return TruyCapDuLieu.HocVienDB.DSHocVienThiHocPhan(NVChuyenMon);
+        }
+
+        public static DataTable DanhSachHocVienThiTotNghiep(string NVChuyenMon)
+        {
+            return TruyCapDuLieu.HocVienDB.DSHocVienThiTotNghiep(NVChuyenMon);
         }
     }
 }

@@ -67,6 +67,7 @@ namespace TRUNGTAMTINHOC
             this.button1.Text = "Đăng xuất";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -78,6 +79,7 @@ namespace TRUNGTAMTINHOC
             this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 13;
             this.label2.Text = "TenNV";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -104,6 +106,7 @@ namespace TRUNGTAMTINHOC
             this.button2.Text = "Quản lý lớp học";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label5
             // 

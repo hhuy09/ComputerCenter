@@ -122,6 +122,7 @@ namespace TRUNGTAMTINHOC
             this.button1.Text = "Đăng xuất";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -167,7 +168,8 @@ namespace TRUNGTAMTINHOC
             this.groupBox4.Size = new System.Drawing.Size(935, 130);
             this.groupBox4.TabIndex = 37;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Danh sách thi tốt nghiệp";
+            this.groupBox4.Text = "Danh sách thi học phần";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // dataGridView3
             // 
@@ -250,6 +252,8 @@ namespace TRUNGTAMTINHOC
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(923, 285);
             this.dataGridView4.TabIndex = 36;
+            this.dataGridView4.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellClick);
+            this.dataGridView4.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // tabPage2
             // 
@@ -363,6 +367,7 @@ namespace TRUNGTAMTINHOC
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChuyenMon_QLLH";
             this.Text = "Quản lý lớp học";
+            this.Load += new System.EventHandler(this.ChuyenMon_QLLH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
