@@ -14,6 +14,7 @@ namespace TRUNGTAMTINHOC
     {
         public string MaNV;
         public string HoTen;
+        public string NamKy;
         public ChuyenMon_QLLH()
         {
             InitializeComponent();
@@ -23,22 +24,24 @@ namespace TRUNGTAMTINHOC
         {
             label2.Text = HoTen;
 
-            DataTable dt1 = NghiepVu.LopHoc.DanhSachLopHoc(MaNV);
+            NamKy = comboBox1.Text;
+
+            DataTable dt1 = NghiepVu.LopHoc.DanhSachLopDay(MaNV,NamKy);
             dataGridView1.DataSource = dt1;
 
-            DataTable dt2 = NghiepVu.KhoaDaoTao.DanhSachThiTotNghiep(MaNV);
+            DataTable dt2 = NghiepVu.KhoaDaoTao.DanhSachThiTotNghiep(MaNV, NamKy);
             dataGridView2.DataSource = dt2;
 
-            DataTable dt3 = NghiepVu.LichThi.DanhSachThiHocPhan(MaNV);
+            DataTable dt3 = NghiepVu.LichThi.DanhSachThiHocPhan(MaNV, NamKy);
             dataGridView3.DataSource = dt3;
 
-            DataTable dt4 = NghiepVu.HocVien.DanhSachHocVien(MaNV);
+            DataTable dt4 = NghiepVu.HocVien.DanhSachHocVien(MaNV, NamKy);
             dataGridView4.DataSource = dt4;
 
-            DataTable dt5 = NghiepVu.HocVien.DanhSachHocVienThiHocPhan(MaNV);
+            DataTable dt5 = NghiepVu.DiemThi.DanhSachHocVienThiHocPhan(MaNV, NamKy);
             dataGridView5.DataSource = dt5;
 
-            DataTable dt6 = NghiepVu.HocVien.DanhSachHocVienThiTotNghiep(MaNV);
+            DataTable dt6 = NghiepVu.HV_KDT.DanhSachHocVienThiTotNghiep(MaNV, NamKy);
             dataGridView6.DataSource = dt6;
         }
 

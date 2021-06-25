@@ -14,9 +14,9 @@ namespace TRUNGTAMTINHOC.NghiepVu
         private string LopHoc;
         private string NgayThi;
 
-        public static DataTable DanhSachThiHocPhan(string NVChuyenMon)
+        public static DataTable DanhSachThiHocPhan(string MaNV,string NamKy)
         {
-            return TruyCapDuLieu.LichThiDB.DSThiHocPhan(NVChuyenMon);
+            return TruyCapDuLieu.LichThiDB.DSThiHocPhan(MaNV,NamKy);
         }
     }
 }

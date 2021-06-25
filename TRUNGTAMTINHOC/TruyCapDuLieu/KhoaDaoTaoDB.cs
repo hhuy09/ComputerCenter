@@ -12,7 +12,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 {
     class KhoaDaoTaoDB
     {
-        public static DataTable DSThiTotNghiep(string NVChuyenMon)
+        public static DataTable DSThiTotNghiep(string MaNV,string NamKy)
         {
             string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
             SqlConnection con = new SqlConnection(connectString);
@@ -20,7 +20,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
             try
             {
-                string sql = "EXEC sp_danhsach_TTN '" + NVChuyenMon + "'";
+                string sql = "EXEC sp_danhsach_TTN '" + MaNV + "','" + NamKy + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);

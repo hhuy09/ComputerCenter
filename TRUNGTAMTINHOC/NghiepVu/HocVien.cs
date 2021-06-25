@@ -43,19 +43,9 @@ namespace TRUNGTAMTINHOC.NghiepVu
             return TruyCapDuLieu.HocVienDB.DKHocVien(HoTen, GioiTinh, Email, SDT, MatKhau);
         }
 
-        public static DataTable DanhSachHocVien(string NVChuyenMon)
+        public static DataTable DanhSachHocVien(string MaNV,string NamKy)
         {
-            return TruyCapDuLieu.HocVienDB.DSHocVien(NVChuyenMon);
-        }
-
-        public static DataTable DanhSachHocVienThiHocPhan(string NVChuyenMon)
-        {
-            return TruyCapDuLieu.HocVienDB.DSHocVienThiHocPhan(NVChuyenMon);
-        }
-
-        public static DataTable DanhSachHocVienThiTotNghiep(string NVChuyenMon)
-        {
-            return TruyCapDuLieu.HocVienDB.DSHocVienThiTotNghiep(NVChuyenMon);
+            return TruyCapDuLieu.HocVienDB.DSHocVien(MaNV,NamKy);
         }
     }
 }

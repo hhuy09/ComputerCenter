@@ -19,9 +19,9 @@ namespace TRUNGTAMTINHOC.NghiepVu
         private string SiSo;
         private string DaDangKy;
 
-        public static DataTable DanhSachThiTotNghiep(string NVChuyenMon)
+        public static DataTable DanhSachThiTotNghiep(string MaNV,string NamKy)
         {
-            return TruyCapDuLieu.KhoaDaoTaoDB.DSThiTotNghiep(NVChuyenMon);
+            return TruyCapDuLieu.KhoaDaoTaoDB.DSThiTotNghiep(MaNV,NamKy);
         }
     }
 }

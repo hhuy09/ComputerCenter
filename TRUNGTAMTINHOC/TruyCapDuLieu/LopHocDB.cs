@@ -12,7 +12,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 {
     class LopHocDB
     {
-        public static DataTable DSLopHoc(string NVChuyenMon)
+        public static DataTable DSLopDay(string MaNV,string NamKy)
         {
             string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
             SqlConnection con = new SqlConnection(connectString);
@@ -20,7 +20,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
             try
             {
-                string sql = "EXEC sp_danhsach_LH '" + NVChuyenMon + "'";
+                string sql = "EXEC sp_danhsach_LH '" + MaNV + "','" + NamKy + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);

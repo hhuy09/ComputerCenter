@@ -18,9 +18,9 @@ namespace TRUNGTAMTINHOC.NghiepVu
         private string SiSo;
         private string DaDangKi;
 
-        public static DataTable DanhSachLopHoc(string NVChuyenMon)
+        public static DataTable DanhSachLopDay(string MaNV,string NamKy)
         {
-            return TruyCapDuLieu.LopHocDB.DSLopHoc(NVChuyenMon);
+            return TruyCapDuLieu.LopHocDB.DSLopDay(MaNV,NamKy);
         }
     }
 }
