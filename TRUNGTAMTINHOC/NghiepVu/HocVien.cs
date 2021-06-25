@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Windows.Forms;
+using System.Data;
 using TRUNGTAMTINHOC.TruyCapDuLieu;
 
 namespace TRUNGTAMTINHOC.NghiepVu
@@ -41,5 +45,17 @@ namespace TRUNGTAMTINHOC.NghiepVu
         {
             return TruyCapDuLieu.HocVienDB.DKHocVien(HoTen, GioiTinh, Email, SDT, MatKhau);
         }
+
+
+        public static DataTable DanhSachHocVien(string MaNV, string NamKy)
+        {
+            return TruyCapDuLieu.HocVienDB.DSHocVien(MaNV, NamKy);
+        }
+
+        public static DataTable DanhSachHocVienThiHocPhan(string MaNV, string NamKy)
+        {
+            return TruyCapDuLieu.HocVienDB.DSHocVienThiHocPhan(MaNV, NamKy);
+        }
+
     }
 }

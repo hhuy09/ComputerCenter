@@ -31,6 +31,7 @@ namespace TRUNGTAMTINHOC
             DataTable dt2 = NghiepVu.HV_KDT.BangDiemTotNghiep(MaHV, NamKy);
             dataGridView2.DataSource = dt2;
 
+
         }
 
         private void button1_Click(object sender, EventArgs e)

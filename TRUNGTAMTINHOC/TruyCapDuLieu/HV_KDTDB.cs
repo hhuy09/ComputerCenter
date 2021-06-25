@@ -87,6 +87,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
             }
         }
 
+
         public static DataTable BangDiemTN (string MaHV, string NamKy)
         {
             string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
@@ -110,6 +111,36 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 string[] arrStr0 = errorStr.Split(':');
                 string[] arrStr = arrStr0[1].Split('\n');
                 //MessageBox.Show(arrStr[0].ToString());
+                MessageBox.Show(arrStr[0].ToString());
+                return null;
+            }
+        }
+
+        public static DataTable DSHocVienThiTotNghiep(string MaNV, string NamKy)
+
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+
+            try
+            {
+                string sql = "EXEC sp_danhsach_HV_TTN '" + MaNV + "', '" + NamKy + "'";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                con.Close();
+                return dt;
+            }
+            catch (Exception error)
+            {
+                string errorStr = error.ToString();
+                string[] arrStr0 = errorStr.Split(':');
+                string[] arrStr = arrStr0[1].Split('\n');
+                //MessageBox.Show(arrStr[0].ToString());
+                MessageBox.Show(arrStr[0].ToString());
                 return null;
             }
         }
