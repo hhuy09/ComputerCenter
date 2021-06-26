@@ -16,5 +16,15 @@ namespace TRUNGTAMTINHOC.NghiepVu
         {
             return TruyCapDuLieu.DiemThiDB.BangDiemHP(MaHV, NamKy);
         }
+
+        public static bool DangKyThiLai(string MaHV, string MaLT)
+        {
+            return TruyCapDuLieu.DiemThiDB.DKThiLai(MaHV, MaLT);
+        }
+
+        public static bool HuyDangKyThiLai(string MaHV, string MaLT)
+        {
+            return TruyCapDuLieu.DiemThiDB.HuyDKThiLai(MaHV, MaLT);
+        }
     }
 }

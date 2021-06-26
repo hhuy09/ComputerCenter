@@ -24,5 +24,20 @@ namespace TRUNGTAMTINHOC
         {
             label2.Text = HoTen;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ChuyenMon_QLLH ql = new ChuyenMon_QLLH();
+            ql.MaNV = MaNV;
+            ql.HoTen = HoTen;
+            ql.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DangNhap dn = new DangNhap();
+            this.Close();
+            dn.Show();
+        }
     }
 }
