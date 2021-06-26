@@ -115,6 +115,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
              }
         }
 
+
         public static DataTable BangDiemTN (string MaHV, string NamKy)
         {
             string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();

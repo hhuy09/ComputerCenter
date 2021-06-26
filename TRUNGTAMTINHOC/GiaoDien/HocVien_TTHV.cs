@@ -31,6 +31,7 @@ namespace TRUNGTAMTINHOC
             DataTable dt2 = NghiepVu.HV_KDT.BangDiemTotNghiep(MaHV, NamKy);
             dataGridView2.DataSource = dt2;
 
+<<<<<<< HEAD
             DataTable dt3 = NghiepVu.LichThi.DSLICHTHILAI(MaHV, NamKy);
             dataGridView6.DataSource = dt3;
             int row = dataGridView6.Rows.Count - 1;
@@ -51,6 +52,9 @@ namespace TRUNGTAMTINHOC
             DataTable dt5 = NghiepVu.DanhGiaNHP.DGNhomHocPhan(MaHV);
             dataGridView4.DataSource = dt5;
             dataGridView4.AutoResizeColumns();
+=======
+
+>>>>>>> 9987cb657ae2c540c25c05c415740281a3099b54
         }
 
         private void button1_Click(object sender, EventArgs e)
