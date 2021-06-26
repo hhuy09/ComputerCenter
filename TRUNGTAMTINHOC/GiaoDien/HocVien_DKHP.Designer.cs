@@ -143,6 +143,7 @@ namespace TRUNGTAMTINHOC
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(8, 31);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -180,6 +181,7 @@ namespace TRUNGTAMTINHOC
             // 
             // dataGridView2
             // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(8, 31);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
