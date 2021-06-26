@@ -169,30 +169,26 @@ namespace TRUNGTAMTINHOC
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.dataGridView6);
-<<<<<<< HEAD
             this.groupBox1.Location = new System.Drawing.Point(468, 238);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(473, 217);
-=======
             this.groupBox1.Controls.Add(this.dataGridView5);
             this.groupBox1.Location = new System.Drawing.Point(8, 329);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Size = new System.Drawing.Size(1247, 231);
->>>>>>> 5826d8f341b501dccec2458a5d497eb21e1521d8
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đăng ký thi lại";
             // 
             // button2
             // 
-<<<<<<< HEAD
             this.button2.Location = new System.Drawing.Point(372, 25);
-=======
             this.button2.Location = new System.Drawing.Point(473, 74);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
->>>>>>> 5826d8f341b501dccec2458a5d497eb21e1521d8
+            this.button2.Location = new System.Drawing.Point(473, 74);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 36);
             this.button2.TabIndex = 14;
@@ -202,12 +198,11 @@ namespace TRUNGTAMTINHOC
             // 
             // button6
             // 
-<<<<<<< HEAD
             this.button6.Location = new System.Drawing.Point(271, 25);
-=======
             this.button6.Location = new System.Drawing.Point(473, 31);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
->>>>>>> 5826d8f341b501dccec2458a5d497eb21e1521d8
+            this.button6.Location = new System.Drawing.Point(473, 31);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(127, 36);
             this.button6.TabIndex = 13;
@@ -241,13 +236,11 @@ namespace TRUNGTAMTINHOC
             // 
             this.dataGridView6.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-<<<<<<< HEAD
             this.dataGridView6.Location = new System.Drawing.Point(6, 60);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(461, 151);
             this.dataGridView6.TabIndex = 3;
             this.dataGridView6.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView6_CellClick);
-=======
             this.dataGridView6.Location = new System.Drawing.Point(8, 126);
             this.dataGridView6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView6.Name = "dataGridView6";
@@ -264,19 +257,17 @@ namespace TRUNGTAMTINHOC
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.Size = new System.Drawing.Size(615, 193);
             this.dataGridView5.TabIndex = 2;
->>>>>>> 5826d8f341b501dccec2458a5d497eb21e1521d8
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(678, 17);
-=======
             this.label3.Location = new System.Drawing.Point(12, 11);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 5826d8f341b501dccec2458a5d497eb21e1521d8
+            this.label3.Location = new System.Drawing.Point(12, 11);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 20);
             this.label3.TabIndex = 3;
@@ -285,12 +276,11 @@ namespace TRUNGTAMTINHOC
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.dataGridView2);
-<<<<<<< HEAD
             this.groupBox6.Location = new System.Drawing.Point(468, 6);
-=======
             this.groupBox6.Location = new System.Drawing.Point(624, 43);
             this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
->>>>>>> 5826d8f341b501dccec2458a5d497eb21e1521d8
+            this.groupBox6.Location = new System.Drawing.Point(624, 43);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox6.Size = new System.Drawing.Size(631, 278);
@@ -315,12 +305,11 @@ namespace TRUNGTAMTINHOC
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "2021-1"});
-<<<<<<< HEAD
             this.comboBox1.Location = new System.Drawing.Point(745, 14);
-=======
             this.comboBox1.Location = new System.Drawing.Point(101, 7);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
->>>>>>> 5826d8f341b501dccec2458a5d497eb21e1521d8
+            this.comboBox1.Location = new System.Drawing.Point(101, 7);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(97, 27);
             this.comboBox1.TabIndex = 2;
@@ -329,17 +318,19 @@ namespace TRUNGTAMTINHOC
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.dataGridView1);
-<<<<<<< HEAD
             this.groupBox5.Location = new System.Drawing.Point(6, 6);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(456, 449);
-=======
             this.groupBox5.Location = new System.Drawing.Point(8, 43);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Size = new System.Drawing.Size(608, 278);
->>>>>>> 5826d8f341b501dccec2458a5d497eb21e1521d8
+            this.groupBox5.Location = new System.Drawing.Point(8, 43);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Size = new System.Drawing.Size(608, 278);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Học phần";
@@ -351,12 +342,11 @@ namespace TRUNGTAMTINHOC
             this.dataGridView1.Location = new System.Drawing.Point(8, 31);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-<<<<<<< HEAD
             this.dataGridView1.Size = new System.Drawing.Size(444, 418);
-=======
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(592, 240);
->>>>>>> 5826d8f341b501dccec2458a5d497eb21e1521d8
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(592, 240);
             this.dataGridView1.TabIndex = 0;
             // 
             // tabPage3
