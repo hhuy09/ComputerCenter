@@ -123,5 +123,10 @@ namespace TRUNGTAMTINHOC.GiaoDien
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

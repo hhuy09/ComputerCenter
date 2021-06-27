@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TRUNGTAMTINHOC.GiaoDien;
 
 namespace TRUNGTAMTINHOC
 {
@@ -30,6 +31,17 @@ namespace TRUNGTAMTINHOC
             DangNhap dn = new DangNhap();
             this.Close();
             dn.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GiaoDien.TroLy_QLLH troly = new GiaoDien.TroLy_QLLH();
+           
+            troly.MaNV = MaNV;
+            troly.HoTen = HoTen;
+            this.Close();
+            troly.Show();
+            
         }
     }
 }

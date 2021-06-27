@@ -318,6 +318,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.dtgv_Load_DGHP.Size = new System.Drawing.Size(763, 500);
             this.dtgv_Load_DGHP.TabIndex = 33;
             this.dtgv_Load_DGHP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_Load_DGHP_CellClick);
+            this.dtgv_Load_DGHP.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_Load_DGHP_CellContentClick);
             // 
             // tabPage3
             // 

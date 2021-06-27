@@ -157,5 +157,10 @@ namespace TRUNGTAMTINHOC.GiaoDien
             DataTable dt = NghiepVu.DanhGiaKhoaHoc.DS_HV_CHUADAT_KH(namky);
             dtgv_Load_DGKH.DataSource = dt;
         }
+
+        private void dtgv_Load_DGHP_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

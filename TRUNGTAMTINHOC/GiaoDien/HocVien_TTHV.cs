@@ -84,5 +84,10 @@ namespace TRUNGTAMTINHOC
 
             HocVien_TTHV_Load(sender, e);
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

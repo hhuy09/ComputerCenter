@@ -125,6 +125,24 @@
     <Compile Include="GiaoDien\TroLy_QLLH.Designer.cs">
       <DependentUpon>TroLy_QLLH.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiaoDien\TroLy_QLLH_CapNhat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoDien\TroLy_QLLH_CapNhat.Designer.cs">
+      <DependentUpon>TroLy_QLLH_CapNhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDien\TroLy_QLLH_Them.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoDien\TroLy_QLLH_Them.Designer.cs">
+      <DependentUpon>TroLy_QLLH_Them.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoDien\TroLy_QLLH_Xoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoDien\TroLy_QLLH_Xoa.Designer.cs">
+      <DependentUpon>TroLy_QLLH_Xoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiaoDien\TroLy_QLLT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +164,7 @@
     <Compile Include="NghiepVu\HV_LCD.cs" />
     <Compile Include="NghiepVu\KhoaDaoTao.cs" />
     <Compile Include="NghiepVu\KhoaHoc.cs" />
+    <Compile Include="NghiepVu\LichHoc.cs" />
     <Compile Include="NghiepVu\LichThi.cs" />
     <Compile Include="NghiepVu\LopChuyenDe.cs" />
     <Compile Include="NghiepVu\LopHoc.cs" />
@@ -177,6 +196,7 @@
     <Compile Include="TruyCapDuLieu\HV_LCDDB.cs" />
     <Compile Include="TruyCapDuLieu\KhoaDaoTaoDB.cs" />
     <Compile Include="TruyCapDuLieu\KhoaHocDB.cs" />
+    <Compile Include="TruyCapDuLieu\LichHocDB.cs" />
     <Compile Include="TruyCapDuLieu\LichThiDB.cs" />
     <Compile Include="TruyCapDuLieu\LopChuyenDeDB.cs" />
     <Compile Include="TruyCapDuLieu\LopHocDB.cs" />
@@ -223,6 +243,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDien\TroLy_QLLH.resx">
       <DependentUpon>TroLy_QLLH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDien\TroLy_QLLH_CapNhat.resx">
+      <DependentUpon>TroLy_QLLH_CapNhat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDien\TroLy_QLLH_Them.resx">
+      <DependentUpon>TroLy_QLLH_Them.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoDien\TroLy_QLLH_Xoa.resx">
+      <DependentUpon>TroLy_QLLH_Xoa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDien\TroLy_QLLT.resx">
       <DependentUpon>TroLy_QLLT.cs</DependentUpon>
