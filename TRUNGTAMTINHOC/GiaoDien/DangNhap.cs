@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using TRUNGTAMTINHOC.NghiepVu;
 
 namespace TRUNGTAMTINHOC
 {
@@ -24,13 +25,17 @@ namespace TRUNGTAMTINHOC
             string TenDN = textBox1.Text;
             string MatKhau = textBox2.Text;
             Email = TenDN;
-            int result = NghiepVu.HocVien.KiemTraDangNhap(TenDN, MatKhau);
-            HoTen = NghiepVu.HocVien.Hoten(Email);
-            ID = NghiepVu.HocVien.ID(Email);
+            NghiepVu.HocVien hocvien = new NghiepVu.HocVien();
+            hocvien.Email = Email;
+            hocvien.MatKhau = MatKhau;
+
+            int result = NghiepVu.HocVien.KiemTraDangNhap(hocvien);
+            HoTen = NghiepVu.HocVien.HotenHocVien(hocvien);
+            ID = NghiepVu.HocVien.IDHocVien(hocvien);
 
             if (result == 0)
             {
-                HocVien hv = new HocVien();
+                LopHoc hv = new LopHoc();
                 hv.HoTen = HoTen;
                 hv.MaHV = ID;
                 this.Hide();          

@@ -37,8 +37,10 @@ namespace TRUNGTAMTINHOC
             dataGridView2.DataSource = dt2;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoResizeColumns();
-            DataTable dt3 = NghiepVu.LichThi.DSLichThiLai(MaHV, NamKy);
-            DataTable dt3 = NghiepVu.LichThi.DSLICHTHILAI(MaHV, NamKy);
+
+            HocVien hocvien = new HocVien();
+            hocvien.MaHocVien = MaHV;
+            DataTable dt3 = NghiepVu.LichThi.DSLichThiLai(hocvien, NamKy);
             dataGridView6.DataSource = dt3;
             dataGridView6.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView6.AutoResizeColumns();
@@ -80,18 +82,18 @@ namespace TRUNGTAMTINHOC
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
             string MaLT = label4.Text;
-            NghiepVu.DiemThi.DangKyThiLai(MaHV, MaLT);
+            NghiepVu.DiemThi.HuyDangKyThiLai(MaHV, MaLT);
 
             HocVien_TTHV_Load(sender, e);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             string MaLT = label4.Text;
-            NghiepVu.DiemThi.HuyDangKyThiLai(MaHV, MaLT);
+            NghiepVu.DiemThi.DangKyThiLai(MaHV, MaLT);
 
             HocVien_TTHV_Load(sender, e);
         }

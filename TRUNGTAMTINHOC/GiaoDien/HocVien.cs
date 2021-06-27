@@ -10,12 +10,14 @@ using System.Windows.Forms;
 
 namespace TRUNGTAMTINHOC
 {
-    public partial class HocVien : Form
+    public partial class LopHoc : Form
     {
         public string MaHV;
         public string HoTen;
 
-        public HocVien()
+        public string NamKy { get; internal set; }
+
+        public LopHoc()
         {
             InitializeComponent();
         }

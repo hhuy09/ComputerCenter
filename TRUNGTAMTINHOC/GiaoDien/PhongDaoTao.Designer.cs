@@ -79,19 +79,7 @@ namespace TRUNGTAMTINHOC
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::TRUNGTAMTINHOC.Properties.Resources.logout;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(873, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 20);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Đăng xuất";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+
             //
             // btn_DangxuatPDT
             // 
@@ -137,19 +125,6 @@ namespace TRUNGTAMTINHOC
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::TRUNGTAMTINHOC.Properties.Resources.certificate;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(344, 244);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(300, 100);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Quản lý chứng chỉ - văn bằng";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // btn_loadPDT
             // 
             this.btn_loadPDT.BackColor = System.Drawing.Color.White;
@@ -173,7 +148,6 @@ namespace TRUNGTAMTINHOC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TRUNGTAMTINHOC.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.button2);
             this.ClientSize = new System.Drawing.Size(1312, 690);
             this.Controls.Add(this.btn_loadPDT);
             this.Controls.Add(this.pictureBox2);

@@ -1,7 +1,7 @@
 ﻿
 namespace TRUNGTAMTINHOC
 {
-    partial class HocVien
+    partial class LopHoc
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace TRUNGTAMTINHOC
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HocVien));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LopHoc));
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();

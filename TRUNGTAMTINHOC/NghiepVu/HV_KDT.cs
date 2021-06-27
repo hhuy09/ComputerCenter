@@ -64,18 +64,13 @@ namespace TRUNGTAMTINHOC.NghiepVu
             string MaLopDT = HV_KDT.LopDT;
             return TruyCapDuLieu.HV_KDTDB.HuyDKKH(MaHV, MaLopDT);
         }
-<<<<<<< HEAD
 
         //Chuc nang Hoc vien: Thong tin hoc vien
         public static DataTable BangDiemTotNghiep(HV_KDT HV_KDT, string NamKy)
-=======
-       
-         public static DataTable DanhSachHVien(string lopDT)
->>>>>>> 743845bd8863fa8507bc880bbf2034d4f1723c48
         {
             string MaHV = HV_KDT.HocVien;
             return TruyCapDuLieu.HV_KDTDB.BangDiemTN(MaHV, NamKy);
-        }
+        }    
 
         //Chuc nang NV chuyen môn: Quan ly lop hoc
         public static DataTable DanhSachHocVien(HV_KDT HV_KDT)
@@ -86,12 +81,8 @@ namespace TRUNGTAMTINHOC.NghiepVu
 
         public static DataTable DanhSachHocVienThiTotNghiep(HV_KDT HV_KDT, string NamKy)
         {
-<<<<<<< HEAD
             string MaHV = HV_KDT.HocVien;
             return TruyCapDuLieu.HV_KDTDB.DSHocVienThiTotNghiep(MaHV, NamKy);
-=======
-            return TruyCapDuLieu.HV_KDTDB.DSHocVienThiTotNghiep(MaNV, NamKy);
->>>>>>> 743845bd8863fa8507bc880bbf2034d4f1723c48
         }
     }
 }

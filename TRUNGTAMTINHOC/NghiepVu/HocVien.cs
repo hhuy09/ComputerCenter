@@ -13,48 +13,59 @@ namespace TRUNGTAMTINHOC.NghiepVu
 {
     class HocVien
     {
-        private string MaHocVien;
-        private string HoTen;
-        private string GioiTinh;
-        private string Email;
-        private string SoDienThoai;
-        private string MatKhau;
+        private string mahocvien;
+        private string hoten;
+        private string gioitinh;
+        private string email;
+        private string sodienthoai;
+        private string matkhau;
 
-        public static int KiemTraDangNhap(string TenDN, string MatKhau)
+        public string MaHocVien { get => mahocvien; set => mahocvien = value; }
+        public string HoTen { get => hoten; set => hoten = value; }
+        public string GioiTinh { get => gioitinh; set => gioitinh = value; }
+        public string Email { get => email; set => email = value; }
+        public string SoDienThoai { get => sodienthoai; set => sodienthoai = value; }
+        public string MatKhau { get => matkhau; set => matkhau = value; }
+
+        public static int KiemTraDangNhap(HocVien HocVien)
         {
+            string TenDN = HocVien.Email;
+            string MatKhau = HocVien.MatKhau;
             int result = HocVienDB.DangNhap(TenDN, MatKhau);
             return result;
         }
 
-        public static string Hoten(string Email)
+        public static string HotenHocVien(HocVien HocVien)
         {
+            string Email = HocVien.Email;
             return TruyCapDuLieu.HocVienDB.HoTen(Email);
         }
 
-        public static string ID(string Email)
+        public static string IDHocVien(HocVien HocVien)
         {
-            return TruyCapDuLieu.HocVienDB.ID(Email);
+            string ID = HocVien.Email;
+            return TruyCapDuLieu.HocVienDB.ID(ID);
         }
 
-        public static bool KiemTraTonTaiEmail(string Email)
+        public static bool KiemTraTonTaiEmail(HocVien HocVien)
         {
+            string Email = HocVien.Email;
             return TruyCapDuLieu.HocVienDB.KTEmail(Email);
         }
 
-        public static bool DangKyHocVien(string HoTen, string GioiTinh, string Email, string SDT, string MatKhau)
+        public static bool DangKyHocVien(HocVien HocVien)
         {
+            string HoTen = HocVien.HoTen;
+            string GioiTinh = HocVien.GioiTinh;
+            string Email = HocVien.Email;
+            string SDT = HocVien.SoDienThoai;
+            string MatKhau = HocVien.MatKhau;
             return TruyCapDuLieu.HocVienDB.DKHocVien(HoTen, GioiTinh, Email, SDT, MatKhau);
         }
 
-        public static DataTable DanhSachHocVien(string MaNV, string NamKy)
-        {
-            return TruyCapDuLieu.HocVienDB.DSHocVien(MaNV, NamKy);
-        }
+        
 
-        public static DataTable DanhSachHocVienThiHocPhan(string MaNV, string NamKy)
-        {
-            return TruyCapDuLieu.HocVienDB.DSHocVienThiHocPhan(MaNV, NamKy);
-        }
+        
 
     }
 }

@@ -13,19 +13,40 @@ namespace TRUNGTAMTINHOC.NghiepVu
 {
     class DangKyHocPhan
     {
-        public static DataTable DanhSachDKHP(string MaHV, string NamKy)
+        private string hocvien;
+        private string lophoc;
+        private int solandathi;
+
+        public string HocVien { get => hocvien; set => hocvien = value; }
+        public string LopHoc { get => lophoc; set => lophoc = value; }
+        public int SoLanDaThi { get => solandathi; set => solandathi = value; }
+
+        public static DataTable DanhSachDKHP(HocVien HocVien, string NamKy)
         {
+            string MaHV = HocVien.MaHocVien;
             return TruyCapDuLieu.DangKyHocPhanDB.DSDKHP(MaHV, NamKy);
         }
 
-        public static bool HVDangKyHocPhan(string MaHV, string MaLH)
+        public static bool HVDangKyHocPhan(DangKyHocPhan DKHP)
         {
+            string MaHV = DKHP.HocVien;
+            string MaLH = DKHP.LopHoc;
             return TruyCapDuLieu.DangKyHocPhanDB.DKHP(MaHV, MaLH);
         }
 
-        public static bool HVHuyDangKyHocPhan(string MaHV, string MaLH)
+        public static bool HVHuyDangKyHocPhan(DangKyHocPhan DKHP)
         {
+            string MaHV = DKHP.HocVien;
+            string MaLH = DKHP.LopHoc;
             return TruyCapDuLieu.DangKyHocPhanDB.HuyDKHP(MaHV, MaLH);
         }
+
+        public static DataTable DanhSachHocVienLopHoc(DangKyHocPhan DKHP)
+        {
+            string MaLH = DKHP.LopHoc;
+            return TruyCapDuLieu.DangKyHocPhanDB.DSHocVienLopHoc(MaLH);
+        }
+
+        
     }
 }

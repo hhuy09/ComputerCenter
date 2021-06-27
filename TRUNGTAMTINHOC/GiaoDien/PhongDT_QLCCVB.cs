@@ -23,75 +23,75 @@ namespace TRUNGTAMTINHOC.GiaoDien
         {
             InitializeComponent();
         }
-        
-        public void load_cbx()
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dataGridView3.Rows[e.RowIndex];
-                string ma_ldt = row.Cells[0].Value.ToString();
-                HV_KDT hv_kdt = new HV_KDT();
-                hv_kdt.LopDT = ma_ldt;
-                DataTable dt2 = NghiepVu.HV_KDT.DanhSachHocVien(hv_kdt);
-                dataGridView1.DataSource = dt2;
-            }
-            cbx_Namky.DataSource = NghiepVu.NamKy.load_data_cbx();
-            cbx_Namky.DisplayMember = "Namky";
-            cbx_Namky.ValueMember = "Namky";
-        }
-        
-        private void PhongDT_QLCCVB_Load(object sender, EventArgs e)
-        {
-            label2.Text = HoTen;
-            this.load_cbx();
 
-            //tabControl1
-            DataTable dt = NghiepVu.KhoaHoc.Danhsachkhoahoc(namky);
-            dataGridView3.DataSource = dt;
-            string ma_ldt = dataGridView3.Rows[0].Cells[0].Value.ToString();
-            HV_KDT hv_kdt = new HV_KDT();
-            hv_kdt.LopDT = ma_ldt;
-            DataTable dt2 = NghiepVu.HV_KDT.DanhSachHocVien(hv_kdt);
-            dataGridView1.DataSource = dt2;
-            // Trang 2
-            DataTable dt1 = NghiepVu.KhoaHoc.DSNHP(namky);
-            dataGridView2.DataSource = dt1;
+        //public void load_cbx()
+        //{
+        //    if (e.RowIndex >= 0)
+        //    {
+        //        DataGridViewRow row = this.dataGridView3.Rows[e.RowIndex];
+        //        string ma_ldt = row.Cells[0].Value.ToString();
+        //        HV_KDT hv_kdt = new HV_KDT();
+        //        hv_kdt.LopDT = ma_ldt;
+        //        DataTable dt2 = NghiepVu.HV_KDT.DanhSachHocVien(hv_kdt);
+        //        dataGridView1.DataSource = dt2;
+        //    }
+        //    cbx_Namky.DataSource = NghiepVu.NamKy.load_data_cbx();
+        //    cbx_Namky.DisplayMember = "Namky";
+        //    cbx_Namky.ValueMember = "Namky";
+        //}
+
+        //private void PhongDT_QLCCVB_Load(object sender, EventArgs e)
+        //{
+        //    label2.Text = HoTen;
+        //    this.load_cbx();
+
+        //    //tabControl1
+        //    DataTable dt = NghiepVu.KhoaHoc.Danhsachkhoahoc(namky);
+        //    dataGridView3.DataSource = dt;
+        //    string ma_ldt = dataGridView3.Rows[0].Cells[0].Value.ToString();
+        //    HV_KDT hv_kdt = new HV_KDT();
+        //    hv_kdt.LopDT = ma_ldt;
+        //    DataTable dt2 = NghiepVu.HV_KDT.DanhSachHocVien(hv_kdt);
+        //    dataGridView1.DataSource = dt2;
+        //    // Trang 2
+        //    DataTable dt1 = NghiepVu.KhoaHoc.DSNHP(namky);
+        //    dataGridView2.DataSource = dt1;
           
-            dtgv_DSKDT.DataSource = dt;
+        //    dtgv_DSKDT.DataSource = dt;
 
-            string ma_ldt = dtgv_DSKDT.Rows[0].Cells[0].Value.ToString();
-            DataTable dt2 = NghiepVu.HV_KDT.DanhSachHVien(ma_ldt);
-            dtgv_Load_DSHV.DataSource = dt2;
+        //    string ma_ldt = dtgv_DSKDT.Rows[0].Cells[0].Value.ToString();
+        //    DataTable dt2 = NghiepVu.HV_KDT.DanhSachHVien(ma_ldt);
+        //    dtgv_Load_DSHV.DataSource = dt2;
 
-            // tabControl2
-            DataTable dt1 = NghiepVu.DanhGiaNHP.Danhsach_hocVien_NHP(namky);
-            dtgv_Load_DGHP.DataSource = dt1;
+        //    // tabControl2
+        //    DataTable dt1 = NghiepVu.DanhGiaNHP.Danhsach_hocVien_NHP(namky);
+        //    dtgv_Load_DGHP.DataSource = dt1;
 
-            string Mahv = dtgv_Load_DGHP.Rows[0].Cells[0].Value.ToString();
-            string MaNHP = dtgv_Load_DGHP.Rows[0].Cells[2].Value.ToString();
-            DataTable dt3 = NghiepVu.DiemThi.DIEM_HP_NHP(Mahv, MaNHP);
-            dtgv_Load_DHP.DataSource = dt3;
-            //tabControl3
-            DataTable dt4 = NghiepVu.DanhGiaKhoaHoc.DS_DG_HVKH(namky);
-            dtgv_Load_DGKH.DataSource = dt4;
+        //    string Mahv = dtgv_Load_DGHP.Rows[0].Cells[0].Value.ToString();
+        //    string MaNHP = dtgv_Load_DGHP.Rows[0].Cells[2].Value.ToString();
+        //    DataTable dt3 = NghiepVu.DiemThi.DIEM_HP_NHP(Mahv, MaNHP);
+        //    dtgv_Load_DHP.DataSource = dt3;
+        //    //tabControl3
+        //    DataTable dt4 = NghiepVu.DanhGiaKhoaHoc.DS_DG_HVKH(namky);
+        //    dtgv_Load_DGKH.DataSource = dt4;
 
-            string Mahv_kh = dtgv_Load_DGHP.Rows[0].Cells[0].Value.ToString();
-            string MaKH = dtgv_Load_DGHP.Rows[0].Cells[2].Value.ToString();
-            DataTable dt5 = NghiepVu.DiemThi.Diem_HocPhan_HVKH(Mahv, MaNHP);
-            dtgv_Load_DHPKH.DataSource = dt5;
+        //    string Mahv_kh = dtgv_Load_DGHP.Rows[0].Cells[0].Value.ToString();
+        //    string MaKH = dtgv_Load_DGHP.Rows[0].Cells[2].Value.ToString();
+        //    DataTable dt5 = NghiepVu.DiemThi.Diem_HocPhan_HVKH(Mahv, MaNHP);
+        //    dtgv_Load_DHPKH.DataSource = dt5;
 
-        }
+        //}
         
-        private void dtgv_DSKDT_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dtgv_DSKDT.Rows[e.RowIndex];
-                string ma_ldt = row.Cells[0].Value.ToString();
-                DataTable dt2 = NghiepVu.HV_KDT.DanhSachHVien(ma_ldt);
-                dtgv_Load_DSHV.DataSource = dt2;
-            }
-        }
+        //private void dtgv_DSKDT_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    if (e.RowIndex >= 0)
+        //    {
+        //        DataGridViewRow row = this.dtgv_DSKDT.Rows[e.RowIndex];
+        //        string ma_ldt = row.Cells[0].Value.ToString();
+        //        DataTable dt2 = NghiepVu.HV_KDT.DanhSachHocVien(ma_ldt);
+        //        dtgv_Load_DSHV.DataSource = dt2;
+        //    }
+        //}
         
         private void btn_ThoatPDT_Click(object sender, EventArgs e)
         {

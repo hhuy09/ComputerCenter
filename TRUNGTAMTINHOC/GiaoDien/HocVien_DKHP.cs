@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TRUNGTAMTINHOC.NghiepVu;
 
 namespace TRUNGTAMTINHOC
 {
@@ -30,19 +31,22 @@ namespace TRUNGTAMTINHOC
         private void HocVien_DKHP_Load(object sender, EventArgs e)
         {
             label2.Text = HoTen;
+            NghiepVu.LopHoc lophoc = new NghiepVu.LopHoc();
+            lophoc.NamKy = "2021-1";
 
-            DataTable dt1 = NghiepVu.LopHoc.DanhSachLopHocPhan(MaHV,"2021-1");
+            DataTable dt1 = NghiepVu.LopHoc.DanhSachLopHocPhan(MaHV, lophoc);
             dt1.Columns.Add(new DataColumn("DangKy", typeof(bool)));
             dataGridView1.DataSource = dt1;          
-            int rows1 = dataGridView1.Rows.Count - 1;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoResizeColumns();
 
-            DataTable dt2 = NghiepVu.DangKyHocPhan.DanhSachDKHP(MaHV, "2021-1");
+            NghiepVu.HocVien hocvien = new HocVien();
+            hocvien.MaHocVien = MaHV;
+
+            DataTable dt2 = NghiepVu.DangKyHocPhan.DanhSachDKHP(hocvien, "2021-1");
             dataGridView2.DataSource = dt2;
             dt2.Columns.Add(new DataColumn("HuyDK", typeof(bool)));
             dataGridView2.DataSource = dt2;
-            int rows2 = dataGridView1.Rows.Count - 1;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoResizeColumns();
         }
@@ -51,7 +55,6 @@ namespace TRUNGTAMTINHOC
         {
             this.Close();
         }
-
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -62,7 +65,12 @@ namespace TRUNGTAMTINHOC
                 if (dk == "True")
                 {
                     string MaLH = dataGridView1.Rows[i].Cells[0].Value.ToString();
-                    NghiepVu.DangKyHocPhan.HVDangKyHocPhan(MaHV, MaLH);
+
+                    NghiepVu.DangKyHocPhan dkhp = new DangKyHocPhan();
+                    dkhp.HocVien = MaHV;
+                    dkhp.LopHoc = MaLH;
+
+                    NghiepVu.DangKyHocPhan.HVDangKyHocPhan(dkhp);
                 }               
             }
 
@@ -78,7 +86,12 @@ namespace TRUNGTAMTINHOC
                 if (dk == "True")
                 {
                     string MaLH = dataGridView2.Rows[i].Cells[0].Value.ToString();
-                    NghiepVu.DangKyHocPhan.HVHuyDangKyHocPhan(MaHV, MaLH);
+
+                    NghiepVu.DangKyHocPhan dkhp = new DangKyHocPhan();
+                    dkhp.HocVien = MaHV;
+                    dkhp.LopHoc = MaLH;
+
+                    NghiepVu.DangKyHocPhan.HVHuyDangKyHocPhan(dkhp);
                 }
             }
 

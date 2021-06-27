@@ -37,11 +37,19 @@ namespace TRUNGTAMTINHOC.GiaoDien
             }
             else
             {
-                NghiepVu.HocVien.KiemTraTonTaiEmail(Email);
+                NghiepVu.HocVien hocvien = new NghiepVu.HocVien();
+                hocvien.Email = Email;
+                NghiepVu.HocVien.KiemTraTonTaiEmail(hocvien);
 
                 if (MatKhau == MK)
                 {
-                    bool result = NghiepVu.HocVien.DangKyHocVien(HoTen, GioiTinh, Email, SoDienThoai, MatKhau);
+                    hocvien.HoTen = HoTen;
+                    hocvien.GioiTinh = GioiTinh;
+                    hocvien.Email = Email;
+                    hocvien.SoDienThoai = SoDienThoai;
+                    hocvien.MatKhau = MatKhau;
+
+                    bool result = NghiepVu.HocVien.DangKyHocVien(hocvien);
                     if(result == true)
                     {
                         MessageBox.Show("Đăng ký học viên thành công.\n Tên đăng nhập của bạn là " + Email);

@@ -13,29 +13,51 @@ namespace TRUNGTAMTINHOC.NghiepVu
     class LopHoc
     {
 
-        private string MaLopHoc;
-        private string LopDaoTao;
-        private string HocPhan;
-        private string NVChuyenMon;
-        private string LichHoc;
-        private string SiSo;
-        private string DaDangKi;
+        private string malophoc;
+        private string namky;
+        private string hocphan;
+        private string nvchuyenmon;
+        private string lichhoc;
+        private int siso;
+        private int dadangki;
 
-        public static DataTable DanhSachLopHocPhan (string MaHV, string NamKy)
+        public string MaLopHoc { get => malophoc; set => malophoc = value; }
+        public string NamKy { get => namky; set => namky = value; }
+        public string HocPhan { get => hocphan; set => hocphan = value; }
+        public string NVChuyenMon { get => nvchuyenmon; set => nvchuyenmon = value; }
+        public string LichHoc { get => lichhoc; set => lichhoc = value; }
+        public int SiSo { get => siso; set => siso = value; }
+        public int DaDangKi { get => dadangki; set => dadangki = value; }
+
+        public LopHoc()
         {
+
+        }
+
+        public LopHoc(string malophoc, string namky, string hocphan, string nvchuyenmon, string lichhoc, int siso, int dadangky )
+        {
+            this.MaLopHoc = malophoc;
+            this.NamKy = namky;
+            this.HocPhan = hocphan;
+            this.NVChuyenMon = nvchuyenmon;
+            this.LichHoc = lichhoc;
+            this.SiSo = siso;
+            this.DaDangKi = dadangky;
+        }
+
+        public static DataTable DanhSachLopHocPhan (string MaHV, LopHoc LopHoc)
+        {
+            string NamKy = LopHoc.NamKy;
             return TruyCapDuLieu.LopHocDB.DSLopHocPhan(MaHV, NamKy);
         }
 
-
-        public static DataTable DanhSachLopHoc(string MaNV, string NamKy)
+        public static DataTable DanhSachLopHoc(string MaNV, LopHoc LopHoc)
         {
+            string NamKy = LopHoc.NamKy;
             return TruyCapDuLieu.LopHocDB.DSLopHoc(MaNV, NamKy);
         }
 
-        public static DataTable DanhSachThiHocPhan(string MaNV, string NamKy)
-        {
-            return TruyCapDuLieu.LopHocDB.DSThiHocPhan(MaNV, NamKy);
-        }
+
 
     }
 }
