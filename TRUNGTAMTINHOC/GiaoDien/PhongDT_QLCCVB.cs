@@ -105,9 +105,13 @@ namespace TRUNGTAMTINHOC.GiaoDien
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dtgv_Load_DGHP.Rows[e.RowIndex];
-                string Mahv = row.Cells[0].Value.ToString();
+                string MaHV = row.Cells[0].Value.ToString();
                 string MaNHP = row.Cells[2].Value.ToString();
-                DataTable dt = NghiepVu.DiemThi.DIEM_HP_NHP(Mahv, MaNHP);
+
+                HocVien hocvien = new HocVien();
+                hocvien.MaHocVien = MaHV;
+
+                DataTable dt = NghiepVu.DiemThi.DIEM_HP_NHP(hocvien, MaNHP);
                 dtgv_Load_DHP.DataSource = dt;
             }
            
@@ -118,9 +122,13 @@ namespace TRUNGTAMTINHOC.GiaoDien
             DataTable dt = NghiepVu.DanhGiaNHP.DS_HV_NHP_CD(namky);
             dtgv_Load_DGHP.DataSource = dt;
 
-            string Mahv = dtgv_Load_DGHP.Rows[0].Cells[0].Value.ToString();
+            string MaHV = dtgv_Load_DGHP.Rows[0].Cells[0].Value.ToString();
             string MaNHP = dtgv_Load_DGHP.Rows[0].Cells[2].Value.ToString();
-            DataTable dt3 = NghiepVu.DiemThi.DIEM_HP_NHP(Mahv, MaNHP);
+
+            HocVien hocvien = new HocVien();
+            hocvien.MaHocVien = MaHV;
+
+            DataTable dt3 = NghiepVu.DiemThi.DIEM_HP_NHP(hocvien, MaNHP);
             dtgv_Load_DHP.DataSource = dt3;
         }
         private void btn_DGKH_Click(object sender, EventArgs e)

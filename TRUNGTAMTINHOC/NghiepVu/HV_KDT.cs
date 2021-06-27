@@ -66,9 +66,9 @@ namespace TRUNGTAMTINHOC.NghiepVu
         }
 
         //Chuc nang Hoc vien: Thong tin hoc vien
-        public static DataTable BangDiemTotNghiep(HV_KDT HV_KDT, string NamKy)
+        public static DataTable BangDiemTotNghiep(HocVien HocVien, string NamKy)
         {
-            string MaHV = HV_KDT.HocVien;
+            string MaHV = HocVien.MaHocVien;
             return TruyCapDuLieu.HV_KDTDB.BangDiemTN(MaHV, NamKy);
         }    
 
@@ -79,10 +79,18 @@ namespace TRUNGTAMTINHOC.NghiepVu
             return TruyCapDuLieu.HV_KDTDB.DSHVien(LopDT);
         }
 
-        public static DataTable DanhSachHocVienThiTotNghiep(HV_KDT HV_KDT, string NamKy)
+        public static DataTable DanhSachHocVienThiTotNghiep(HV_KDT HV_KDT)
         {
-            string MaHV = HV_KDT.HocVien;
-            return TruyCapDuLieu.HV_KDTDB.DSHocVienThiTotNghiep(MaHV, NamKy);
+            string MaLDT = HV_KDT.LopDT;
+            return TruyCapDuLieu.HV_KDTDB.DSHocVienThiTotNghiep(MaLDT);
+        }
+
+        public static bool CapNhatDiemThiTotNghiep (HV_KDT HK)
+        {
+            string MaHV = HK.HocVien;
+            string MaLDT = HK.LopDT;
+            float DiemTN = HK.DiemTotNghiep;
+            return TruyCapDuLieu.HV_KDTDB.CapNhatDiemTN(MaHV, MaLDT, DiemTN);
         }
     }
 }

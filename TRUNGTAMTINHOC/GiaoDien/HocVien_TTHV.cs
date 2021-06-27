@@ -25,21 +25,22 @@ namespace TRUNGTAMTINHOC
         {
             label2.Text = HoTen;
             string NamKy = comboBox1.Text;
+            HocVien hocvien = new HocVien();
+            hocvien.MaHocVien = MaHV;
 
-            DataTable dt1 = NghiepVu.DiemThi.BangDiemHocVien(MaHV, NamKy);
+            DataTable dt1 = NghiepVu.DiemThi.BangDiemHocVien(hocvien, NamKy);
             dataGridView1.DataSource = dt1;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoResizeColumns();
 
             HV_KDT hv_kdt = new HV_KDT();
             hv_kdt.HocVien = MaHV;
-            DataTable dt2 = NghiepVu.HV_KDT.BangDiemTotNghiep(hv_kdt, NamKy);
+            DataTable dt2 = NghiepVu.HV_KDT.BangDiemTotNghiep(hocvien, NamKy);
             dataGridView2.DataSource = dt2;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoResizeColumns();
 
-            HocVien hocvien = new HocVien();
-            hocvien.MaHocVien = MaHV;
+            
             DataTable dt3 = NghiepVu.LichThi.DSLichThiLai(hocvien, NamKy);
             dataGridView6.DataSource = dt3;
             dataGridView6.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -85,7 +86,11 @@ namespace TRUNGTAMTINHOC
         private void button4_Click(object sender, EventArgs e)
         {
             string MaLT = label4.Text;
-            NghiepVu.DiemThi.HuyDangKyThiLai(MaHV, MaLT);
+            DiemThi diemthi = new DiemThi();
+            diemthi.HocVien = MaHV;
+            diemthi.LichThi = MaLT;
+
+            NghiepVu.DiemThi.HuyDangKyThiLai(diemthi);
 
             HocVien_TTHV_Load(sender, e);
         }
@@ -93,7 +98,11 @@ namespace TRUNGTAMTINHOC
         private void button3_Click(object sender, EventArgs e)
         {
             string MaLT = label4.Text;
-            NghiepVu.DiemThi.DangKyThiLai(MaHV, MaLT);
+            DiemThi diemthi = new DiemThi();
+            diemthi.HocVien = MaHV;
+            diemthi.LichThi = MaLT;
+
+            NghiepVu.DiemThi.DangKyThiLai(diemthi);
 
             HocVien_TTHV_Load(sender, e);
         }

@@ -10,10 +10,11 @@ namespace TRUNGTAMTINHOC.NghiepVu
 {
     class KhoaHoc
     {
-        public static DataTable Danhsachkhoahoc(string namky)
-        {
-            return TruyCapDuLieu.KhoaHocDB.Danhsachkhoahoc(namky);
-        }
+        //public static DataTable Danhsachkhoahoc(string namky)
+        //{
+        //    return TruyCapDuLieu.KhoaHocDB.Danhsachkhoahoc(namky);
+        //}
 
+        
     }
 }

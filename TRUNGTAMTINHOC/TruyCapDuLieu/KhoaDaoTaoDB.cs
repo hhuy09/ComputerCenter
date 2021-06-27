@@ -12,7 +12,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 {
     class KhoaDaoTaoDB
     {
-        public static DataTable DSThiTotNghiep(string MaNV, string NamKy)
+        public static DataTable DSLichThiTN(string MaNV, string NamKy)
         {
             string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
             SqlConnection con = new SqlConnection(connectString);

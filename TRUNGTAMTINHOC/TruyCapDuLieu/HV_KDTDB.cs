@@ -144,7 +144,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
             }
         }
 
-        public static DataTable DSHocVienThiTotNghiep(string MaNV, string NamKy)
+        public static DataTable DSHocVienThiTotNghiep(string MaLDT)
 
         {
             string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
@@ -153,7 +153,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
             try
             {
-                string sql = "EXEC sp_danhsach_HV_TTN '" + MaNV + "', '" + NamKy + "'";
+                string sql = "EXEC sp_danhsach_HV_TTN '" + MaLDT + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -174,5 +174,30 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
 
         }
+
+        public static bool CapNhatDiemTN (string MaHV, string MaLDT, float DiemTN)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+
+            try
+            {
+                string sql = "EXEC SP_CAPNHATDIEMTN '" + MaHV + "', '" + MaLDT + "', " + DiemTN;
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                return true;
+            }
+            catch (Exception error)
+            {
+                string errorStr = error.ToString();
+                string[] arrStr0 = errorStr.Split(':');
+                string[] arrStr = arrStr0[1].Split('\n');
+                MessageBox.Show(arrStr[0].ToString());
+                return false;
+            }
+        }
+
     }
 }

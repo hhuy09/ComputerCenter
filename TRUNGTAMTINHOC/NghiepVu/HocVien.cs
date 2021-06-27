@@ -63,9 +63,9 @@ namespace TRUNGTAMTINHOC.NghiepVu
             return TruyCapDuLieu.HocVienDB.DKHocVien(HoTen, GioiTinh, Email, SDT, MatKhau);
         }
 
-        
 
-        
+
+
 
     }
 }

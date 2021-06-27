@@ -13,18 +13,32 @@ namespace TRUNGTAMTINHOC.NghiepVu
 {
     class KhoaDaoTao
     {
-        private string MaLopDT;
-        private string KhoaHoc;
-        private string NamKy;
-        private string NVTroLy;
-        private string NgayKhaiGiang;
-        private string NgayThiTN;
-        private string SiSo;
-        private string DaDangKy;
+        private string malopdt;
+        private string khoahoc;
+        private string namky;
+        private string nvtroly;
+        private string ngaykhaigiang;
+        private string ngaythitn;
+        private int siso;
+        private int dadangky;
 
-        public static DataTable DanhSachThiTotNghiep(string MaNV, string NamKy)
+        public string MaLopDT { get => malopdt; set => malopdt = value; }
+        public string KhoaHoc { get => khoahoc; set => khoahoc = value; }
+        public string NamKy { get => namky; set => namky = value; }
+        public string NVTroLy { get => nvtroly; set => nvtroly = value; }
+        public string NgayKhaiGiang { get => ngaykhaigiang; set => ngaykhaigiang = value; }
+        public string NgayThiTN { get => ngaythitn; set => ngaythitn = value; }
+        public int SiSo { get => siso; set => siso = value; }
+        public int DaDangKy { get => dadangky; set => dadangky = value; }
+
+        //public static DataTable DanhSachThiTotNghiep(string MaNV, string NamKy)
+        //{
+        //    return TruyCapDuLieu.KhoaDaoTaoDB.DSThiTotNghiep(MaNV, NamKy);
+        //}
+
+        public static DataTable DanhSachLichThiTotNghiep(string MaNV, string NamKy)
         {
-            return TruyCapDuLieu.KhoaDaoTaoDB.DSThiTotNghiep(MaNV, NamKy);
+            return TruyCapDuLieu.KhoaDaoTaoDB.DSLichThiTN(MaNV, NamKy);
         }
     }
 }
