@@ -14,16 +14,6 @@ namespace TRUNGTAMTINHOC.NghiepVu
         {
             return TruyCapDuLieu.KhoaHocDB.Danhsachkhoahoc(namky);
         }
-        public static DataTable DSNHP(string namky)
-        {
-            return TruyCapDuLieu.KhoaHocDB.DanhsachNHP(namky);
-        }
-        public static DataTable DIEMHP(string Mahv,string MaNHP)
-        {
-            return TruyCapDuLieu.KhoaHocDB.DiemHP_HV(Mahv,MaNHP);
-        }
-
-
 
     }
 }

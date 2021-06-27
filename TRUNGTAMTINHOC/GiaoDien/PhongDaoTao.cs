@@ -27,7 +27,7 @@ namespace TRUNGTAMTINHOC
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btn_loadPDT_Click(object sender, EventArgs e)
         {
             GiaoDien.PhongDT_QLCCVB pdt_ql = new GiaoDien.PhongDT_QLCCVB();
             pdt_ql.MaNV = MaNV;
@@ -36,16 +36,11 @@ namespace TRUNGTAMTINHOC
             pdt_ql.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_DangxuatPDT_Click(object sender, EventArgs e)
         {
             DangNhap dn = new DangNhap();
             this.Close();
             dn.Show();
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

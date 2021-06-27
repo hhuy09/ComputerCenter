@@ -170,6 +170,8 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 MessageBox.Show(arrStr[0].ToString());
                 return null;
             }
+
+
         }
     }
 }

@@ -119,5 +119,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.Close();
         }
 
+        private void PhongTaiVu_QLHP_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
