@@ -42,5 +42,10 @@ namespace TRUNGTAMTINHOC
             this.Close();
             dn.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

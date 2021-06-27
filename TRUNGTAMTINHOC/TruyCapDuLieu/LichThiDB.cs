@@ -12,7 +12,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 {
     class LichThiDB
     {
-        public static DataTable LICHTHILAI (string MaHV, string NamKy)
+        public static DataTable LichThiLai (string MaHV, string NamKy)
         {
             string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
             SqlConnection con = new SqlConnection(connectString);

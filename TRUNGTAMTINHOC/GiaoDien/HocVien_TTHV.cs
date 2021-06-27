@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TRUNGTAMTINHOC.NghiepVu;
 
 namespace TRUNGTAMTINHOC
 {
@@ -27,12 +28,20 @@ namespace TRUNGTAMTINHOC
 
             DataTable dt1 = NghiepVu.DiemThi.BangDiemHocVien(MaHV, NamKy);
             dataGridView1.DataSource = dt1;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoResizeColumns();
 
-            DataTable dt2 = NghiepVu.HV_KDT.BangDiemTotNghiep(MaHV, NamKy);
+            HV_KDT hv_kdt = new HV_KDT();
+            hv_kdt.HocVien = MaHV;
+            DataTable dt2 = NghiepVu.HV_KDT.BangDiemTotNghiep(hv_kdt, NamKy);
             dataGridView2.DataSource = dt2;
-
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.AutoResizeColumns();
+            DataTable dt3 = NghiepVu.LichThi.DSLichThiLai(MaHV, NamKy);
             DataTable dt3 = NghiepVu.LichThi.DSLICHTHILAI(MaHV, NamKy);
             dataGridView6.DataSource = dt3;
+            dataGridView6.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView6.AutoResizeColumns();
             int row = dataGridView6.Rows.Count - 1;
             if( row > 0)
             {
@@ -47,11 +56,13 @@ namespace TRUNGTAMTINHOC
             DataTable dt4 = NghiepVu.DanhGiaKhoaHoc.DGKhoaHoc(MaHV);
             dataGridView3.DataSource = dt4;
             dataGridView3.AutoResizeColumns();
-
+            dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView3.AutoResizeColumns();
             DataTable dt5 = NghiepVu.DanhGiaNHP.DGNhomHocPhan(MaHV);
             dataGridView4.DataSource = dt5;
             dataGridView4.AutoResizeColumns();
-
+            dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView4.AutoResizeColumns();
         }
 
         private void button1_Click(object sender, EventArgs e)

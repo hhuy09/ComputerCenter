@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TRUNGTAMTINHOC.NghiepVu;
 
 namespace TRUNGTAMTINHOC.GiaoDien
 {
@@ -25,10 +26,20 @@ namespace TRUNGTAMTINHOC.GiaoDien
         
         public void load_cbx()
         {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView3.Rows[e.RowIndex];
+                string ma_ldt = row.Cells[0].Value.ToString();
+                HV_KDT hv_kdt = new HV_KDT();
+                hv_kdt.LopDT = ma_ldt;
+                DataTable dt2 = NghiepVu.HV_KDT.DanhSachHocVien(hv_kdt);
+                dataGridView1.DataSource = dt2;
+            }
             cbx_Namky.DataSource = NghiepVu.NamKy.load_data_cbx();
             cbx_Namky.DisplayMember = "Namky";
             cbx_Namky.ValueMember = "Namky";
         }
+        
         private void PhongDT_QLCCVB_Load(object sender, EventArgs e)
         {
             label2.Text = HoTen;
@@ -36,6 +47,16 @@ namespace TRUNGTAMTINHOC.GiaoDien
 
             //tabControl1
             DataTable dt = NghiepVu.KhoaHoc.Danhsachkhoahoc(namky);
+            dataGridView3.DataSource = dt;
+            string ma_ldt = dataGridView3.Rows[0].Cells[0].Value.ToString();
+            HV_KDT hv_kdt = new HV_KDT();
+            hv_kdt.LopDT = ma_ldt;
+            DataTable dt2 = NghiepVu.HV_KDT.DanhSachHocVien(hv_kdt);
+            dataGridView1.DataSource = dt2;
+            // Trang 2
+            DataTable dt1 = NghiepVu.KhoaHoc.DSNHP(namky);
+            dataGridView2.DataSource = dt1;
+          
             dtgv_DSKDT.DataSource = dt;
 
             string ma_ldt = dtgv_DSKDT.Rows[0].Cells[0].Value.ToString();
@@ -60,6 +81,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             dtgv_Load_DHPKH.DataSource = dt5;
 
         }
+        
         private void dtgv_DSKDT_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -70,6 +92,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
                 dtgv_Load_DSHV.DataSource = dt2;
             }
         }
+        
         private void btn_ThoatPDT_Click(object sender, EventArgs e)
         {
             DangNhap dn = new DangNhap();
@@ -156,6 +179,11 @@ namespace TRUNGTAMTINHOC.GiaoDien
         {
             DataTable dt = NghiepVu.DanhGiaKhoaHoc.DS_HV_CHUADAT_KH(namky);
             dtgv_Load_DGKH.DataSource = dt;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -173,6 +173,8 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(947, 461);
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage1.Size = new System.Drawing.Size(1265, 571);
             this.tabPage1.TabIndex = 0;
@@ -198,6 +200,8 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(947, 461);
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabPage2.Size = new System.Drawing.Size(1265, 571);
             this.tabPage2.TabIndex = 1;
@@ -353,6 +357,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TRUNGTAMTINHOC.Properties.Resources.background;
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.ClientSize = new System.Drawing.Size(1217, 599);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);

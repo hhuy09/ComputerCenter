@@ -99,8 +99,6 @@ namespace TRUNGTAMTINHOC.GiaoDien
             }           
         }
 
-       
-
         private void btn_Nop_Click(object sender, EventArgs e)
         {
 
@@ -121,7 +119,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
 
         private void PhongTaiVu_QLHP_Load(object sender, EventArgs e)
         {
-
+            //string namky = cbx_NamKy_DKHP.Text;
+            //dtgv_dsdkHocPhan.DataSource = DSDKHocPhanDB.Instance.GetListDSDK_NamKy(namky);
+            //dtgv_DSHocPhi.DataSource = DSHocPhiDB.Instance.GetListDSHocPhi_NamKy(namky);
         }
     }
 }

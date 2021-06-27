@@ -35,7 +35,5 @@ namespace TRUNGTAMTINHOC.NghiepVu
         public string LopDaoTao { get => lopDaoTao; set => lopDaoTao = value; }
         public string HocPhi { get => hocPhi; set => hocPhi = value; }
 
-
-
     }
 }

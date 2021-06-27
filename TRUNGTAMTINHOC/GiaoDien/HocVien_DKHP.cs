@@ -35,6 +35,7 @@ namespace TRUNGTAMTINHOC
             dt1.Columns.Add(new DataColumn("DangKy", typeof(bool)));
             dataGridView1.DataSource = dt1;          
             int rows1 = dataGridView1.Rows.Count - 1;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoResizeColumns();
 
             DataTable dt2 = NghiepVu.DangKyHocPhan.DanhSachDKHP(MaHV, "2021-1");
@@ -42,6 +43,7 @@ namespace TRUNGTAMTINHOC
             dt2.Columns.Add(new DataColumn("HuyDK", typeof(bool)));
             dataGridView2.DataSource = dt2;
             int rows2 = dataGridView1.Rows.Count - 1;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoResizeColumns();
         }
 
