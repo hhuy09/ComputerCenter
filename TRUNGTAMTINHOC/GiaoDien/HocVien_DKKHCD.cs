@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TRUNGTAMTINHOC.NghiepVu;
 
 namespace TRUNGTAMTINHOC
 {
@@ -14,6 +15,7 @@ namespace TRUNGTAMTINHOC
     {
        public string MaHV;
        public string HoTen;
+       HV_KDT hv_kdt = new HV_KDT();
 
         public HocVien_DKKHCD()
         {
@@ -23,10 +25,12 @@ namespace TRUNGTAMTINHOC
         private void HocVien_DKKHCD_Load(object sender, EventArgs e)
         {
             label2.Text = HoTen;
+            hv_kdt.HocVien = MaHV;
 
-            DataTable dt1 = NghiepVu.HV_KDT.DanhSachDKKH(MaHV);
+            DataTable dt1 = NghiepVu.HV_KDT.DanhSachDKKH(hv_kdt);
             dataGridView1.DataSource = dt1;
-            dataGridView1.Columns[2].Width = 220;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoResizeColumns();
             int count1 = dataGridView1.Rows.Count - 1;
 
             if (count1 > 0)
@@ -42,7 +46,8 @@ namespace TRUNGTAMTINHOC
 
             DataTable dt2 = NghiepVu.HV_LCD.DanhSachDKCD(MaHV);
             dataGridView2.DataSource = dt2;
-            dataGridView2.Columns[2].Width = 250;
+            dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView2.AutoResizeColumns();
             int count2 = dataGridView2.Rows.Count - 1;
 
             if(count2 > 0)
@@ -59,39 +64,29 @@ namespace TRUNGTAMTINHOC
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             if (checkBox1.Checked == true)
             {
                 string MaLopDT = label20.Text;
-                NghiepVu.HV_KDT.DangKyKhoaHoc(MaHV, MaLopDT);
+                hv_kdt.LopDT = MaLopDT;
+                NghiepVu.HV_KDT.DangKyKhoaHoc(hv_kdt);
             }
 
             if (checkBox2.Checked == true)
             {
                 string MaLopDT = label21.Text;
-                NghiepVu.HV_KDT.DangKyKhoaHoc(MaHV, MaLopDT);
+                hv_kdt.LopDT = MaLopDT;
+                NghiepVu.HV_KDT.DangKyKhoaHoc(hv_kdt);
             }
 
             if (checkBox3.Checked == true)
             {
                 string MaLopDT = label22.Text;
-                NghiepVu.HV_KDT.DangKyKhoaHoc(MaHV, MaLopDT);
+                hv_kdt.LopDT = MaLopDT;
+                NghiepVu.HV_KDT.DangKyKhoaHoc(hv_kdt);
             }
 
-            DataTable dt1 = NghiepVu.HV_KDT.DanhSachDKKH(MaHV);
-            dataGridView1.DataSource = dt1;
-            dataGridView1.Columns[2].Width = 220;
-            int count1 = dataGridView1.Rows.Count - 1;
-
-            if (count1 > 0)
-            {
-                label25.Text = dataGridView1.Rows[0].Cells[2].Value.ToString();
-                label26.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
-            }
-            else
-            {
-                label25.Text = "(none)";
-                label26.Text = "(none)";
-            }
+            HocVien_DKKHCD_Load(sender, e);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -112,23 +107,10 @@ namespace TRUNGTAMTINHOC
         private void button3_Click(object sender, EventArgs e)
         {
             string MaLopDT = label26.Text;
-            NghiepVu.HV_KDT.HuyDangKyKhoaHoc(MaHV, MaLopDT);
+            hv_kdt.LopDT = MaLopDT;
+            NghiepVu.HV_KDT.HuyDangKyKhoaHoc(hv_kdt);
 
-            DataTable dt1 = NghiepVu.HV_KDT.DanhSachDKKH(MaHV);
-            dataGridView1.DataSource = dt1;
-            dataGridView1.Columns[2].Width = 220;
-            int count1 = dataGridView1.Rows.Count - 1;
-
-            if (count1 > 0)
-            {
-                label25.Text = dataGridView1.Rows[0].Cells[2].Value.ToString();
-                label26.Text = dataGridView1.Rows[0].Cells[1].Value.ToString();
-            }
-            else
-            {
-                label25.Text = "(none)";
-                label26.Text = "(none)";
-            }
+            HocVien_DKKHCD_Load(sender, e);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -151,21 +133,7 @@ namespace TRUNGTAMTINHOC
                 NghiepVu.HV_LCD.DangKyChuyenDe(MaHV, MaLopCD);
             }
 
-            DataTable dt2 = NghiepVu.HV_LCD.DanhSachDKCD(MaHV);
-            dataGridView2.DataSource = dt2;
-            dataGridView2.Columns[2].Width = 250;
-            int count2 = dataGridView2.Rows.Count - 1;
-
-            if (count2 > 0)
-            {
-                label31.Text = dataGridView2.Rows[0].Cells[2].Value.ToString();
-                label30.Text = dataGridView2.Rows[0].Cells[1].Value.ToString();
-            }
-            else
-            {
-                label31.Text = "(none)";
-                label30.Text = "(none)";
-            }
+            HocVien_DKKHCD_Load(sender, e);
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -183,26 +151,17 @@ namespace TRUNGTAMTINHOC
             string MaLopCD = label30.Text;
             NghiepVu.HV_LCD.HuyDangKyChuyenDe(MaHV, MaLopCD);
 
-            DataTable dt2 = NghiepVu.HV_LCD.DanhSachDKCD(MaHV);
-            dataGridView2.DataSource = dt2;
-            dataGridView2.Columns[2].Width = 250;
-            int count2 = dataGridView2.Rows.Count - 1;
-
-            if (count2 > 0)
-            {
-                label31.Text = dataGridView2.Rows[0].Cells[2].Value.ToString();
-                label30.Text = dataGridView2.Rows[0].Cells[1].Value.ToString();
-            }
-            else
-            {
-                label31.Text = "(none)";
-                label30.Text = "(none)";
-            }
+            HocVien_DKKHCD_Load(sender, e);
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void dataGridView2_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView2.Rows[e.RowIndex];
+                label31.Text = row.Cells[2].Value.ToString();
+                label30.Text = row.Cells[1].Value.ToString();
+            }
         }
     }
 }

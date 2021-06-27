@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TRUNGTAMTINHOC.NghiepVu;
 
 namespace TRUNGTAMTINHOC.GiaoDien
 {
@@ -32,7 +33,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             {
                 DataGridViewRow row = this.dataGridView3.Rows[e.RowIndex];
                 string ma_ldt = row.Cells[0].Value.ToString();
-                DataTable dt2 = NghiepVu.HV_KDT.DanhSachHVien(ma_ldt);
+                HV_KDT hv_kdt = new HV_KDT();
+                hv_kdt.LopDT = ma_ldt;
+                DataTable dt2 = NghiepVu.HV_KDT.DanhSachHocVien(hv_kdt);
                 dataGridView1.DataSource = dt2;
             }
         }
@@ -45,15 +48,14 @@ namespace TRUNGTAMTINHOC.GiaoDien
             DataTable dt = NghiepVu.KhoaHoc.Danhsachkhoahoc(namky);
             dataGridView3.DataSource = dt;
             string ma_ldt = dataGridView3.Rows[0].Cells[0].Value.ToString();
-            DataTable dt2 = NghiepVu.HV_KDT.DanhSachHVien(ma_ldt);
+            HV_KDT hv_kdt = new HV_KDT();
+            hv_kdt.LopDT = ma_ldt;
+            DataTable dt2 = NghiepVu.HV_KDT.DanhSachHocVien(hv_kdt);
             dataGridView1.DataSource = dt2;
             // Trang 2
             DataTable dt1 = NghiepVu.KhoaHoc.DSNHP(namky);
             dataGridView2.DataSource = dt1;
           
-          
-           
-
 
         }
 
@@ -108,6 +110,11 @@ namespace TRUNGTAMTINHOC.GiaoDien
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

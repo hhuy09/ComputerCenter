@@ -164,7 +164,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.tabPage1.Controls.Add(this.dtgv_dsdkHocPhan);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(947, 461);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh sách đăng ký học phần";
@@ -187,7 +187,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(947, 461);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh sách học phí";
@@ -328,7 +328,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TRUNGTAMTINHOC.Properties.Resources.background;
-            this.ClientSize = new System.Drawing.Size(913, 487);
+            this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbx_NamKy_DKHP);
@@ -340,6 +340,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PhongTaiVu_QLHP";
             this.Text = "Quản lý học phí";
+            this.Load += new System.EventHandler(this.PhongTaiVu_QLHP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

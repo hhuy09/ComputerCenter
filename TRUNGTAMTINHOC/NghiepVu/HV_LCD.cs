@@ -13,6 +13,7 @@ namespace TRUNGTAMTINHOC.NghiepVu
     class HV_LCD
     {
         private string HocVien;
+        private string HoTen;
         private string LopChuyenDe;
         private string NgayGhiDanh;
 

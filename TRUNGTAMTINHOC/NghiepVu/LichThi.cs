@@ -12,9 +12,9 @@ namespace TRUNGTAMTINHOC.NghiepVu
 {
     class LichThi
     {
-        public static DataTable DSLICHTHILAI(string MaHV, string NamKy)
+        public static DataTable DSLichThiLai(string MaHV, string NamKy)
         {
-            return TruyCapDuLieu.LichThiDB.LICHTHILAI(MaHV, NamKy);
+            return TruyCapDuLieu.LichThiDB.LichThiLai(MaHV, NamKy);
         }
     }
 }

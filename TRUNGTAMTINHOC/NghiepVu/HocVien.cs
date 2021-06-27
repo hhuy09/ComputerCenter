@@ -46,7 +46,6 @@ namespace TRUNGTAMTINHOC.NghiepVu
             return TruyCapDuLieu.HocVienDB.DKHocVien(HoTen, GioiTinh, Email, SDT, MatKhau);
         }
 
-
         public static DataTable DanhSachHocVien(string MaNV, string NamKy)
         {
             return TruyCapDuLieu.HocVienDB.DSHocVien(MaNV, NamKy);

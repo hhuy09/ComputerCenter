@@ -7,6 +7,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
+using TRUNGTAMTINHOC.NghiepVu;
 
 namespace TRUNGTAMTINHOC.TruyCapDuLieu
 {
@@ -58,7 +59,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 string errorStr = error.ToString();
                 string[] arrStr0 = errorStr.Split(':');
                 string[] arrStr = arrStr0[1].Split('\n');
-                //MessageBox.Show(arrStr[0].ToString());
+                MessageBox.Show(arrStr[0].ToString());
                 return false;
             }
         }
@@ -82,7 +83,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 string errorStr = error.ToString();
                 string[] arrStr0 = errorStr.Split(':');
                 string[] arrStr = arrStr0[1].Split('\n');
-                //MessageBox.Show(arrStr[0].ToString());
+                MessageBox.Show(arrStr[0].ToString());
                 return false;
             }
         }
@@ -109,12 +110,11 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 string errorStr = error.ToString();
                 string[] arrStr0 = errorStr.Split(':');
                 string[] arrStr = arrStr0[1].Split('\n');
-                //MessageBox.Show(arrStr[0].ToString());
+                MessageBox.Show(arrStr[0].ToString());
                 MessageBox.Show(arrStr[0].ToString());
                 return null;
              }
         }
-
 
         public static DataTable BangDiemTN (string MaHV, string NamKy)
         {
@@ -138,7 +138,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 string errorStr = error.ToString();
                 string[] arrStr0 = errorStr.Split(':');
                 string[] arrStr = arrStr0[1].Split('\n');
-                //MessageBox.Show(arrStr[0].ToString());
+                MessageBox.Show(arrStr[0].ToString());
                 MessageBox.Show(arrStr[0].ToString());
                 return null;
             }
@@ -167,7 +167,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 string errorStr = error.ToString();
                 string[] arrStr0 = errorStr.Split(':');
                 string[] arrStr = arrStr0[1].Split('\n');
-                //MessageBox.Show(arrStr[0].ToString());
+                MessageBox.Show(arrStr[0].ToString());
                 MessageBox.Show(arrStr[0].ToString());
                 return null;
             }
