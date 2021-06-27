@@ -24,7 +24,7 @@ namespace TRUNGTAMTINHOC.NghiepVu
             this.KetThuc = (DateTime?)row["ketthuc"];
             this.MucHocPhi = (int)row["muchocphi"];
         }
-
+        
         private string namky;
         private DateTime? batDau;
         private DateTime? ketThuc;
@@ -34,5 +34,10 @@ namespace TRUNGTAMTINHOC.NghiepVu
         public DateTime? BatDau { get => batDau; set => batDau = value; }
         public DateTime? KetThuc { get => ketThuc; set => ketThuc = value; }
         public int MucHocPhi { get => mucHocPhi; set => mucHocPhi = value; }
+        public static DataTable load_data_cbx()
+        {
+            return TruyCapDuLieu.NamKyDB.Load_DB_Combobox();
+        }
     }
+ 
 }

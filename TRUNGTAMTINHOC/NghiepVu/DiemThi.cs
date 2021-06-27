@@ -26,5 +26,13 @@ namespace TRUNGTAMTINHOC.NghiepVu
         {
             return TruyCapDuLieu.DiemThiDB.HuyDKThiLai(MaHV, MaLT);
         }
+        public static DataTable Diem_HocPhan_HVKH(string MaHV, string MaLT)
+        {
+            return TruyCapDuLieu.DiemThiDB.DiemHP_HV_KH(MaHV, MaLT);
+        }
+        public static DataTable DIEM_HP_NHP(string Mahv, string MaNHP)
+        {
+            return TruyCapDuLieu.DiemThiDB.DiemHP_HV(Mahv, MaNHP);
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace TRUNGTAMTINHOC.GiaoDien
         {
             InitializeComponent();
         }
+
+        private void TroLy_QLLH_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

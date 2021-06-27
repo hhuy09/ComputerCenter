@@ -35,5 +35,6 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
             return list;
         }
+ 
     }
 }

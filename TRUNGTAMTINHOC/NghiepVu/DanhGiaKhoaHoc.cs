@@ -16,5 +16,21 @@ namespace TRUNGTAMTINHOC.NghiepVu
         {
             return TruyCapDuLieu.DanhGiaKhoaHocDB.DGKH(MaHV);
         }
+        public static DataTable DS_DG_HVKH(string MaHV)
+        {
+            return TruyCapDuLieu.DanhGiaKhoaHocDB.DS_Danhgia_HVKH(MaHV);
+        }
+        public static DataTable DSCCVB_KH(string namky)
+        {
+            return TruyCapDuLieu.DanhGiaKhoaHocDB.DSCCVB_KhoaHoc(namky);
+        }
+        public static DataTable UPDATE_DAT_KH(string MaHV,string MaKH)
+        {
+            return TruyCapDuLieu.DanhGiaKhoaHocDB.Update_KhoaHoc(MaHV,MaKH);
+        }
+        public static DataTable DS_HV_CHUADAT_KH(string namky)
+        {
+            return TruyCapDuLieu.DanhGiaKhoaHocDB.DS_HVKhoaHoc_ChuaDat(namky);
+        }
     }
 }

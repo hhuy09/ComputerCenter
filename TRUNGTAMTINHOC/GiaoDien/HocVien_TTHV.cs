@@ -37,8 +37,8 @@ namespace TRUNGTAMTINHOC
             dataGridView2.DataSource = dt2;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView2.AutoResizeColumns();
-
             DataTable dt3 = NghiepVu.LichThi.DSLichThiLai(MaHV, NamKy);
+            DataTable dt3 = NghiepVu.LichThi.DSLICHTHILAI(MaHV, NamKy);
             dataGridView6.DataSource = dt3;
             dataGridView6.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView6.AutoResizeColumns();
@@ -58,13 +58,11 @@ namespace TRUNGTAMTINHOC
             dataGridView3.AutoResizeColumns();
             dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView3.AutoResizeColumns();
-
             DataTable dt5 = NghiepVu.DanhGiaNHP.DGNhomHocPhan(MaHV);
             dataGridView4.DataSource = dt5;
             dataGridView4.AutoResizeColumns();
             dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView4.AutoResizeColumns();
-
         }
 
         private void button1_Click(object sender, EventArgs e)
