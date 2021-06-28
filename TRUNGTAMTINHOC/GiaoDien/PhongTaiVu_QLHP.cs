@@ -14,102 +14,60 @@ namespace TRUNGTAMTINHOC.GiaoDien
 {
     public partial class PhongTaiVu_QLHP : Form
     {
-        
+        public string MaNV;
+        public string HoTen;
+
         public PhongTaiVu_QLHP()
         {
             InitializeComponent();
-            Load_NamKy();
-            //lb_TenNV.Text = PhongTaiVu.HoTen;
         }
 
-        private string namKy;
-        private string hocVien;
-        private string hocPhi;
-
-        public string NamKy { get => namKy; set => namKy = value; }
-        public string HocVien { get => hocVien; set => hocVien = value; }
-        public string HocPhi { get => hocPhi; set => hocPhi = value; }
-
-        void Load_NamKy()
-        {
-            List<NamKy> listNamKy = NamKy_DB_H.Instance.GetListNamKy();
-            cbx_NamKy_DKHP.DataSource = listNamKy;
-            cbx_NamKy_DKHP.DisplayMember = "NamKy";
-        }
-
-        void Load_DSDKHP_NamKy(string namky)
-        {
-           // List<DSDKHocPhan> listDSDKHocPhan = DSDKHocPhanDB.Instance.GetListDSDK(namky);
-            dtgv_dsdkHocPhan.DataSource = DSDKHocPhanDB.Instance.GetListDSDK_NamKy(namky);
-
-        }
-
-        void Load_DSChuaNopHocPhi_NamKy(string namky)
-        {
-            dtgv_DSHocPhi.DataSource = DSHocPhiDB.Instance.GetList_ChuaNopHocPhi(namky);
-
-        }
-
-        void Load_DSHocPhi_NamKy(string namky)
-        {
-            dtgv_DSHocPhi.DataSource = DSHocPhiDB.Instance.GetListDSHocPhi_NamKy(namky);
-        }
-
-        private void cbx_NamKy_DKHP_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            ComboBox cb = sender as ComboBox;
-            NamKy selected = cb.SelectedItem as NamKy;
-
-            if (cb.SelectedItem == null)
-                return;
-
-            NamKy = selected.Namky;
-
-            Load_DSDKHP_NamKy(NamKy);
-            Load_DSHocPhi_NamKy(NamKy);
-        }
-
-        
-
-        private void btn_DSChuaNop_Click(object sender, EventArgs e)
-        {
-
-            Load_DSChuaNopHocPhi_NamKy(NamKy);
-        }
 
         private void btn_TinhHocPhi_Click(object sender, EventArgs e)
         {
-            DSHocPhiDB.Instance.TinhHocPhi(NamKy);
-
-            Load_DSHocPhi_NamKy(NamKy);
-
-        }
-
-       
-        private void dtgv_DSHocPhi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dtgv_DSHocPhi.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            int row = dtgv_DSHocPhi.Rows.Count - 1;
+            if (row > 0)
             {
-                dtgv_DSHocPhi.CurrentRow.Selected = true;
-                lb_MaHocVien.Text = dtgv_DSHocPhi.Rows[e.RowIndex].Cells["HocVien"].FormattedValue.ToString();
-                lb_HocPhi.Text = dtgv_DSHocPhi.Rows[e.RowIndex].Cells["HocPhi"].FormattedValue.ToString();
+                for (int i = 0; i < row; i++)
+                {
+                    string MaHV = dtgv_DSHocPhi.Rows[i].Cells[0].Value.ToString();
+                    string MaLDT = dtgv_DSHocPhi.Rows[i].Cells[2].Value.ToString();
 
-                HocVien = lb_MaHocVien.Text;
-            }           
+                    NghiepVu.HV_KDT h = new HV_KDT();
+                    h.HocVien = MaHV;
+                    h.LopDT = MaLDT;
+
+                    NghiepVu.HV_KDT.TinhTienHocPhi(h);
+                }
+            }
+            PhongTaiVu_QLHP_Load(sender, e);
         }
+      
 
         private void btn_Nop_Click(object sender, EventArgs e)
         {
+            string MaHV = lb_MaHocVien.Text;
+            string MaLDT = label6.Text;
 
-            DSHocPhiDB.Instance.NopHocPhi(HocVien);
-            Load_DSChuaNopHocPhi_NamKy(NamKy);
+            NghiepVu.HV_KDT h = new HV_KDT();
+            h.HocVien = MaHV;
+            h.LopDT = MaLDT;
+
+            NghiepVu.HV_KDT.HVNopHocPhi(h);
+            PhongTaiVu_QLHP_Load(sender, e);
         }
 
         private void btn_Huy_Click(object sender, EventArgs e)
         {
-            DSHocPhiDB.Instance.HuyNopHocPhi(HocVien);
-            Load_DSChuaNopHocPhi_NamKy(NamKy);
+            string MaHV = lb_MaHocVien.Text;
+            string MaLDT = label6.Text;
+
+            NghiepVu.HV_KDT h = new HV_KDT();
+            h.HocVien = MaHV;
+            h.LopDT = MaLDT;
+
+            NghiepVu.HV_KDT.HVHuyNopHocPhi(h);
+            PhongTaiVu_QLHP_Load(sender, e);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -119,9 +77,63 @@ namespace TRUNGTAMTINHOC.GiaoDien
 
         private void PhongTaiVu_QLHP_Load(object sender, EventArgs e)
         {
-            //string namky = cbx_NamKy_DKHP.Text;
-            //dtgv_dsdkHocPhan.DataSource = DSDKHocPhanDB.Instance.GetListDSDK_NamKy(namky);
-            //dtgv_DSHocPhi.DataSource = DSHocPhiDB.Instance.GetListDSHocPhi_NamKy(namky);
+            lb_TenNV.Text = HoTen;
+            string namky = cbx_NamKy_DKHP.Text;
+
+            DataTable dt1 = NghiepVu.DangKyHocPhan.DanhSachDKHocPhan(namky);
+            dtgv_dsdkHocPhan.DataSource = dt1;
+            dtgv_dsdkHocPhan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgv_dsdkHocPhan.AutoResizeColumns();
+
+            DataTable dt2 = NghiepVu.HV_KDT.DanhSachHocPhi(namky);
+            dtgv_DSHocPhi.DataSource = dt2;
+            dtgv_DSHocPhi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgv_DSHocPhi.AutoResizeColumns();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int row = dtgv_DSHocPhi.Rows.Count - 1;
+            if(row > 0)
+            {
+                for(int i = 0; i< row; i++)
+                {
+                    string MaHV = dtgv_DSHocPhi.Rows[i].Cells[0].Value.ToString();
+                    string MaLDT = dtgv_DSHocPhi.Rows[i].Cells[2].Value.ToString();
+
+                    NghiepVu.HV_KDT h = new HV_KDT();
+                    h.HocVien = MaHV;
+                    h.LopDT = MaLDT;
+
+                    NghiepVu.HV_KDT.TinhTongHocPhan(h);
+                }
+            }
+            PhongTaiVu_QLHP_Load(sender, e);
+        }
+
+        private void dtgv_DSHocPhi_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgv_DSHocPhi.Rows[e.RowIndex];
+                string MaHV = row.Cells[0].Value.ToString();
+                string MaLDT = row.Cells[2].Value.ToString();
+                string HocPhi = row.Cells[5].Value.ToString();
+                lb_MaHocVien.Text = MaHV;
+                label6.Text = MaLDT;
+                lb_HocPhi.Text = HocPhi;
+
+            }
+        }
+
+        private void btn_DSChuaNop_Click(object sender, EventArgs e)
+        {
+            string namky = cbx_NamKy_DKHP.Text;
+
+            DataTable dt2 = NghiepVu.HV_KDT.DSChuaNopHocPhi(namky);
+            dtgv_DSHocPhi.DataSource = dt2;
+            dtgv_DSHocPhi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtgv_DSHocPhi.AutoResizeColumns();
         }
     }
 }

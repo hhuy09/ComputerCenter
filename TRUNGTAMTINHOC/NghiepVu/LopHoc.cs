@@ -51,13 +51,25 @@ namespace TRUNGTAMTINHOC.NghiepVu
             return TruyCapDuLieu.LopHocDB.DSLopHocPhan(MaHV, NamKy);
         }
 
-        public static DataTable DanhSachLopHoc(string MaNV, LopHoc LopHoc)
+        public static DataTable DanhSachLopHoc(LopHoc LopHoc)
         {
+            string MaNV = LopHoc.NVChuyenMon;
             string NamKy = LopHoc.NamKy;
             return TruyCapDuLieu.LopHocDB.DSLopHoc(MaNV, NamKy);
         }
 
+        public static DataTable DanhSachLopHoc(KhoaDaoTao kdt)
+        {
+            string NamKy = kdt.NamKy;
+            string MaNV = kdt.NVTroLy;
+            return TruyCapDuLieu.LopHocDB.DSLopHocTroLy(MaNV, NamKy);
+        }
 
-
+        public static DataTable DanhSachLichHocHP(KhoaDaoTao kdt)
+        {
+            string NamKy = kdt.NamKy;
+            string MaNV = kdt.NVTroLy;
+            return TruyCapDuLieu.LopHocDB.DSLichHocHPTroLy(MaNV, NamKy);
+        }
     }
 }

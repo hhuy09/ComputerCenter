@@ -18,11 +18,8 @@ namespace TRUNGTAMTINHOC.NghiepVu
         private int lanthi;
 
         public string MaLichThi { get => malichthi; set => malichthi = value; }
-
         public string LopHoc { get => lophoc; set => lophoc = value; }
-
         public string NgayThi { get => ngaythi; set => ngaythi = value; }
-
         public int LanThi { get => lanthi; set => lanthi = value; }
 
         public static DataTable DSLichThiLai(HocVien hocvien, string NamKy)
@@ -35,9 +32,42 @@ namespace TRUNGTAMTINHOC.NghiepVu
         {
             string MaNV = lophoc.NVChuyenMon;
             string NamKy = lophoc.NamKy;
-            return TruyCapDuLieu.LichThiDB.LichThiHocPhan(MaNV, NamKy);
+            return TruyCapDuLieu.LichThiDB.LichThiHocPhanChuyenMon(MaNV, NamKy);
         }
 
+        public static DataTable LichThiHP(KhoaDaoTao kdt)
+        {
+            string MaNV = kdt.NVTroLy;
+            string NamKy = kdt.NamKy;
+            return TruyCapDuLieu.LichThiDB.LichThiHocPhanTroLy(MaNV, NamKy);
+        }
 
+        public static DataTable LichThiLopHP(KhoaDaoTao kdt, string MaLH)
+        {
+            string MaNV = kdt.NVTroLy;
+            string NamKy = kdt.NamKy;
+            return TruyCapDuLieu.LichThiDB.LichThiHocPhanTroLy(MaNV, NamKy, MaLH);
+        }
+
+        public static bool ThemLichThiHP (LichThi LT)
+        {
+            string MaLH = LT.LopHoc;
+            string NgayThi = LT.NgayThi;
+            return TruyCapDuLieu.LichThiDB.ThemLichThi(MaLH, NgayThi);
+        }
+
+        public static bool XoaLichThiHP(LichThi LT)
+        {
+            string MaLT = LT.MaLichThi;
+            return TruyCapDuLieu.LichThiDB.XoaLichThi(MaLT);
+        }
+
+        public static bool CapNhatLichThiHP(LichThi LT)
+        {
+            string MaLT = LT.MaLichThi;
+            string NgayThi = LT.NgayThi;
+            return TruyCapDuLieu.LichThiDB.CapNhatLichThi(MaLT, NgayThi);
+        }
     }
+
 }

@@ -31,5 +31,22 @@ namespace TRUNGTAMTINHOC
             this.Close();
             dn.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GiaoDien.TroLy_QLLT troly = new GiaoDien.TroLy_QLLT();
+
+            troly.MaNV = MaNV;
+            troly.HoTen = HoTen;
+            troly.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            GiaoDien.TroLy_QLLH troly = new GiaoDien.TroLy_QLLH();
+            troly.MaNV = MaNV;
+            troly.HoTen = HoTen;
+            troly.Show();
+        }
     }
 }

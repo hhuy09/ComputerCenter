@@ -89,6 +89,7 @@ namespace TRUNGTAMTINHOC
             this.button3.Text = "Quản lý lịch học";
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -104,6 +105,7 @@ namespace TRUNGTAMTINHOC
             this.button2.Text = "Quản lý lịch thi";
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 

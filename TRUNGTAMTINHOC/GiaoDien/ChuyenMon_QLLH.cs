@@ -30,7 +30,7 @@ namespace TRUNGTAMTINHOC
             lophoc.NamKy = NamKy;
             lophoc.NVChuyenMon = MaNV;
 
-            DataTable dt1 = NghiepVu.LopHoc.DanhSachLopHoc(MaNV, lophoc);
+            DataTable dt1 = NghiepVu.LopHoc.DanhSachLopHoc(lophoc);
             dataGridView1.DataSource = dt1;
             string MaLopHoc = dataGridView1.Rows[0].Cells[0].Value.ToString();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -38,7 +38,11 @@ namespace TRUNGTAMTINHOC
             NghiepVu.DangKyHocPhan dkhp = new DangKyHocPhan();
             dkhp.LopHoc = MaLopHoc;
 
-            DataTable dt2 = NghiepVu.KhoaDaoTao.DanhSachLichThiTotNghiep(MaNV, NamKy);
+            NghiepVu.KhoaDaoTao kdt = new KhoaDaoTao();
+            kdt.NVTroLy = MaNV;
+            kdt.NamKy = NamKy;
+
+            DataTable dt2 = NghiepVu.KhoaDaoTao.DanhSachLichThiTotNghiep(kdt);
             dataGridView2.DataSource = dt2;
             string MaLDT = dataGridView2.Rows[0].Cells[0].Value.ToString();
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

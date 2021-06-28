@@ -69,18 +69,13 @@ namespace TRUNGTAMTINHOC
             this.pictureBox1.BackgroundImage = global::TRUNGTAMTINHOC.Properties.Resources.admin;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(825, 9);
-            this.pictureBox1.Location = new System.Drawing.Point(1100, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(823, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 36);
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-
-            //
             // btn_DangxuatPDT
             // 
             this.btn_DangxuatPDT.BackColor = System.Drawing.Color.Transparent;
@@ -88,12 +83,12 @@ namespace TRUNGTAMTINHOC
             this.btn_DangxuatPDT.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DangxuatPDT.Image = global::TRUNGTAMTINHOC.Properties.Resources.logout;
             this.btn_DangxuatPDT.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_DangxuatPDT.Location = new System.Drawing.Point(1164, 11);
+            this.btn_DangxuatPDT.Location = new System.Drawing.Point(872, 9);
             this.btn_DangxuatPDT.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DangxuatPDT.Name = "btn_DangxuatPDT";
-            this.btn_DangxuatPDT.Size = new System.Drawing.Size(132, 25);
+            this.btn_DangxuatPDT.Size = new System.Drawing.Size(99, 20);
             this.btn_DangxuatPDT.TabIndex = 25;
-            this.btn_DangxuatPDT.Text = "Đăng xuất";
+            this.btn_DangxuatPDT.Text = "Đăng xuất ";
             this.btn_DangxuatPDT.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_DangxuatPDT.UseVisualStyleBackColor = false;
             this.btn_DangxuatPDT.Click += new System.EventHandler(this.btn_DangxuatPDT_Click);
@@ -103,7 +98,7 @@ namespace TRUNGTAMTINHOC
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(870, 31);
+            this.label2.Location = new System.Drawing.Point(869, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 24;
@@ -115,15 +110,12 @@ namespace TRUNGTAMTINHOC
             this.pictureBox2.BackgroundImage = global::TRUNGTAMTINHOC.Properties.Resources.icon;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.ErrorImage = null;
-            this.pictureBox2.Location = new System.Drawing.Point(425, 98);
-            this.pictureBox2.Location = new System.Drawing.Point(567, 121);
+            this.pictureBox2.Location = new System.Drawing.Point(410, 106);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(139, 140);
             this.pictureBox2.TabIndex = 28;
             this.pictureBox2.TabStop = false;
-            // 
-            // button2
             // 
             // btn_loadPDT
             // 
@@ -132,10 +124,10 @@ namespace TRUNGTAMTINHOC
             this.btn_loadPDT.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_loadPDT.Image = global::TRUNGTAMTINHOC.Properties.Resources.certificate;
             this.btn_loadPDT.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_loadPDT.Location = new System.Drawing.Point(459, 300);
+            this.btn_loadPDT.Location = new System.Drawing.Point(327, 254);
             this.btn_loadPDT.Margin = new System.Windows.Forms.Padding(4);
             this.btn_loadPDT.Name = "btn_loadPDT";
-            this.btn_loadPDT.Size = new System.Drawing.Size(400, 123);
+            this.btn_loadPDT.Size = new System.Drawing.Size(302, 99);
             this.btn_loadPDT.TabIndex = 29;
             this.btn_loadPDT.Text = "Quản lý chứng chỉ - văn bằng";
             this.btn_loadPDT.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -148,7 +140,6 @@ namespace TRUNGTAMTINHOC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TRUNGTAMTINHOC.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.ClientSize = new System.Drawing.Size(1312, 690);
             this.Controls.Add(this.btn_loadPDT);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label5);

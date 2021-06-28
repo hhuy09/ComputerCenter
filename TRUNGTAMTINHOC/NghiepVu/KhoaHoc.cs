@@ -15,6 +15,8 @@ namespace TRUNGTAMTINHOC.NghiepVu
         //    return TruyCapDuLieu.KhoaHocDB.Danhsachkhoahoc(namky);
         //}
 
+
+
         
     }
 }

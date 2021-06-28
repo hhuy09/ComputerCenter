@@ -29,6 +29,8 @@ namespace TRUNGTAMTINHOC
         private void btn_QLHP_Click(object sender, EventArgs e)
         {
             PhongTaiVu_QLHP f = new PhongTaiVu_QLHP();
+            f.MaNV = MaNV;
+            f.HoTen = HoTen;
             f.Show();
         }
 

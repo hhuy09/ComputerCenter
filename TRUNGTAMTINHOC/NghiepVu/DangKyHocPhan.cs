@@ -47,6 +47,9 @@ namespace TRUNGTAMTINHOC.NghiepVu
             return TruyCapDuLieu.DangKyHocPhanDB.DSHocVienLopHoc(MaLH);
         }
 
-        
+        public static DataTable DanhSachDKHocPhan(string NamKy)
+        {
+            return TruyCapDuLieu.DangKyHocPhanDB.DSDKHocPhan(NamKy);
+        }
     }
 }

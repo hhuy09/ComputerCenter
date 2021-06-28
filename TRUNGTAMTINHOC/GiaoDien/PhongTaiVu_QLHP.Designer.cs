@@ -29,6 +29,10 @@ namespace TRUNGTAMTINHOC.GiaoDien
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhongTaiVu_QLHP));
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,6 +57,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.btn_TinhHocPhi = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgv_DSHocPhi = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -68,10 +75,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 42);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(13, 34);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(335, 23);
+            this.label5.Size = new System.Drawing.Size(269, 19);
             this.label5.TabIndex = 49;
             this.label5.Text = "Bộ phận phòng tài vụ > Quản lý học phí";
             // 
@@ -80,10 +86,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(521, 32);
+            this.label1.Size = new System.Drawing.Size(411, 25);
             this.label1.TabIndex = 48;
             this.label1.Text = "HỆ THỐNG QUẢN LÝ TRUNG TÂM TIN HỌC";
             // 
@@ -93,10 +98,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.pictureBox1.BackgroundImage = global::TRUNGTAMTINHOC.Properties.Resources.admin;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(1104, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(828, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(52, 44);
+            this.pictureBox1.Size = new System.Drawing.Size(39, 36);
             this.pictureBox1.TabIndex = 47;
             this.pictureBox1.TabStop = false;
             // 
@@ -107,10 +111,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.button1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::TRUNGTAMTINHOC.Properties.Resources.logout;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1164, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(873, 8);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 25);
+            this.button1.Size = new System.Drawing.Size(99, 20);
             this.button1.TabIndex = 46;
             this.button1.Text = "Thoát      ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -122,10 +125,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.lb_TenNV.AutoSize = true;
             this.lb_TenNV.BackColor = System.Drawing.Color.Transparent;
             this.lb_TenNV.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_TenNV.Location = new System.Drawing.Point(1164, 38);
-            this.lb_TenNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_TenNV.Location = new System.Drawing.Point(873, 31);
             this.lb_TenNV.Name = "lb_TenNV";
-            this.lb_TenNV.Size = new System.Drawing.Size(57, 20);
+            this.lb_TenNV.Size = new System.Drawing.Size(44, 15);
             this.lb_TenNV.TabIndex = 45;
             this.lb_TenNV.Text = "TenNV";
             // 
@@ -134,10 +136,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(908, 21);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(681, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 20);
+            this.label3.Size = new System.Drawing.Size(50, 15);
             this.label3.TabIndex = 51;
             this.label3.Text = "Năm Kỳ";
             // 
@@ -147,69 +148,79 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.cbx_NamKy_DKHP.FormattingEnabled = true;
             this.cbx_NamKy_DKHP.Items.AddRange(new object[] {
             "2021-1"});
-            this.cbx_NamKy_DKHP.Location = new System.Drawing.Point(997, 17);
-            this.cbx_NamKy_DKHP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbx_NamKy_DKHP.Location = new System.Drawing.Point(748, 14);
             this.cbx_NamKy_DKHP.Name = "cbx_NamKy_DKHP";
-            this.cbx_NamKy_DKHP.Size = new System.Drawing.Size(97, 27);
+            this.cbx_NamKy_DKHP.Size = new System.Drawing.Size(74, 23);
             this.cbx_NamKy_DKHP.TabIndex = 50;
             this.cbx_NamKy_DKHP.Text = "2021-1";
-            this.cbx_NamKy_DKHP.SelectedIndexChanged += new System.EventHandler(this.cbx_NamKy_DKHP_SelectedIndexChanged);
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(23, 69);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Location = new System.Drawing.Point(17, 56);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1273, 607);
+            this.tabControl1.Size = new System.Drawing.Size(955, 493);
             this.tabControl1.TabIndex = 52;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.dtgv_dsdkHocPhan);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(947, 461);
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1265, 571);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Danh sách đăng ký học phần";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // dtgv_dsdkHocPhan
             // 
+            this.dtgv_dsdkHocPhan.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_dsdkHocPhan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_dsdkHocPhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_dsdkHocPhan.Location = new System.Drawing.Point(8, 7);
-            this.dtgv_dsdkHocPhan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv_dsdkHocPhan.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgv_dsdkHocPhan.Location = new System.Drawing.Point(6, 6);
             this.dtgv_dsdkHocPhan.Name = "dtgv_dsdkHocPhan";
             this.dtgv_dsdkHocPhan.RowHeadersWidth = 62;
-            this.dtgv_dsdkHocPhan.Size = new System.Drawing.Size(1247, 553);
+            this.dtgv_dsdkHocPhan.Size = new System.Drawing.Size(935, 449);
             this.dtgv_dsdkHocPhan.TabIndex = 0;
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Controls.Add(this.btn_TinhHocPhi);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.btn_DSChuaNop);
-            this.tabPage2.Controls.Add(this.btn_TinhHocPhi);
             this.tabPage2.Controls.Add(this.groupBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(947, 461);
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1265, 571);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Danh sách học phí";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btn_Huy);
             this.groupBox2.Controls.Add(this.btn_Nop);
             this.groupBox2.Controls.Add(this.label9);
@@ -217,11 +228,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.lb_MaHocVien);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(1004, 183);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(753, 198);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(251, 176);
+            this.groupBox2.Size = new System.Drawing.Size(188, 143);
             this.groupBox2.TabIndex = 45;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nộp học phí";
@@ -229,10 +238,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             // btn_Huy
             // 
             this.btn_Huy.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Huy.Location = new System.Drawing.Point(12, 128);
-            this.btn_Huy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Huy.Location = new System.Drawing.Point(9, 104);
             this.btn_Huy.Name = "btn_Huy";
-            this.btn_Huy.Size = new System.Drawing.Size(100, 41);
+            this.btn_Huy.Size = new System.Drawing.Size(75, 33);
             this.btn_Huy.TabIndex = 47;
             this.btn_Huy.Text = "Hủy";
             this.btn_Huy.UseVisualStyleBackColor = true;
@@ -241,10 +249,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             // btn_Nop
             // 
             this.btn_Nop.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Nop.Location = new System.Drawing.Point(143, 128);
-            this.btn_Nop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Nop.Location = new System.Drawing.Point(107, 104);
             this.btn_Nop.Name = "btn_Nop";
-            this.btn_Nop.Size = new System.Drawing.Size(100, 41);
+            this.btn_Nop.Size = new System.Drawing.Size(75, 33);
             this.btn_Nop.TabIndex = 46;
             this.btn_Nop.Text = "Nộp";
             this.btn_Nop.UseVisualStyleBackColor = true;
@@ -254,10 +261,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(209, 71);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(149, 74);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 20);
+            this.label9.Size = new System.Drawing.Size(33, 15);
             this.label9.TabIndex = 4;
             this.label9.Text = "VNĐ";
             // 
@@ -265,10 +271,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             // 
             this.lb_HocPhi.AutoSize = true;
             this.lb_HocPhi.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_HocPhi.Location = new System.Drawing.Point(99, 71);
-            this.lb_HocPhi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_HocPhi.Location = new System.Drawing.Point(70, 74);
             this.lb_HocPhi.Name = "lb_HocPhi";
-            this.lb_HocPhi.Size = new System.Drawing.Size(18, 20);
+            this.lb_HocPhi.Size = new System.Drawing.Size(14, 15);
             this.lb_HocPhi.TabIndex = 3;
             this.lb_HocPhi.Text = "0";
             // 
@@ -276,10 +281,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 71);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(6, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 20);
+            this.label7.Size = new System.Drawing.Size(53, 15);
             this.label7.TabIndex = 2;
             this.label7.Text = "Học phí:";
             // 
@@ -287,31 +291,28 @@ namespace TRUNGTAMTINHOC.GiaoDien
             // 
             this.lb_MaHocVien.AutoSize = true;
             this.lb_MaHocVien.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_MaHocVien.Location = new System.Drawing.Point(99, 42);
-            this.lb_MaHocVien.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lb_MaHocVien.Location = new System.Drawing.Point(87, 34);
             this.lb_MaHocVien.Name = "lb_MaHocVien";
-            this.lb_MaHocVien.Size = new System.Drawing.Size(96, 20);
+            this.lb_MaHocVien.Size = new System.Drawing.Size(52, 15);
             this.lb_MaHocVien.TabIndex = 1;
-            this.lb_MaHocVien.Text = "Mã học viên";
+            this.lb_MaHocVien.Text = "MHVxxx";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(8, 42);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(6, 34);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 20);
+            this.label4.Size = new System.Drawing.Size(59, 15);
             this.label4.TabIndex = 0;
             this.label4.Text = "Học viên:";
             // 
             // btn_DSChuaNop
             // 
             this.btn_DSChuaNop.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DSChuaNop.Location = new System.Drawing.Point(1004, 21);
-            this.btn_DSChuaNop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_DSChuaNop.Location = new System.Drawing.Point(753, 137);
             this.btn_DSChuaNop.Name = "btn_DSChuaNop";
-            this.btn_DSChuaNop.Size = new System.Drawing.Size(251, 68);
+            this.btn_DSChuaNop.Size = new System.Drawing.Size(188, 55);
             this.btn_DSChuaNop.TabIndex = 44;
             this.btn_DSChuaNop.Text = "Danh sách chưa nộp học phí";
             this.btn_DSChuaNop.UseVisualStyleBackColor = true;
@@ -320,10 +321,9 @@ namespace TRUNGTAMTINHOC.GiaoDien
             // btn_TinhHocPhi
             // 
             this.btn_TinhHocPhi.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TinhHocPhi.Location = new System.Drawing.Point(1004, 96);
-            this.btn_TinhHocPhi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_TinhHocPhi.Location = new System.Drawing.Point(753, 76);
             this.btn_TinhHocPhi.Name = "btn_TinhHocPhi";
-            this.btn_TinhHocPhi.Size = new System.Drawing.Size(251, 68);
+            this.btn_TinhHocPhi.Size = new System.Drawing.Size(188, 55);
             this.btn_TinhHocPhi.TabIndex = 43;
             this.btn_TinhHocPhi.Text = "Tính tiền học phí";
             this.btn_TinhHocPhi.UseVisualStyleBackColor = true;
@@ -332,33 +332,77 @@ namespace TRUNGTAMTINHOC.GiaoDien
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dtgv_DSHocPhi);
-            this.groupBox1.Location = new System.Drawing.Point(8, 7);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(988, 553);
+            this.groupBox1.Size = new System.Drawing.Size(741, 449);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách học phí";
             // 
             // dtgv_DSHocPhi
             // 
+            this.dtgv_DSHocPhi.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_DSHocPhi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgv_DSHocPhi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_DSHocPhi.Location = new System.Drawing.Point(8, 31);
-            this.dtgv_DSHocPhi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgv_DSHocPhi.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgv_DSHocPhi.Location = new System.Drawing.Point(6, 25);
             this.dtgv_DSHocPhi.Name = "dtgv_DSHocPhi";
             this.dtgv_DSHocPhi.RowHeadersWidth = 62;
-            this.dtgv_DSHocPhi.Size = new System.Drawing.Size(972, 514);
+            this.dtgv_DSHocPhi.Size = new System.Drawing.Size(729, 418);
             this.dtgv_DSHocPhi.TabIndex = 0;
             this.dtgv_DSHocPhi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_DSHocPhi_CellClick);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(753, 15);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(188, 55);
+            this.button2.TabIndex = 46;
+            this.button2.Text = "Tính tổng học phần";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 15);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Lớp đào tạo:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(87, 54);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 15);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "LDTxxx";
+            // 
             // PhongTaiVu_QLHP
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TRUNGTAMTINHOC.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.ClientSize = new System.Drawing.Size(1217, 599);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbx_NamKy_DKHP);
@@ -368,7 +412,6 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lb_TenNV);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PhongTaiVu_QLHP";
             this.Text = "Quản lý học phí";
             this.Load += new System.EventHandler(this.PhongTaiVu_QLHP_Load);
@@ -411,5 +454,8 @@ namespace TRUNGTAMTINHOC.GiaoDien
         private System.Windows.Forms.Button btn_DSChuaNop;
         private System.Windows.Forms.Button btn_TinhHocPhi;
         private System.Windows.Forms.DataGridView dtgv_DSHocPhi;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label2;
     }
 }

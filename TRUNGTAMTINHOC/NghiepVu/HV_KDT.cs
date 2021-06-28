@@ -92,5 +92,43 @@ namespace TRUNGTAMTINHOC.NghiepVu
             float DiemTN = HK.DiemTotNghiep;
             return TruyCapDuLieu.HV_KDTDB.CapNhatDiemTN(MaHV, MaLDT, DiemTN);
         }
+
+        public static DataTable DanhSachHocPhi(string NamKy)
+        {
+            return TruyCapDuLieu.HV_KDTDB.DSHocPhi(NamKy);
+        }
+
+        public static DataTable TinhTongHocPhan(HV_KDT hv)
+        {
+            string MaHV = hv.HocVien;
+            string MaLDT = hv.LopDT;
+            return TruyCapDuLieu.HV_KDTDB.TinhTongHP(MaHV, MaLDT);
+        }
+
+        public static DataTable TinhTienHocPhi(HV_KDT hv)
+        {
+            string MaHV = hv.HocVien;
+            string MaLDT = hv.LopDT;
+            return TruyCapDuLieu.HV_KDTDB.TinhTienHP(MaHV, MaLDT);
+        }
+
+        public static DataTable HVNopHocPhi (HV_KDT hv)
+        {
+            string MaHV = hv.HocVien;
+            string MaLDT = hv.LopDT;
+            return TruyCapDuLieu.HV_KDTDB.NopHP(MaHV, MaLDT);
+        }
+
+        public static DataTable HVHuyNopHocPhi(HV_KDT hv)
+        {
+            string MaHV = hv.HocVien;
+            string MaLDT = hv.LopDT;
+            return TruyCapDuLieu.HV_KDTDB.HuyNopHP(MaHV, MaLDT);
+        }
+
+        public static DataTable DSChuaNopHocPhi(string NamKy)
+        {
+            return TruyCapDuLieu.HV_KDTDB.DSChuaNopHocPhi(NamKy);
+        }
     }
 }
