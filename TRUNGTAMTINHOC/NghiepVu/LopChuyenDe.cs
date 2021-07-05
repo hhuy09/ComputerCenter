@@ -32,5 +32,11 @@ namespace TRUNGTAMTINHOC.NghiepVu
             return TruyCapDuLieu.LopChuyenDeDB.DSLopCD(MaNV, NamKy);
         }
 
+        public static DataTable DanhSachLopChuyenDe(NamKy namky)
+        {
+            string NamKy = namky.Namky;
+            return TruyCapDuLieu.LopChuyenDeDB.DSLopCD(NamKy);
+        }
+
     }
 }

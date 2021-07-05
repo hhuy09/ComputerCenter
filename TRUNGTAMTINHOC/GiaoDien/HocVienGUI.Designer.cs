@@ -30,34 +30,34 @@ namespace TRUNGTAMTINHOC
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LopHoc));
-            this.button2 = new System.Windows.Forms.Button();
+            this.button_DKKHCD = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button_DangXuat = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_TTHV = new System.Windows.Forms.Button();
+            this.button_DKHP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // button_DKKHCD
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::TRUNGTAMTINHOC.Properties.Resources.regiscourse;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(73, 244);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(277, 106);
-            this.button2.TabIndex = 36;
-            this.button2.Text = "Đăng ký khóa học - chuyên đề";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button_DKKHCD.BackColor = System.Drawing.Color.White;
+            this.button_DKKHCD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_DKKHCD.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DKKHCD.Image = global::TRUNGTAMTINHOC.Properties.Resources.regiscourse;
+            this.button_DKKHCD.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_DKKHCD.Location = new System.Drawing.Point(73, 244);
+            this.button_DKKHCD.Name = "button_DKKHCD";
+            this.button_DKKHCD.Size = new System.Drawing.Size(277, 106);
+            this.button_DKKHCD.TabIndex = 36;
+            this.button_DKKHCD.Text = "Đăng ký khóa học - chuyên đề";
+            this.button_DKKHCD.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_DKKHCD.UseVisualStyleBackColor = false;
+            this.button_DKKHCD.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
@@ -88,34 +88,34 @@ namespace TRUNGTAMTINHOC
             this.pictureBox1.BackgroundImage = global::TRUNGTAMTINHOC.Properties.Resources.admin;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(825, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(807, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(39, 36);
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
+            // button_DangXuat
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::TRUNGTAMTINHOC.Properties.Resources.logout;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(873, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 20);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Đăng xuất";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button_DangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.button_DangXuat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button_DangXuat.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DangXuat.Image = global::TRUNGTAMTINHOC.Properties.Resources.logout;
+            this.button_DangXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_DangXuat.Location = new System.Drawing.Point(852, 8);
+            this.button_DangXuat.Name = "button_DangXuat";
+            this.button_DangXuat.Size = new System.Drawing.Size(120, 20);
+            this.button_DangXuat.TabIndex = 32;
+            this.button_DangXuat.Text = "Đăng xuất";
+            this.button_DangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_DangXuat.UseVisualStyleBackColor = false;
+            this.button_DangXuat.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(870, 31);
+            this.label2.Location = new System.Drawing.Point(849, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 31;
@@ -132,55 +132,55 @@ namespace TRUNGTAMTINHOC
             this.label1.TabIndex = 30;
             this.label1.Text = "HỆ THỐNG QUẢN LÝ TRUNG TÂM TIN HỌC";
             // 
-            // button3
+            // button_TTHV
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Image = global::TRUNGTAMTINHOC.Properties.Resources.info;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(639, 244);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(277, 106);
-            this.button3.TabIndex = 39;
-            this.button3.Text = "Thông tin học viên";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button_TTHV.BackColor = System.Drawing.Color.White;
+            this.button_TTHV.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_TTHV.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_TTHV.Image = global::TRUNGTAMTINHOC.Properties.Resources.info;
+            this.button_TTHV.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_TTHV.Location = new System.Drawing.Point(639, 244);
+            this.button_TTHV.Name = "button_TTHV";
+            this.button_TTHV.Size = new System.Drawing.Size(277, 106);
+            this.button_TTHV.TabIndex = 39;
+            this.button_TTHV.Text = "Thông tin học viên";
+            this.button_TTHV.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_TTHV.UseVisualStyleBackColor = false;
+            this.button_TTHV.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button_DKHP
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = global::TRUNGTAMTINHOC.Properties.Resources.registsub;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(356, 244);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(277, 106);
-            this.button4.TabIndex = 38;
-            this.button4.Text = "Đăng ký học phần";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button_DKHP.BackColor = System.Drawing.Color.White;
+            this.button_DKHP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_DKHP.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_DKHP.Image = global::TRUNGTAMTINHOC.Properties.Resources.registsub;
+            this.button_DKHP.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button_DKHP.Location = new System.Drawing.Point(356, 244);
+            this.button_DKHP.Name = "button_DKHP";
+            this.button_DKHP.Size = new System.Drawing.Size(277, 106);
+            this.button_DKHP.TabIndex = 38;
+            this.button_DKHP.Text = "Đăng ký học phần";
+            this.button_DKHP.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button_DKHP.UseVisualStyleBackColor = false;
+            this.button_DKHP.Click += new System.EventHandler(this.button4_Click);
             // 
-            // HocVien
+            // LopHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::TRUNGTAMTINHOC.Properties.Resources.background;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button_TTHV);
+            this.Controls.Add(this.button_DKHP);
+            this.Controls.Add(this.button_DKKHCD);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_DangXuat);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "HocVien";
+            this.Name = "LopHoc";
             this.Text = "Học viên trung tâm";
             this.Load += new System.EventHandler(this.HocVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -192,14 +192,14 @@ namespace TRUNGTAMTINHOC
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button_DKKHCD;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_DangXuat;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button_TTHV;
+        private System.Windows.Forms.Button button_DKHP;
     }
 }

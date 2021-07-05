@@ -9,7 +9,18 @@ namespace TRUNGTAMTINHOC.NghiepVu
 {
     public class NamKy
     {
-        public NamKy(string namky, DateTime? batdau, DateTime? ketthuc, int muchocphi)
+
+        private string namky;
+        private string batDau;
+        private string ketThuc;
+        private int mucHocPhi;
+
+        public string Namky { get => namky; set => namky = value; }
+        public string BatDau { get => batDau; set => batDau = value; }
+        public string KetThuc { get => ketThuc; set => ketThuc = value; }
+        public int MucHocPhi { get => mucHocPhi; set => mucHocPhi = value; }
+
+        public NamKy(string namky, string batdau, string ketthuc, int muchocphi)
         {
             this.Namky = namky;
             this.BatDau = batdau;
@@ -17,27 +28,13 @@ namespace TRUNGTAMTINHOC.NghiepVu
             this.MucHocPhi = muchocphi;
         }
 
-        public NamKy(DataRow row)
+        public NamKy()
         {
-            this.Namky = row["namky"].ToString();
-            this.BatDau = (DateTime?)row["batdau"];
-            this.KetThuc = (DateTime?)row["ketthuc"];
-            this.MucHocPhi = (int)row["muchocphi"];
         }
-        
-        private string namky;
-        private DateTime? batDau;
-        private DateTime? ketThuc;
-        private int mucHocPhi;
 
-        public string Namky { get => namky; set => namky = value; }
-        public DateTime? BatDau { get => batDau; set => batDau = value; }
-        public DateTime? KetThuc { get => ketThuc; set => ketThuc = value; }
-        public int MucHocPhi { get => mucHocPhi; set => mucHocPhi = value; }
-        public static DataTable load_data_cbx()
-        {
-            return TruyCapDuLieu.NamKyDB.Load_DB_Combobox();
-        }
+        
+
+
     }
  
 }

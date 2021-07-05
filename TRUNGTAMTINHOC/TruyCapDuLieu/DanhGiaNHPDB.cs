@@ -39,7 +39,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 return null;
             }
         }
-        public static DataTable Danhsach_HV_NHP(string namky)
+        public static DataTable Danhsach_HV_NHP()
         {
             string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
             SqlConnection con = new SqlConnection(connectString);
@@ -47,7 +47,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
             try
             {
-                string sql = "EXEC sp_danhsach_HV_NHP '" + namky + "'";
+                string sql = "EXEC sp_danhsach_HV_NHP";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -65,7 +65,9 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 return null;
             }
         }
-        public static DataTable DS_NHP_CHUADAT(string namky)
+        
+        
+        public static DataTable DSCCVB_NhomHocPhan()
         {
             string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
             SqlConnection con = new SqlConnection(connectString);
@@ -73,7 +75,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
             try
             {
-                string sql = "EXEC SP_DANHSACH_HV_NHP_CHUADAT '" + namky + "'";
+                string sql = "EXEC SP_DSCCVB_NHP";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -91,7 +93,8 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 return null;
             }
         }
-        public static DataTable Update_DGHP(string MaHV,string MaNHP)
+
+        public static bool DanhGiaNHP(string mahv,string nhp)
         {
             string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
             SqlConnection con = new SqlConnection(connectString);
@@ -99,14 +102,11 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
             try
             {
-                string sql = "EXEC SP_UPDATE_DAT_NHP '" + MaHV + "'" + "," + "'" + MaNHP + "'";
+                string sql = "EXEC SP_DANHGIA_NHP '" + mahv + "', '" + nhp + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
                 con.Close();
-                return dt;
+                return true;
             }
             catch (Exception error)
             {
@@ -114,33 +114,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 string[] arrStr0 = errorStr.Split(':');
                 string[] arrStr = arrStr0[1].Split('\n');
                 MessageBox.Show(arrStr[0].ToString());
-                return null;
-            }
-        }
-        public static DataTable DSCCVB_NhomHocPhan(string namky)
-        {
-            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
-            SqlConnection con = new SqlConnection(connectString);
-            con.Open();
-
-            try
-            {
-                string sql = "EXEC SP_DSCCVB_NHP '" + namky + "'";
-                SqlCommand cmd = new SqlCommand(sql, con);
-                cmd.ExecuteNonQuery();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-                con.Close();
-                return dt;
-            }
-            catch (Exception error)
-            {
-                string errorStr = error.ToString();
-                string[] arrStr0 = errorStr.Split(':');
-                string[] arrStr = arrStr0[1].Split('\n');
-                MessageBox.Show(arrStr[0].ToString());
-                return null;
+                return false;
             }
         }
     }

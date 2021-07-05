@@ -43,18 +43,17 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.dtgv_DSKDT = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btn_Load_DSCCVB_NHP = new System.Windows.Forms.Button();
-            this.btn_Load_DSCD = new System.Windows.Forms.Button();
             this.btn_DGNHP = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dtgv_Load_DHP = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dtgv_Load_DGHP = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btn_DSKHCD = new System.Windows.Forms.Button();
             this.btn_DSCCCVB_KH = new System.Windows.Forms.Button();
             this.btn_DGKH = new System.Windows.Forms.Button();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.dtgv_Load_DHPKH = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dtgv_Load_DGKH = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,7 +72,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_Load_DGHP)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_Load_DHPKH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_Load_DGKH)).BeginInit();
             this.SuspendLayout();
@@ -159,7 +158,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1265, 560);
+            this.tabPage1.Size = new System.Drawing.Size(951, 448);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Học viên - Khóa đào tạo";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -169,21 +168,22 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.dtgv_Load_DSHV);
             this.groupBox1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(329, 6);
+            this.groupBox1.Location = new System.Drawing.Point(6, 169);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(612, 437);
+            this.groupBox1.Size = new System.Drawing.Size(939, 273);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách học viên";
             // 
             // dtgv_Load_DSHV
             // 
+            this.dtgv_Load_DSHV.BackgroundColor = System.Drawing.Color.White;
             this.dtgv_Load_DSHV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_Load_DSHV.Location = new System.Drawing.Point(8, 31);
+            this.dtgv_Load_DSHV.Location = new System.Drawing.Point(7, 26);
             this.dtgv_Load_DSHV.Margin = new System.Windows.Forms.Padding(4);
             this.dtgv_Load_DSHV.Name = "dtgv_Load_DSHV";
             this.dtgv_Load_DSHV.RowHeadersWidth = 51;
-            this.dtgv_Load_DSHV.Size = new System.Drawing.Size(800, 500);
+            this.dtgv_Load_DSHV.Size = new System.Drawing.Size(925, 240);
             this.dtgv_Load_DSHV.TabIndex = 33;
             // 
             // groupBox4
@@ -193,25 +193,26 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.groupBox4.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(6, 6);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(317, 130);
+            this.groupBox4.Size = new System.Drawing.Size(939, 157);
             this.groupBox4.TabIndex = 38;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách khóa đào tạo";
             // 
             // dtgv_DSKDT
             // 
+            this.dtgv_DSKDT.BackgroundColor = System.Drawing.Color.White;
             this.dtgv_DSKDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_DSKDT.Location = new System.Drawing.Point(8, 31);
+            this.dtgv_DSKDT.Location = new System.Drawing.Point(7, 26);
             this.dtgv_DSKDT.Margin = new System.Windows.Forms.Padding(4);
             this.dtgv_DSKDT.Name = "dtgv_DSKDT";
             this.dtgv_DSKDT.RowHeadersWidth = 51;
-            this.dtgv_DSKDT.Size = new System.Drawing.Size(302, 92);
+            this.dtgv_DSKDT.Size = new System.Drawing.Size(925, 124);
             this.dtgv_DSKDT.TabIndex = 33;
+            this.dtgv_DSKDT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_DSKDT_CellClick);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.btn_Load_DSCCVB_NHP);
-            this.tabPage2.Controls.Add(this.btn_Load_DSCD);
             this.tabPage2.Controls.Add(this.btn_DGNHP);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox2);
@@ -226,34 +227,22 @@ namespace TRUNGTAMTINHOC.GiaoDien
             // btn_Load_DSCCVB_NHP
             // 
             this.btn_Load_DSCCVB_NHP.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Load_DSCCVB_NHP.Location = new System.Drawing.Point(618, 336);
+            this.btn_Load_DSCCVB_NHP.Location = new System.Drawing.Point(635, 352);
             this.btn_Load_DSCCVB_NHP.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Load_DSCCVB_NHP.Name = "btn_Load_DSCCVB_NHP";
-            this.btn_Load_DSCCVB_NHP.Size = new System.Drawing.Size(287, 37);
+            this.btn_Load_DSCCVB_NHP.Size = new System.Drawing.Size(280, 40);
             this.btn_Load_DSCCVB_NHP.TabIndex = 43;
             this.btn_Load_DSCCVB_NHP.Text = "Danh sách cấp chứng chỉ";
             this.btn_Load_DSCCVB_NHP.UseVisualStyleBackColor = true;
             this.btn_Load_DSCCVB_NHP.Click += new System.EventHandler(this.btn_Load_DSCCVB_NHP_Click);
             // 
-            // btn_Load_DSCD
-            // 
-            this.btn_Load_DSCD.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Load_DSCD.Location = new System.Drawing.Point(618, 235);
-            this.btn_Load_DSCD.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Load_DSCD.Name = "btn_Load_DSCD";
-            this.btn_Load_DSCD.Size = new System.Drawing.Size(287, 46);
-            this.btn_Load_DSCD.TabIndex = 42;
-            this.btn_Load_DSCD.Text = "Danh sách học viên chưa đạt Nhóm Học Phần";
-            this.btn_Load_DSCD.UseVisualStyleBackColor = true;
-            this.btn_Load_DSCD.Click += new System.EventHandler(this.btn_Load_DSCD_Click);
-            // 
             // btn_DGNHP
             // 
             this.btn_DGNHP.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DGNHP.Location = new System.Drawing.Point(618, 289);
+            this.btn_DGNHP.Location = new System.Drawing.Point(635, 305);
             this.btn_DGNHP.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DGNHP.Name = "btn_DGNHP";
-            this.btn_DGNHP.Size = new System.Drawing.Size(287, 39);
+            this.btn_DGNHP.Size = new System.Drawing.Size(280, 40);
             this.btn_DGNHP.TabIndex = 42;
             this.btn_DGNHP.Text = "Đánh giá nhóm học phần";
             this.btn_DGNHP.UseVisualStyleBackColor = true;
@@ -264,21 +253,22 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.dtgv_Load_DHP);
             this.groupBox3.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(596, 6);
+            this.groupBox3.Location = new System.Drawing.Point(6, 266);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(345, 222);
+            this.groupBox3.Size = new System.Drawing.Size(584, 176);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Điểm học phần";
             // 
             // dtgv_Load_DHP
             // 
+            this.dtgv_Load_DHP.BackgroundColor = System.Drawing.Color.White;
             this.dtgv_Load_DHP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_Load_DHP.Location = new System.Drawing.Point(8, 31);
+            this.dtgv_Load_DHP.Location = new System.Drawing.Point(7, 23);
             this.dtgv_Load_DHP.Margin = new System.Windows.Forms.Padding(4);
             this.dtgv_Load_DHP.Name = "dtgv_Load_DHP";
             this.dtgv_Load_DHP.RowHeadersWidth = 51;
-            this.dtgv_Load_DHP.Size = new System.Drawing.Size(330, 184);
+            this.dtgv_Load_DHP.Size = new System.Drawing.Size(569, 146);
             this.dtgv_Load_DHP.TabIndex = 33;
             // 
             // groupBox2
@@ -288,28 +278,29 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.groupBox2.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(584, 437);
+            this.groupBox2.Size = new System.Drawing.Size(939, 254);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Đánh giá nhóm học phần";
             // 
             // dtgv_Load_DGHP
             // 
+            this.dtgv_Load_DGHP.BackgroundColor = System.Drawing.Color.White;
             this.dtgv_Load_DGHP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_Load_DGHP.Location = new System.Drawing.Point(8, 31);
+            this.dtgv_Load_DGHP.Location = new System.Drawing.Point(8, 26);
             this.dtgv_Load_DGHP.Margin = new System.Windows.Forms.Padding(4);
             this.dtgv_Load_DGHP.Name = "dtgv_Load_DGHP";
             this.dtgv_Load_DGHP.RowHeadersWidth = 51;
-            this.dtgv_Load_DGHP.Size = new System.Drawing.Size(569, 399);
+            this.dtgv_Load_DGHP.Size = new System.Drawing.Size(924, 216);
             this.dtgv_Load_DGHP.TabIndex = 33;
             this.dtgv_Load_DGHP.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_Load_DGHP_CellClick);
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.btn_DSKHCD);
             this.tabPage3.Controls.Add(this.btn_DSCCCVB_KH);
             this.tabPage3.Controls.Add(this.btn_DGKH);
-            this.tabPage3.Controls.Add(this.groupBox6);
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
@@ -318,14 +309,37 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.tabPage3.Text = "Đánh giá khóa học";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox6.Controls.Add(this.dataGridView1);
+            this.groupBox6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Location = new System.Drawing.Point(6, 269);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(584, 176);
+            this.groupBox6.TabIndex = 47;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Điểm học phần";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 23);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.Size = new System.Drawing.Size(569, 146);
+            this.dataGridView1.TabIndex = 33;
+            // 
             // btn_DSKHCD
             // 
             this.btn_DSKHCD.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DSKHCD.Location = new System.Drawing.Point(630, 261);
+            this.btn_DSKHCD.Location = new System.Drawing.Point(646, 360);
             this.btn_DSKHCD.Name = "btn_DSKHCD";
-            this.btn_DSKHCD.Size = new System.Drawing.Size(251, 65);
+            this.btn_DSKHCD.Size = new System.Drawing.Size(280, 40);
             this.btn_DSKHCD.TabIndex = 46;
-            this.btn_DSKHCD.Text = "Danh sách học viên chưa đạt Khóa Học";
+            this.btn_DSKHCD.Text = "Danh sách học viên cấp văn bằng";
             this.btn_DSKHCD.UseVisualStyleBackColor = true;
             this.btn_DSKHCD.Click += new System.EventHandler(this.btn_DSKHCD_Click);
             // 
@@ -339,41 +353,18 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.btn_DSCCCVB_KH.TabIndex = 45;
             this.btn_DSCCCVB_KH.Text = "Danh sách cấp \r\nchứng chỉ văn bằng";
             this.btn_DSCCCVB_KH.UseVisualStyleBackColor = true;
-            this.btn_DSCCCVB_KH.Click += new System.EventHandler(this.btn_DSCCCVB_KH_Click);
             // 
             // btn_DGKH
             // 
             this.btn_DGKH.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_DGKH.Location = new System.Drawing.Point(630, 346);
+            this.btn_DGKH.Location = new System.Drawing.Point(646, 313);
             this.btn_DGKH.Margin = new System.Windows.Forms.Padding(4);
             this.btn_DGKH.Name = "btn_DGKH";
-            this.btn_DGKH.Size = new System.Drawing.Size(251, 68);
+            this.btn_DGKH.Size = new System.Drawing.Size(280, 40);
             this.btn_DGKH.TabIndex = 44;
             this.btn_DGKH.Text = "Đánh giá khóa học";
             this.btn_DGKH.UseVisualStyleBackColor = true;
             this.btn_DGKH.Click += new System.EventHandler(this.btn_DGKH_Click);
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.dtgv_Load_DHPKH);
-            this.groupBox6.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(596, 6);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(345, 222);
-            this.groupBox6.TabIndex = 42;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Điểm học phần";
-            // 
-            // dtgv_Load_DHPKH
-            // 
-            this.dtgv_Load_DHPKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_Load_DHPKH.Location = new System.Drawing.Point(8, 31);
-            this.dtgv_Load_DHPKH.Margin = new System.Windows.Forms.Padding(4);
-            this.dtgv_Load_DHPKH.Name = "dtgv_Load_DHPKH";
-            this.dtgv_Load_DHPKH.RowHeadersWidth = 51;
-            this.dtgv_Load_DHPKH.Size = new System.Drawing.Size(444, 235);
-            this.dtgv_Load_DHPKH.TabIndex = 33;
             // 
             // groupBox5
             // 
@@ -382,20 +373,22 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.groupBox5.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(6, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(584, 437);
+            this.groupBox5.Size = new System.Drawing.Size(942, 257);
             this.groupBox5.TabIndex = 41;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Đánh giá nhóm học phần";
+            this.groupBox5.Text = "Đánh giá khóa học";
             // 
             // dtgv_Load_DGKH
             // 
+            this.dtgv_Load_DGKH.BackgroundColor = System.Drawing.Color.White;
             this.dtgv_Load_DGKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgv_Load_DGKH.Location = new System.Drawing.Point(8, 31);
+            this.dtgv_Load_DGKH.Location = new System.Drawing.Point(7, 26);
             this.dtgv_Load_DGKH.Margin = new System.Windows.Forms.Padding(4);
             this.dtgv_Load_DGKH.Name = "dtgv_Load_DGKH";
             this.dtgv_Load_DGKH.RowHeadersWidth = 51;
-            this.dtgv_Load_DGKH.Size = new System.Drawing.Size(763, 500);
+            this.dtgv_Load_DGKH.Size = new System.Drawing.Size(928, 224);
             this.dtgv_Load_DGKH.TabIndex = 33;
+            this.dtgv_Load_DGKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_Load_DGKH_CellClick);
             // 
             // label3
             // 
@@ -438,6 +431,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PhongDT_QLCCVB";
             this.Text = "Quản lý chứng chỉ - văn bằng";
+            this.Load += new System.EventHandler(this.PhongDT_QLCCVB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Tabcontrol.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -452,7 +446,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_Load_DGHP)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgv_Load_DHPKH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_Load_DGKH)).EndInit();
             this.ResumeLayout(false);
@@ -485,11 +479,10 @@ namespace TRUNGTAMTINHOC.GiaoDien
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Button btn_DSCCCVB_KH;
         private System.Windows.Forms.Button btn_DGKH;
-        private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.DataGridView dtgv_Load_DHPKH;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dtgv_Load_DGKH;
-        private System.Windows.Forms.Button btn_Load_DSCD;
         private System.Windows.Forms.Button btn_DSKHCD;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

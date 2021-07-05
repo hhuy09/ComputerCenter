@@ -32,7 +32,6 @@ namespace TRUNGTAMTINHOC
             GiaoDien.PhongDT_QLCCVB pdt_ql = new GiaoDien.PhongDT_QLCCVB();
             pdt_ql.MaNV = MaNV;
             pdt_ql.HoTen = HoTen;
-            this.Close();
             pdt_ql.Show();
         }
 

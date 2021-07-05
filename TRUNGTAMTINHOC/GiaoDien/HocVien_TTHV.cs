@@ -61,7 +61,8 @@ namespace TRUNGTAMTINHOC
             dataGridView3.AutoResizeColumns();
             dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView3.AutoResizeColumns();
-            DataTable dt5 = NghiepVu.DanhGiaNHP.DGNhomHocPhan(MaHV);
+
+            DataTable dt5 = NghiepVu.DanhGiaNHP.DGNhomHocPhan(hocvien);
             dataGridView4.DataSource = dt5;
             dataGridView4.AutoResizeColumns();
             dataGridView4.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

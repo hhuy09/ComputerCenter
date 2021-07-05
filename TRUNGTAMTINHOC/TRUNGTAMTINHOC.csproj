@@ -53,17 +53,17 @@
     <Compile Include="GiaoDien\ChuyenMon_QLLH.Designer.cs">
       <DependentUpon>ChuyenMon_QLLH.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoDien\DangKy.cs">
+    <Compile Include="GiaoDien\DangKyHocVienGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoDien\DangKy.Designer.cs">
-      <DependentUpon>DangKy.cs</DependentUpon>
+    <Compile Include="GiaoDien\DangKyHocVienGUI.Designer.cs">
+      <DependentUpon>DangKyHocVienGUI.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoDien\HocVien.cs">
+    <Compile Include="GiaoDien\HocVienGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoDien\HocVien.Designer.cs">
-      <DependentUpon>HocVien.cs</DependentUpon>
+    <Compile Include="GiaoDien\HocVienGUI.Designer.cs">
+      <DependentUpon>HocVienGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoDien\HocVien_DKHP.cs">
       <SubType>Form</SubType>
@@ -71,11 +71,11 @@
     <Compile Include="GiaoDien\HocVien_DKHP.Designer.cs">
       <DependentUpon>HocVien_DKHP.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoDien\HocVien_DKKHCD.cs">
+    <Compile Include="GiaoDien\HocVienDKKHCDGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoDien\HocVien_DKKHCD.Designer.cs">
-      <DependentUpon>HocVien_DKKHCD.cs</DependentUpon>
+    <Compile Include="GiaoDien\HocVienDKKHCDGUI.Designer.cs">
+      <DependentUpon>HocVienDKKHCDGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoDien\HocVien_TTHV.cs">
       <SubType>Form</SubType>
@@ -89,11 +89,11 @@
     <Compile Include="GiaoDien\PhongDaoTao.Designer.cs">
       <DependentUpon>PhongDaoTao.cs</DependentUpon>
     </Compile>
-    <Compile Include="GiaoDien\DangNhap.cs">
+    <Compile Include="GiaoDien\DangNhapGUI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GiaoDien\DangNhap.Designer.cs">
-      <DependentUpon>DangNhap.cs</DependentUpon>
+    <Compile Include="GiaoDien\DangNhapGUI.Designer.cs">
+      <DependentUpon>DangNhapGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoDien\ChuyenMon.cs">
       <SubType>Form</SubType>
@@ -182,17 +182,17 @@
     <EmbeddedResource Include="GiaoDien\ChuyenMon_QLLH.resx">
       <DependentUpon>ChuyenMon_QLLH.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiaoDien\DangKy.resx">
-      <DependentUpon>DangKy.cs</DependentUpon>
+    <EmbeddedResource Include="GiaoDien\DangKyHocVienGUI.resx">
+      <DependentUpon>DangKyHocVienGUI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiaoDien\HocVien.resx">
-      <DependentUpon>HocVien.cs</DependentUpon>
+    <EmbeddedResource Include="GiaoDien\HocVienGUI.resx">
+      <DependentUpon>HocVienGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDien\HocVien_DKHP.resx">
       <DependentUpon>HocVien_DKHP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiaoDien\HocVien_DKKHCD.resx">
-      <DependentUpon>HocVien_DKKHCD.cs</DependentUpon>
+    <EmbeddedResource Include="GiaoDien\HocVienDKKHCDGUI.resx">
+      <DependentUpon>HocVienDKKHCDGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDien\HocVien_TTHV.resx">
       <DependentUpon>HocVien_TTHV.cs</DependentUpon>
@@ -200,8 +200,8 @@
     <EmbeddedResource Include="GiaoDien\PhongDaoTao.resx">
       <DependentUpon>PhongDaoTao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GiaoDien\DangNhap.resx">
-      <DependentUpon>DangNhap.cs</DependentUpon>
+    <EmbeddedResource Include="GiaoDien\DangNhapGUI.resx">
+      <DependentUpon>DangNhapGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDien\ChuyenMon.resx">
       <DependentUpon>ChuyenMon.cs</DependentUpon>

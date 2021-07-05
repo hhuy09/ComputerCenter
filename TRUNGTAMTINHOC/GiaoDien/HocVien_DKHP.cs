@@ -44,7 +44,6 @@ namespace TRUNGTAMTINHOC
             hocvien.MaHocVien = MaHV;
 
             DataTable dt2 = NghiepVu.DangKyHocPhan.DanhSachDKHP(hocvien, "2021-1");
-            dataGridView2.DataSource = dt2;
             dt2.Columns.Add(new DataColumn("HuyDK", typeof(bool)));
             dataGridView2.DataSource = dt2;
             dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

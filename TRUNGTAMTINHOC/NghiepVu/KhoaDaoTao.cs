@@ -31,11 +31,6 @@ namespace TRUNGTAMTINHOC.NghiepVu
         public int SiSo { get => siso; set => siso = value; }
         public int DaDangKy { get => dadangky; set => dadangky = value; }
 
-        //public static DataTable DanhSachThiTotNghiep(string MaNV, string NamKy)
-        //{
-        //    return TruyCapDuLieu.KhoaDaoTaoDB.DSThiTotNghiep(MaNV, NamKy);
-        //}
-
         public static DataTable DanhSachLichThiTotNghiep(KhoaDaoTao kdt)
         {
             string MaNV = kdt.NVTroLy;
@@ -62,6 +57,18 @@ namespace TRUNGTAMTINHOC.NghiepVu
             string MaNV = kdt.NVTroLy;
             string NamKy = kdt.NamKy;
             return TruyCapDuLieu.KhoaDaoTaoDB.DSLopDaoTao(MaNV, NamKy);
+        }
+
+        public static DataTable DanhSachTatCaLopDaoTao(NamKy namky)
+        {
+            string NamKy = namky.Namky;
+            return TruyCapDuLieu.KhoaDaoTaoDB.DSTatCaLDT(NamKy);
+        }
+
+        public static DataTable DanhSachLopDaoTao(NamKy namky)
+        {
+            string NamKy = namky.Namky;
+            return TruyCapDuLieu.KhoaDaoTaoDB.DSLopDaoTao(NamKy);
         }
     }
 }

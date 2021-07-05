@@ -15,16 +15,12 @@ namespace TRUNGTAMTINHOC
             InitializeComponent();
         }
 
-        private void DangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            string TenDN = textBox1.Text;
-            string MatKhau = textBox2.Text;
+            string TenDN = textBox_TenDangNhap.Text;
+            string MatKhau = textBox_MatKhau.Text;
             Email = TenDN;
+
             NghiepVu.HocVien hocvien = new NghiepVu.HocVien();
             hocvien.Email = Email;
             hocvien.MatKhau = MatKhau;
@@ -86,7 +82,7 @@ namespace TRUNGTAMTINHOC
 
         private void label6_Click(object sender, EventArgs e)
         {
-            GiaoDien.DangKy dk = new GiaoDien.DangKy();
+            GiaoDien.DangKyHocVienGUI dk = new GiaoDien.DangKyHocVienGUI();
             this.Hide();
             dk.Show();
         }

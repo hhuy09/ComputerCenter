@@ -58,7 +58,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 string errorStr = error.ToString();
                 string[] arrStr0 = errorStr.Split(':');
                 string[] arrStr = arrStr0[1].Split('\n');
-                //MessageBox.Show(arrStr[0].ToString());
+                MessageBox.Show(arrStr[0].ToString());
                 return false;
             }
         }
@@ -82,7 +82,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 string errorStr = error.ToString();
                 string[] arrStr0 = errorStr.Split(':');
                 string[] arrStr = arrStr0[1].Split('\n');
-                //MessageBox.Show(arrStr[0].ToString());
+                MessageBox.Show(arrStr[0].ToString());
                 return false;
             }
         }

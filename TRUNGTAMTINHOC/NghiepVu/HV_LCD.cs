@@ -12,23 +12,31 @@ namespace TRUNGTAMTINHOC.NghiepVu
 {
     class HV_LCD
     {
-        private string HocVien;
-        private string HoTen;
-        private string LopChuyenDe;
-        private string NgayGhiDanh;
+        private string hocvien;
+        private string lopchuyende;
+        private string ngayghidanh;
 
-        public static DataTable DanhSachDKCD(string MaHV)
+        public string HocVien { get => hocvien; set => hocvien = value; }
+        public string LopChuyenDe { get => lopchuyende; set => lopchuyende = value; }
+        public string NgayGhiDanh { get => ngayghidanh; set => ngayghidanh = value; }
+
+        public static DataTable DanhSachDKCD(HocVien hv)
         {
+            string MaHV = hv.MaHocVien;
             return TruyCapDuLieu.HV_LCDDB.DSDKCD(MaHV);
         }
 
-        public static bool DangKyChuyenDe(string MaHV, string MaLopCD)
+        public static bool DangKyChuyenDe(HV_LCD hv)
         {
+            string MaHV = hv.HocVien;
+            string MaLopCD = hv.LopChuyenDe;
             return TruyCapDuLieu.HV_LCDDB.ThemDKCD(MaHV, MaLopCD);
         }
 
-        public static bool HuyDangKyChuyenDe(string MaHV, string MaLopCD)
+        public static bool HuyDangKyChuyenDe(HV_LCD hv)
         {
+            string MaHV = hv.HocVien;
+            string MaLopCD = hv.LopChuyenDe;
             return TruyCapDuLieu.HV_LCDDB.HuyDKCD(MaHV, MaLopCD);
         }
     }

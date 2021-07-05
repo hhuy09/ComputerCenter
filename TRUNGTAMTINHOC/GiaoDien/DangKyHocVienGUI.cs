@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TRUNGTAMTINHOC.GiaoDien
 {
-    public partial class DangKy : Form
+    public partial class DangKyHocVienGUI : Form
     {
-        public DangKy()
+        public DangKyHocVienGUI()
         {
             InitializeComponent();
         }
@@ -24,12 +24,12 @@ namespace TRUNGTAMTINHOC.GiaoDien
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string HoTen = textBox1.Text;
-            string GioiTinh = comboBox1.Text;
-            string SoDienThoai = textBox2.Text;
-            string Email = textBox3.Text;
-            string MatKhau = textBox4.Text;
-            string MK = textBox5.Text;
+            string HoTen = textBox_HoTen.Text;
+            string GioiTinh = comboBox_GioiTinh.Text;
+            string SoDienThoai = textBox_SoDienThoai.Text;
+            string Email = textBox_Email.Text;
+            string MatKhau = textBox_MatKhau.Text;
+            string MK = textBox_XacNhanMatKhau.Text;
 
             if (HoTen == "" || GioiTinh == "" || SoDienThoai == "" || Email == "" || MatKhau == "" || MK == "")
             {

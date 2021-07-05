@@ -44,17 +44,6 @@ namespace TRUNGTAMTINHOC.NghiepVu
             string MaLT = DiemThi.LichThi;
             return TruyCapDuLieu.DiemThiDB.HuyDKThiLai(MaHV, MaLT);
         }
-        public static DataTable Diem_HocPhan_HVKH(DiemThi DiemThi)
-        {
-            string MaHV = DiemThi.HocVien;
-            string MaLT = DiemThi.LichThi;
-            return TruyCapDuLieu.DiemThiDB.DiemHP_HV_KH(MaHV, MaLT);
-        }
-        public static DataTable DIEM_HP_NHP(HocVien HocVien, string MaNHP)
-        {
-            string MaHV = HocVien.MaHocVien;
-            return TruyCapDuLieu.DiemThiDB.DiemHP_HV(MaHV, MaNHP);
-        }
 
         public static DataTable DanhSachHocVienThiHocPhan(LichThi lichThi)
         {
@@ -69,6 +58,20 @@ namespace TRUNGTAMTINHOC.NghiepVu
             string MaLH = DiemThi.LopHoc;
             float Diem = DiemThi.DiemThiHP;
             return TruyCapDuLieu.DiemThiDB.CapNhatDiemHP(MaHV, MaLT, MaLH, Diem);
+        }
+
+        public static DataTable DiemNhomHocPhan(HocVien hv, NhomHocPhan nhp)
+        {
+            string MaHV = hv.MaHocVien;
+            string NHP = nhp.MaNHP;
+            return TruyCapDuLieu.DiemThiDB.DiemNHP(MaHV, NHP);
+        }
+
+        public static DataTable DiemKhoaHoc(HocVien hv, KhoaHoc kh)
+        {
+            string MaHV = hv.MaHocVien;
+            string Kh = kh.MaKhoaHoc;
+            return TruyCapDuLieu.DiemThiDB.DiemKH(MaHV, Kh);
         }
     }
 }
