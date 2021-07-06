@@ -12,12 +12,12 @@ using TRUNGTAMTINHOC.TruyCapDuLieu;
 
 namespace TRUNGTAMTINHOC.GiaoDien
 {
-    public partial class PhongTaiVu_QLHP : Form
+    public partial class PhongTaiVu_QLHPGUI : Form
     {
         public string MaNV;
         public string HoTen;
 
-        public PhongTaiVu_QLHP()
+        public PhongTaiVu_QLHPGUI()
         {
             InitializeComponent();
         }

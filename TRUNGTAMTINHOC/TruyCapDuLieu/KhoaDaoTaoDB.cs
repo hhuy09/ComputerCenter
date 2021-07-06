@@ -172,6 +172,76 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 MessageBox.Show(arrStr[0].ToString());
                 return null;
             }
+
+        }
+
+        public static bool ThemLDT(string MaLDT, string KhoaHoc, string NamKy, string NVTL, string NgayKhaiGiang, int SiSo)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+
+            try
+            {
+                string sql = "EXEC SP_INS_LDT  '" + MaLDT +"', '" + KhoaHoc +"','" + NamKy +"','" + NVTL +"','" + NgayKhaiGiang+"'," + SiSo;
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception error)
+            {
+                string errorStr = error.ToString();
+                string[] arrStr0 = errorStr.Split(':');
+                string[] arrStr = arrStr0[1].Split('\n');
+                MessageBox.Show(arrStr[0].ToString());
+                return false;
+            }
+        }
+
+        public static bool XoaLDT(string MaLDT)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+
+            try
+            {
+                string sql = "EXEC SP_DEL_LDT  '" + MaLDT + "'"; 
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception error)
+            {
+                string errorStr = error.ToString();
+                string[] arrStr0 = errorStr.Split(':');
+                string[] arrStr = arrStr0[1].Split('\n');
+                MessageBox.Show(arrStr[0].ToString());
+                return false;
+            }
+        }
+
+        public static bool CapNhatLDT(string MaLDT, string KhoaHoc, string NamKy, string NgayKhaiGiang, int SiSo)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+
+            try
+            {
+                string sql = "EXEC SP_UPD_LDT  '" + MaLDT + "', '" + KhoaHoc + "','" + NamKy + "', '" + NgayKhaiGiang + "'," + SiSo;
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception error)
+            {
+                string errorStr = error.ToString();
+                string[] arrStr0 = errorStr.Split(':');
+                string[] arrStr = arrStr0[1].Split('\n');
+                MessageBox.Show(arrStr[0].ToString());
+                return false;
+            }
         }
     }
 }

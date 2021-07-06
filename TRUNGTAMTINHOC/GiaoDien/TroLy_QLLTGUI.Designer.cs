@@ -1,7 +1,7 @@
 ﻿
 namespace TRUNGTAMTINHOC.GiaoDien
 {
-    partial class TroLy_QLLT
+    partial class TroLy_QLLTGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TroLy_QLLT));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TroLy_QLLTGUI));
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();

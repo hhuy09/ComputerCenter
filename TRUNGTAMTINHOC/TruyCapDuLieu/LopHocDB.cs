@@ -119,5 +119,74 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
                 return null;
             }
         }
+
+        public static bool ThemLH(string MaLopHoc, string NamKy, string HocPhan, string NVCM, string LichHoc, int SiSo)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+
+            try
+            {
+                string sql = "EXEC SP_INS_LOPHOC '" + MaLopHoc + "', '" + NamKy + "', '" + HocPhan + "', '" + NVCM + "', '" + LichHoc + "'," + SiSo;
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception error)
+            {
+                string errorStr = error.ToString();
+                string[] arrStr0 = errorStr.Split(':');
+                string[] arrStr = arrStr0[1].Split('\n');
+                MessageBox.Show(arrStr[0].ToString());
+                return false;
+            }
+        }
+
+        public static bool XoaLH(string MaLopHoc)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+
+            try
+            {
+                string sql = "EXEC SP_DEL_LOPHOC '" + MaLopHoc + "'";
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception error)
+            {
+                string errorStr = error.ToString();
+                string[] arrStr0 = errorStr.Split(':');
+                string[] arrStr = arrStr0[1].Split('\n');
+                MessageBox.Show(arrStr[0].ToString());
+                return false;
+            }
+        }
+
+        public static bool CapNhatLH(string MaLopHoc, string NamKy, string HocPhan, string NVCM, string LichHoc, int SiSo)
+        {
+            string connectString = ConfigurationManager.ConnectionStrings["TTTH"].ConnectionString.ToString();
+            SqlConnection con = new SqlConnection(connectString);
+            con.Open();
+
+            try
+            {
+                string sql = "EXEC SP_UPD_LOPHOC '" + MaLopHoc + "', '" + NamKy + "', '" + HocPhan + "', '" + NVCM + "', '" + LichHoc + "'," + SiSo;
+                SqlCommand cmd = new SqlCommand(sql, con);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception error)
+            {
+                string errorStr = error.ToString();
+                string[] arrStr0 = errorStr.Split(':');
+                string[] arrStr = arrStr0[1].Split('\n');
+                MessageBox.Show(arrStr[0].ToString());
+                return false;
+            }
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace TRUNGTAMTINHOC.GiaoDien
 {
-    partial class PhongTaiVu_QLHP
+    partial class PhongTaiVu_QLHPGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace TRUNGTAMTINHOC.GiaoDien
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhongTaiVu_QLHP));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PhongTaiVu_QLHPGUI));
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();

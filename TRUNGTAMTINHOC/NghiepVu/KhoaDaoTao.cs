@@ -70,5 +70,32 @@ namespace TRUNGTAMTINHOC.NghiepVu
             string NamKy = namky.Namky;
             return TruyCapDuLieu.KhoaDaoTaoDB.DSLopDaoTao(NamKy);
         }
+
+        public static bool ThemLopDaoTao(KhoaDaoTao kdt)
+        {
+            string MaLDT = kdt.MaLopDT;
+            string KhHoc = kdt.KhoaHoc;
+            string NamKy = kdt.NamKy;
+            string NVTL = kdt.NVTroLy;
+            string NKG = kdt.NgayKhaiGiang;
+            int SS = kdt.SiSo;
+            return TruyCapDuLieu.KhoaDaoTaoDB.ThemLDT(MaLDT, KhHoc, NamKy, NVTL, NKG, SS);
+        }
+
+        public static bool XoaLopDaoTao(KhoaDaoTao kdt)
+        {
+            string MaLDT = kdt.MaLopDT;
+            return TruyCapDuLieu.KhoaDaoTaoDB.XoaLDT(MaLDT);
+        }
+
+        public static bool CapNhatLopDaoTao(KhoaDaoTao kdt)
+        {
+            string MaLDT = kdt.MaLopDT;
+            string KhHoc = kdt.KhoaHoc;
+            string NamKy = kdt.NamKy;
+            string NKG = kdt.NgayKhaiGiang;
+            int SS = kdt.SiSo;
+            return TruyCapDuLieu.KhoaDaoTaoDB.CapNhatLDT(MaLDT, KhHoc, NamKy, NKG, SS);
+        }
     }
 }

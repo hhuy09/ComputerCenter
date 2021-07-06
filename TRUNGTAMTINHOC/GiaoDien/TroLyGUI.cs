@@ -34,7 +34,7 @@ namespace TRUNGTAMTINHOC
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GiaoDien.TroLy_QLLT troly = new GiaoDien.TroLy_QLLT();
+            GiaoDien.TroLy_QLLTGUI troly = new GiaoDien.TroLy_QLLTGUI();
 
             troly.MaNV = MaNV;
             troly.HoTen = HoTen;
@@ -43,7 +43,7 @@ namespace TRUNGTAMTINHOC
 
         private void button3_Click(object sender, EventArgs e)
         {
-            GiaoDien.TroLy_QLLH troly = new GiaoDien.TroLy_QLLH();
+            GiaoDien.TroLy_QLLHGUI troly = new GiaoDien.TroLy_QLLHGUI();
             troly.MaNV = MaNV;
             troly.HoTen = HoTen;
             troly.Show();

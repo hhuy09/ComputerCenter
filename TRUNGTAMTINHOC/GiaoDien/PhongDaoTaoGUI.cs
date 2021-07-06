@@ -29,7 +29,7 @@ namespace TRUNGTAMTINHOC
 
         private void btn_loadPDT_Click(object sender, EventArgs e)
         {
-            GiaoDien.PhongDT_QLCCVB pdt_ql = new GiaoDien.PhongDT_QLCCVB();
+            GiaoDien.PhongDT_QLCCVBGUI pdt_ql = new GiaoDien.PhongDT_QLCCVBGUI();
             pdt_ql.MaNV = MaNV;
             pdt_ql.HoTen = HoTen;
             pdt_ql.Show();

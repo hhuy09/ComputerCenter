@@ -12,12 +12,12 @@ using TRUNGTAMTINHOC.NghiepVu;
 
 namespace TRUNGTAMTINHOC.GiaoDien
 {
-    public partial class TroLy_QLLT : Form
+    public partial class TroLy_QLLTGUI : Form
     {
         public string MaNV;
         public string HoTen;
 
-        public TroLy_QLLT()
+        public TroLy_QLLTGUI()
         {
             InitializeComponent();
         }

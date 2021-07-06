@@ -38,5 +38,32 @@ namespace TRUNGTAMTINHOC.NghiepVu
             return TruyCapDuLieu.LopChuyenDeDB.DSLopCD(NamKy);
         }
 
+        public static bool ThemLopChuyenDe(LopChuyenDe lcd)
+        {
+            string Malcd = lcd.MaLopCD;
+            string NamKy = lcd.NamKy;
+            string ChuyenDe = lcd.ChuyenDe;
+            string NVTL = lcd.NVTroLy;
+            string Lich = lcd.NgayHoc;
+            int SiSo = lcd.SiSo;
+            return TruyCapDuLieu.LopChuyenDeDB.ThemLCD(Malcd, ChuyenDe, NamKy, NVTL, Lich, SiSo);
+        }
+
+        public static bool XoaLopChuyenDe(LopChuyenDe lcd)
+        {
+            string Malcd = lcd.MaLopCD;
+            return TruyCapDuLieu.LopChuyenDeDB.XoaLCD(Malcd);
+        }
+
+        public static bool CapNhatLopChuyenDe(LopChuyenDe lcd)
+        {
+            string Malcd = lcd.MaLopCD;
+            string NamKy = lcd.NamKy;
+            string ChuyenDe = lcd.ChuyenDe;
+            string NVTL = lcd.NVTroLy;
+            string Lich = lcd.NgayHoc;
+            int SiSo = lcd.SiSo;
+            return TruyCapDuLieu.LopChuyenDeDB.CapNhatLCD(Malcd, ChuyenDe, NamKy, NVTL, Lich, SiSo);
+        }
     }
 }

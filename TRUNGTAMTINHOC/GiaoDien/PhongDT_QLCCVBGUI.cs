@@ -11,12 +11,12 @@ using TRUNGTAMTINHOC.NghiepVu;
 
 namespace TRUNGTAMTINHOC.GiaoDien
 {
-    public partial class PhongDT_QLCCVB : Form
+    public partial class PhongDT_QLCCVBGUI : Form
     {
         public string MaNV;
         public string HoTen;
 
-        public PhongDT_QLCCVB()
+        public PhongDT_QLCCVBGUI()
         {
             InitializeComponent();
         }
