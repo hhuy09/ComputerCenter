@@ -128,7 +128,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
             try
             {
-                string sql = "EXEC SP_INS_LOPHOC '" + MaLopHoc + "', '" + NamKy + "', '" + HocPhan + "', '" + NVCM + "', '" + LichHoc + "'," + SiSo;
+                string sql = "EXEC SP_INS_LOPHOC '" + MaLopHoc + "', '" + NamKy + "', '" + HocPhan + "', '" + NVCM + "', N'" + LichHoc + "'," + SiSo;
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
                 return true;
@@ -174,7 +174,7 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
 
             try
             {
-                string sql = "EXEC SP_UPD_LOPHOC '" + MaLopHoc + "', '" + NamKy + "', '" + HocPhan + "', '" + NVCM + "', '" + LichHoc + "'," + SiSo;
+                string sql = "EXEC SP_UPD_LOPHOC '" + MaLopHoc + "', '" + NamKy + "', '" + HocPhan + "', '" + NVCM + "', N'" + LichHoc + "'," + SiSo;
                 SqlCommand cmd = new SqlCommand(sql, con);
                 cmd.ExecuteNonQuery();
                 return true;

@@ -193,10 +193,13 @@ namespace TRUNGTAMTINHOC.GiaoDien
                 DataGridViewRow row = this.dataGridView2.Rows[e.RowIndex];
                 string MaLT = row.Cells[1].Value.ToString();
                 label10.Text = MaLT;
-                string NgThi = row.Cells[3].Value.ToString();
-                NgThi = NgThi.Substring(0, NgThi.IndexOf(" "));
-                DateTime NgayThi = DateTime.Parse(NgThi);
-                dateTimePicker2.Value = NgayThi;
+                string NgThi = row.Cells[3].Value.ToString();                
+                if (NgThi != "")
+                {
+                    NgThi = NgThi.Substring(0, NgThi.IndexOf(" "));
+                    DateTime NgayThi = DateTime.Parse(NgThi);
+                    dateTimePicker2.Value = NgayThi;
+                }               
             }
         }
 

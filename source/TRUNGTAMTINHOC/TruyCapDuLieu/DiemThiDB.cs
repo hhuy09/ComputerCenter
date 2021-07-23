@@ -49,7 +49,6 @@ namespace TRUNGTAMTINHOC.TruyCapDuLieu
             {
                 string sql = "EXEC SP_DKTHILAI '" + MaHV + "', '" + MaLT + "'";
                 SqlCommand cmd = new SqlCommand(sql, con);
-                MessageBox.Show(sql);
                 cmd.ExecuteNonQuery();
                 con.Close();
                 return true;
